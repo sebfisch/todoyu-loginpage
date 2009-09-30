@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locallang>
+	<labels lang="en">
+		<label index="title">Missing library dependencies</label>
+		<label index="depencywarning">Dependency warning!</label>
+		<label index="missinglibs">The following required third party libraries must be installed to ensure faultless usableness of todoyu.</label>
+		<label index="downloadandinstallinstructions">Please download the libraries from these URLs and install them to the listed todoyu paths:</label>
+		<label index="instruction.tinymce">Copy the "tiny_mce" folder into the lib/js/ folder.</label>
+		<label index="instruction.phpmailer">Copy the content of the archive into lib/php/phpmailer</label>
+		<label index="instruction.jscalendar">Copy the content of the archive info lib/js/jscalendar</label>
+	</labels>
+	<labels lang="de">
+		<label index="title">Fehlende Abhängigkeiten</label>
+		<label index="depencywarning">Abhängigkeits-Warnung!</label>
+		<label index="missinglibs">Die folgenden Bibliotheken müssen für den fehlerfreien Betrieb des todoyu installiert werden.</label>
+		<label index="downloadandinstallinstructions">Bitte downloaden Sie die Bibliotheken von den angegebenen URLs und kopieren Sie diese in den jeweiligen todoyu-Pfad:</label>
+		<label index="instruction.tinymce">Den Ordner "tiny_mce" in den Ordner lib/js/ kopieren.</label>
+		<label index="instruction.phpmailer">Den Inhalt des Archivs nach lib/php/phpmailer kopieren.</label>
+		<label index="instruction.jscalendar">Den Inhalt des Archivs nach lib/js/jscalendar kopieren.</label>
+	</labels>
+</locallang>

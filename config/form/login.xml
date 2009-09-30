@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<attributes>
+		<attribute name="action">?ext=loginpage</attribute>
+		<attribute name="name">login</attribute>
+		<attribute name="class">formLogin</attribute>
+	</attributes>
+	<fieldsets>
+	
+		<fieldset name="message">
+			<legend>Info messages</legend>
+			<class>message</class>
+			<elements>
+							
+			</elements>
+		</fieldset>
+		
+		<fieldset name="inputs">
+			<legend>Login dialog</legend>
+			<class>loginForm</class>
+			<elements>
+				<field type="comment" name="status">
+					<default>LLL:loginpage.form.status.enterLoginData</default>
+				</field>
+				<field type="textinput" name="username">
+					<label>LLL:loginpage.form.field.username</label>
+					<validate>
+						<isNotEmpty msg="Tell me your name!" />
+					</validate>
+					<required />
+				</field>
+				<field type="textinput" name="password">
+					<label>LLL:loginpage.form.field.password</label>
+					<type>password</type>
+					<required />
+				</field>
+				<field type="checkbox" name="loginremain">
+					<label>LLL:loginpage.form.remainLogin</label>
+				</field>
+			</elements>
+		</fieldset>
+
+		<fieldset name="buttons">
+			<legend>Actions</legend>
+			<class>buttons</class>
+			<elements>
+				<field type="button" name="submit">
+					<text>LLL:loginpage.form.field.submit</text>
+					<type>submit</type>
+					<class>buttonLogin</class>
+					<hasIcon />
+				</field>
+			</elements>
+		</fieldset>
+
+	</fieldsets>
+</form>

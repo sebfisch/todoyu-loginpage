@@ -1,0 +1,83 @@
+/* default layout changes */
+body.todoyu-loginpage #right {
+	top:20px;
+}
+
+body.todoyu-loginpage #right .inner {
+	background-color:#edf1e0; /* bcl01 */
+}
+
+body.todoyu-loginpage .content span.lt {display:block;}
+
+body.todoyu-loginpage button span.rgt {
+	background-color:#d3dabb; /* bcl03 */
+}
+
+span#password-forget {
+	line-height:23px;
+	padding-right:10px;
+	position:absolute;
+	right:300px;
+	bottom:18px;
+}
+
+/* form layout changes */
+form.formLogin .fElement {
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top:1px dotted #fff;
+}
+
+form.formLogin .fElement input {
+	width:50%;
+	font-size:13px;
+	line-height:13px;
+	padding:2px;
+}
+
+form.formLogin .fElement input.checkbox {
+	width:100%;
+}
+
+form.formLogin .loginError {
+	padding: 10px 20px;
+	border: 1px solid #0065a6;
+	color: #ff0000;
+}
+
+form.formLogin fieldset {
+	padding:0;
+}
+
+form.formLogin div.odd,
+form.formLogin div.even {
+	background-color:#edf1e0; /* bcl01 */
+}
+
+form.formLogin fieldset.buttons,
+form.formLogin fieldset.buttons div.odd,
+form.formLogin fieldset.buttons div.even,
+form.formLogin fieldset.buttons button span.rgt {
+	background-color:#D3DABB;
+}
+
+	form.formLogin fieldset.buttons button.buttonLogin {
+		margin-left:370px;
+	}
+	button.buttonLogin span.hasIcon.iconSubmit {
+		background:url('../img/icons.png') no-repeat 7px -62px;
+	}
+
+/* headlet element */
+#metamenu-logout a {
+	background:url('../img/icons.png') no-repeat 40px 0;
+	padding-right:20px;
+	display:block;
+}
+
+/* remove this */
+#headletlogout div {
+	width:16px;
+	height:16px;
+	background:green;
+}
