@@ -2,6 +2,10 @@
 
 class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
+	protected function hasActionAccess($action) {
+		return true;
+	}
+
 	public function defaultAction(array $params) {
 			// Add loginscreen maintabs
 		TodoyuLoginpageManager::addLoginscreenMainTabs();
