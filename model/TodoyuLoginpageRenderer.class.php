@@ -92,7 +92,7 @@ class TodoyuLoginpageRenderer {
 
 		if (is_array($funcRefs)) {
 			foreach($funcRefs as $funcRef) {
-				if(TodoyuDiv::checkOnMethodString($funcRef))	{
+				if(TodoyuDiv::isFunctionReference($funcRef))	{
 					list($obj, $method) = explode('::', $funcRef);
 					$obj = new $obj();
 					$content	.= $obj->$method($requestData);
