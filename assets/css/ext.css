@@ -1,4 +1,7 @@
-/* default layout changes */
+/* -------------------------------
+	default layout changes
+   ------------------------------- */
+
 body.todoyu-loginpage #right {
 	top:20px;
 }
@@ -68,14 +71,19 @@ form.formLogin fieldset.buttons button span.rgt {
 		background:url('../img/icons.png') no-repeat 7px -62px;
 	}
 
-/* headlet element */
+/* --------------------------
+	headlet element
+   -------------------------- */
 #metamenu-logout a {
 	background:url('../img/icons.png') no-repeat 40px 0;
 	padding-right:20px;
 	display:block;
 }
 
-/* remove this */
+/* --------------------------
+	remove this
+   -------------------------- */
+
 #headletlogout div {
 	width:16px;
 	height:16px;
