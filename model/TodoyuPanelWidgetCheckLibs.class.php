@@ -50,18 +50,6 @@ class TodoyuPanelWidgetCheckLibs extends TodoyuPanelWidget implements TodoyuPane
 
 
 
-	/**
-	 * This panelwidget is for the loginpage where no user is loged in.
-	 * So we always allow to render this widget
-	 *
-	 * @return	Bool		true on loginpage only
-	 */
-	public function isAllowed() {
-
-		return AREA == 110 ? true : false;
-	}
-
-
 
 	/**
 	 * Render panelwidget content
@@ -116,6 +104,18 @@ class TodoyuPanelWidgetCheckLibs extends TodoyuPanelWidget implements TodoyuPane
 
 		return $missingLibs;
 	}
+
+
+	/**
+	 * This panelwidget is for the loginpage where no user is loged in.
+	 * So we always allow to render this widget
+	 *
+	 * @return	Bool		true on loginpage only
+	 */
+	public static function isAllowed() {
+		return AREA === 110;
+	}
+
 
 }
 
