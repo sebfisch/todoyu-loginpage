@@ -112,7 +112,7 @@ class TodoyuPanelWidgetCheckLibs extends TodoyuPanelWidget implements TodoyuPane
 	 *
 	 * @return	Bool		true on loginpage only
 	 */
-	public function isAllowed() {
+	public static function isAllowed() {
 		return AREA === 110;
 	}
 
