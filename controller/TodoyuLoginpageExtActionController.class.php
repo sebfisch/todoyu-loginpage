@@ -39,11 +39,11 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	public function logoutAction($params) {
 		TodoyuAuth::logout();
 
-		$addParams	= array(
-			'status' => 'loggedout'
-		);
-
-		TodoyuHeader::redirect('loginpage', 'ext', $addParams);
+//		$addParams	= array(
+//			'status' => 'loggedout'
+//		);
+//
+//		TodoyuHeader::redirect('loginpage', 'ext', $addParams);
 	}
 
 

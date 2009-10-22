@@ -128,8 +128,21 @@ Todoyu.Ext.loginpage = {
 	/**
 	 *	Log out
 	 */
-	logout: function() {
-		location.href = '?ext=loginpage&cmd=logout';
+	logout: function() {		
+		var url		= Todoyu.getUrl('loginpage', 'ext');
+		var options	= {
+			'parameters': {
+				'cmd': 'logout'
+			},
+			'onComplete': this.onLoggedOut.bind(this)
+		};
+		
+		Todoyu.send(url, options);
+	},
+	
+	onLoggedOut: function(response) {
+			// Remove all parameters from url and reload
+		location.search = '';
 	}
 
 };
