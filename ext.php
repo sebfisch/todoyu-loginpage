@@ -42,7 +42,7 @@ TodoyuLocale::register('loginpage', PATH_EXT_LOGINPAGE . '/locale/ext.xml');
 TodoyuLocale::register('panelwidget-loginpage', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginpage.xml');
 TodoyuLocale::register('panelwidget-checklibs', PATH_EXT_LOGINPAGE . '/locale/panelwidget-checklibs.xml');
 
-TodoyuMetaMenuManager::addEntry('logout', 'Logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
+TodoyuMetaMenuManager::addEntry('logout', 'LLL:loginpage.metamenu.logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
 
 
 ?>
