@@ -38,12 +38,6 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 	public function logoutAction($params) {
 		TodoyuAuth::logout();
-
-//		$addParams	= array(
-//			'status' => 'loggedout'
-//		);
-//
-//		TodoyuHeader::redirect('loginpage', 'ext', $addParams);
 	}
 
 
@@ -69,9 +63,6 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				'success'	=> true,
 				'redirect'	=> TodoyuDiv::buildUrl($params)
 			);
-
-			TodoyuDebug::printInFirebug(PATH_WEB, 'path web');
-			TodoyuDebug::printInFirebug($response['redirect']);
 
 				// Set remain login cookie
 			if( $remain ) {

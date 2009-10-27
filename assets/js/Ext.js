@@ -105,7 +105,7 @@ Todoyu.Ext.loginpage = {
 		
 		if( status.success ) {
 			this.displayLoginSuccess();
-			location.href = status.redirect;	
+			location.href = status.redirect;		
 		} else {
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
