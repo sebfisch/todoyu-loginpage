@@ -29,20 +29,20 @@
 if( ! defined('TODOYU') ) die('NO ACCESS');
 
 
-	// declare ext ID, path
+
+	// Declare ext ID, path
 define('EXTID_LOGINPAGE', 110);
 define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
 
-	// request configurations
-require_once( PATH_EXT_LOGINPAGE . '/config/extension.php' );
-require_once( PATH_EXT_LOGINPAGE . '/config/panelwidgets.php' );
-
-	// register localization files
+	// Register module locales
 TodoyuLocale::register('loginpage', PATH_EXT_LOGINPAGE . '/locale/ext.xml');
 TodoyuLocale::register('panelwidget-loginpage', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginpage.xml');
 TodoyuLocale::register('panelwidget-checklibs', PATH_EXT_LOGINPAGE . '/locale/panelwidget-checklibs.xml');
 
-TodoyuMetaMenuManager::addEntry('logout', 'LLL:loginpage.metamenu.logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
+	// Request configurations
+require_once( PATH_EXT_LOGINPAGE . '/config/extension.php' );
+require_once( PATH_EXT_LOGINPAGE . '/config/panelwidgets.php' );
 
+TodoyuMetaMenuManager::addEntry('logout', 'LLL:loginpage.metamenu.logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
 
 ?>
