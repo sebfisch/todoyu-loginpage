@@ -47,6 +47,15 @@ $requiredLibraries = array(
 
 TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetCheckLibs', 10, $requiredLibraries );
 
-TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginPage', 20);
+
+
+$loginHintsConfig	= array(
+	'message'	=> 'todoyu alpha version is developed and tested on Firefox and Internet Explorer v 8.0<br/><br/><img src="ext/loginpage/assets/img/firefox.png" />We recommend using the firefox browser for testing the current todoyu version!'
+);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginHints', 20, $loginHintsConfig );
+
+
+
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginPage', 30);
 
 ?>

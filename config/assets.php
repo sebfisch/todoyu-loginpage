@@ -76,6 +76,14 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 			),
 		)
 	),
+	'panelWidgetLoginHints' => array(
+		'css' => array(
+			array(
+				'file' => 'ext/loginpage/assets/css/panelwidget-loginhints.css',
+				'position' => 115,
+			),
+		)
+	),
 
 
 );
