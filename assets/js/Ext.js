@@ -62,7 +62,7 @@ Todoyu.Ext.loginpage = {
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
 				'parameters': {
-					'cmd': 'login',
+					'action': 'login',
 					'username': $F(this.fieldUsername),
 					'passhash': this.getHashedPassword(),
 					'remain': this.isRemainLoginChecked()
@@ -132,7 +132,7 @@ Todoyu.Ext.loginpage = {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
 			'parameters': {
-				'cmd': 'logout'
+				'action': 'logout'
 			},
 			'onComplete': this.onLoggedOut.bind(this)
 		};
