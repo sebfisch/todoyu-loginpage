@@ -61,7 +61,6 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 			)
 		),
 		'css' => array(
-
 		)
 	),
 
@@ -87,6 +86,5 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 
 
 );
-
 
 ?>

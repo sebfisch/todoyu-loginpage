@@ -44,8 +44,6 @@ TodoyuLocale::register('panelwidget-checklibs', PATH_EXT_LOGINPAGE . '/locale/pa
 require_once( PATH_EXT_LOGINPAGE . '/config/extension.php' );
 require_once( PATH_EXT_LOGINPAGE . '/config/panelwidgets.php' );
 
-TodoyuMetaMenuManager::addEntry('logout', 'LLL:loginpage.metamenu.logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
-
 if( TodoyuAuth::isLoggedIn() ) {
 	TodoyuFrontend::addSubmenuEntry('todoyu', 'logout', 'LLL:loginpage.metamenu.logout', 'javascript:Todoyu.Ext.loginpage.logout()', 1000);
 }

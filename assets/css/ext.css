@@ -85,6 +85,21 @@ form.formLogin fieldset.buttons button span.rgt {
 
 
 /* --------------------------
+	Metamenu entries
+   -------------------------- */
+
+ul.navilist li .itemlogout a {
+	background:url('../img/icons.png') no-repeat 6px 6px !important;
+	padding-left: 26px !important;
+}
+
+ul.navilist li .itemlogout a:hover {
+	background-color: #EFF3E5 !important;
+}
+
+
+
+/* --------------------------
 	Remove this
    -------------------------- */
 
