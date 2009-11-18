@@ -15,18 +15,6 @@
 		<label index="forgotPassword">Forgot password?</label>
 		<label index="metamenu.logout">Logout</label>
 	</labels>
-	<labels lang="de">
-		<label index="navi.login">Anmelden</label>
-		<label index="navi.help">Hilfe</label>
-		<label index="navi.blog">Blog</label>
-		<label index="username">Benutzername</label>
-		<label index="password">Passwort</label>
-		<label index="password.forget">Passwort vergessen ?</label>
-		<label index="loginButton">Anmelden</label>
-		<label index="loginfailed">Der Benutzername oder das Passwort ist nicht korrekt. Bitte melden Sie sich erneut an.</label>
-
-		<label index="check.loginremain">Auf diesem Computer angemeldet bleiben</label>
-		<label index="form.status.enterLoginData">Willkommen, geben Sie Ihre Logindaten ein</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>
 

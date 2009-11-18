@@ -3,7 +3,5 @@
 	<labels lang="en">
 		<label index="title">Informations</label>
 	</labels>
-	<labels lang="de">
-		<label index="title">Hinweise</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>

@@ -3,7 +3,5 @@
 	<labels lang="en">
 		<label index="title">Todoyu 2.0</label>
 	</labels>
-	<labels lang="de">
-		<label index="title">Todoyu 2.0</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>
