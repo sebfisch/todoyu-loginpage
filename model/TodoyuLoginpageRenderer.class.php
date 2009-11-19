@@ -63,7 +63,7 @@ class TodoyuLoginpageRenderer {
 	 */
 	public static function renderLoginForm($status = null) {
 		$xml	= 'ext/loginpage/config/form/login.xml';
-		$form	= new TodoyuForm($xml);
+		$form	= TodoyuFormManager::getForm($xml);
 		$form->setUseRecordID(false);
 
 			// If status is failed, show error message
