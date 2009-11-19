@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
+		<label index="ext.title">Loginpage</label>
 		<label index="page.title">Login</label>
 		<label index="logintab.login">Login</label>
 		<label index="logintab.help">Help</label>
