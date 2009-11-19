@@ -28,8 +28,8 @@ $CONFIG['EXT']['loginpage']['info'] = array(
 	'title'				=> 'todoyu login page',
 	'description' 		=> 'todoyu login page',
 	'author' 			=> array(
-		'name'		=> '',
-		'email'		=> '',
+		'name'		=> 'Todoyu Core Team',
+		'email'		=> 'team@todoyu.com',
 		'company'	=> 'Snowflake Productions, Zürich'
 	),
 	'dependencies' 		=> '',
