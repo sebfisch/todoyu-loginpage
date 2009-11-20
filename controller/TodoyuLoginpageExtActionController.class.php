@@ -43,10 +43,12 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
 		$loginForm			= TodoyuLoginpageRenderer::renderLoginForm($loginStatus);
 		$extendedContent	= TodoyuLoginpageRenderer::renderExtendedContent();
+		$todoyuInfo			= TodoyuLoginpageRenderer::renderTodoyuInfo();
 
 		TodoyuPage::set('panelWidgets', $panelWidgets);
 		TodoyuPage::set('loginForm', $loginForm);
 		TodoyuPage::set('extendedContent', $extendedContent);
+		TodoyuPage::set('todoyuInfo', $todoyuInfo);
 
 		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)');
 
