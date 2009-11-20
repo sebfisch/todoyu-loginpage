@@ -13,6 +13,7 @@
 		<label index="form.remainLogin">Remember me on this computer</label>
 		<label index="form.loginFailed">Der User bzw. das Passwort ist nicht korrekt. Bitte melden Sie sich erneut an.</label>
 		<label index="form.status.enterLoginData">Enter username and password</label>
+		<label index="submenu.logout">Logout</label>
 	</labels>
 	<labels lang="de"></labels>
 </locallang>
