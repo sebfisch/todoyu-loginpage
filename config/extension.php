@@ -30,6 +30,4 @@ $CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
 $CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
-//TodoyuMetaMenuManager::addEntry('logout', 'LLL:loginpage.metamenu.logout', 100, '', 'Todoyu.Ext.loginpage.logout()');
-
 ?>

@@ -19,12 +19,18 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+/**
+ * Ext controller for loginpage
+ *
+ */
 class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
-	protected function hasActionAccess($action) {
-		return true;
-	}
-
+	/**
+	 * Default action when loading without parameters (normal call of login page)
+	 *
+	 * @param	Array		$params
+	 * @return	String
+	 */
 	public function defaultAction(array $params) {
 			// Add loginscreen maintabs
 		TodoyuLoginpageManager::addLoginscreenMainTabs();
@@ -57,11 +63,23 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 
+	/**
+	 * Logout request
+	 *
+	 * @param	Array		$params
+	 */
 	public function logoutAction($params) {
 		TodoyuAuth::logout();
 	}
 
 
+
+	/**
+	 * Login request
+	 *
+	 * @param	Array		$params
+	 * @return	String
+	 */
 	public function loginAction($params) {
 		$username	= trim(strtolower($params['username']));
 		$passhash	= trim(strtolower($params['passhash']));
@@ -111,9 +129,5 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	}
 
 }
-
-
-
-
 
 ?>
