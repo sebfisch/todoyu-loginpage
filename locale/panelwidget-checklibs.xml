@@ -8,6 +8,7 @@
 		<label index="instruction.tinymce">Copy the "tiny_mce" folder into the lib/js/ folder.</label>
 		<label index="instruction.phpmailer">Copy the content of the archive into lib/php/phpmailer</label>
 		<label index="instruction.jscalendar">Copy the content of the archive info lib/js/jscalendar</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>

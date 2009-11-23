@@ -14,6 +14,7 @@
 		<label index="form.loginFailed">Der User bzw. das Passwort ist nicht korrekt. Bitte melden Sie sich erneut an.</label>
 		<label index="form.status.enterLoginData">Enter username and password</label>
 		<label index="submenu.logout">Logout</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>
