@@ -1,38 +1,37 @@
-
 /* ------------------------------------------------------------
 	Check library dependencies panel widget
    ------------------------------------------------------------ */
 
 #panelwidget-checklibs-h1, #panelwidget-checklibs h1 .title {
-	display: none;
+	display:none;
 }
 
 #panelwidget-checklibs-content h1.headerline span {
 	background:url('../img/panelwidget-checklibs.png') no-repeat 0 0 !important;
-	width: 258px;
-	margin: 0 !important;
-	padding: 0 0 12px 10px;
+	width:258px;
+	margin:0 !important;
+	padding:0 0 12px 10px;
 }
 
 #panelwidget-checklibs-content {
-	background-color: #FFF8C4;
-	margin: 2px 0 0 0;
+	background-color:#FFF8C4;
+	margin:2px 0 0 0;
 }
 
 #panelwidget-checklibs-content div.libsList {
-	margin: 8px 0 0 0;
-        padding: 6px 8px 10px 8px;
+	margin:8px 0 0 0;
+    padding:6px 8px 10px 8px;
 }
 
 #panelwidget-checklibs-content div.libsList ul {
-	margin: 6px 0 6px 0;
-	list-style-type: square;
+	margin:6px 0 6px 0;
+	list-style-type:square;
 }
 
 #panelwidget-checklibs-content div.libsList ul li {
-	margin: 0 0 0 16px;
+	margin:0 0 0 16px;
 }
 
 #panelwidget-checklibs-content div.libsList ul li a.link {
-	text-decoration: underline;
+	text-decoration:underline;
 }
