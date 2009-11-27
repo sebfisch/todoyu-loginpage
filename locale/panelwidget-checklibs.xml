@@ -8,7 +8,14 @@
 		<label index="instruction.tinymce">Copy the "tiny_mce" folder into the lib/js/ folder.</label>
 		<label index="instruction.phpmailer">Copy the content of the archive into lib/php/phpmailer</label>
 		<label index="instruction.jscalendar">Copy the content of the archive info lib/js/jscalendar</label>
-<!--  ......................................... added after 20091122 -->
 	</labels>
-	<labels lang="de"></labels>
+	<labels lang="de">
+		<label index="title">Fehlende Library Abhängigkeiten</label>
+		<label index="depencywarning">Abhängkeits-Warnung!</label>
+		<label index="missinglibs">Die folgenden fremd-Bibliotheken müssen installiert sein um die fehlerfreie Verwendbarkeit von todoyu sicher zu stellen.</label>
+		<label index="downloadandinstallinstructions">Bitte Downloaden Sie die Bibliotheken von diesen URLs und installieren sie in den angegebenen todoyu-Pfaden:</label>
+		<label index="instruction.tinymce">Kopieren Sie den "tiny_mce" Ordner in den Ordner: "lib/js/".</label>
+		<label index="instruction.phpmailer">Kopieren Sie den Inhalt der Archiv-Datei in: "lib/php/phpmailer"</label>
+		<label index="instruction.jscalendar">Kopieren Sie den Inhalt der Archiv-Datei in "lib/js/jscalendar/"</label>
+	</labels>
 </locallang>

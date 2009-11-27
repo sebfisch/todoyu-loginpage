@@ -6,15 +6,28 @@
 		<label index="logintab.login">Login</label>
 		<label index="logintab.help">Help</label>
 		<label index="logintab.blog">Blog</label>
-		<label index="loginbox.title">Login for Todoyu</label>
+		<label index="loginbox.title">Login for todoyu</label>
 		<label index="form.field.username">Username</label>
 		<label index="form.field.password">Password</label>
 		<label index="form.field.submit">Login</label>
 		<label index="form.remainLogin">Remember me on this computer</label>
-		<label index="form.loginFailed">Der User bzw. das Passwort ist nicht korrekt. Bitte melden Sie sich erneut an.</label>
+		<label index="form.loginFailed">The ursername or password is not corredt. Please try again.</label>
 		<label index="form.status.enterLoginData">Enter username and password</label>
 		<label index="submenu.logout">Logout</label>
-<!--  ......................................... added after 20091122 -->
 	</labels>
-	<labels lang="de"></labels>
+	<labels lang="de">
+		<label index="ext.title">Anmelde-Seite</label>
+		<label index="page.title">Anmeldung</label>
+		<label index="logintab.login">Anmeldung</label>
+		<label index="logintab.help">Hilfe</label>
+		<label index="logintab.blog">Blog</label>
+		<label index="loginbox.title">Bei todoyu anmelden</label>
+		<label index="form.field.username">Benutzer</label>
+		<label index="form.field.password">Passwort</label>
+		<label index="form.field.submit">Anmeldung</label>
+		<label index="form.remainLogin">Anmeldung auf diesem Computer speichern</label>
+		<label index="form.loginFailed">Der Benutzer oder das Passwort ist nicht korrekt. Bitte melden Sie sich erneut an.</label>
+		<label index="form.status.enterLoginData">Benutzername und Passwort eingeben</label>
+		<label index="submenu.logout">Abmelden</label>
+	</labels>
 </locallang>
