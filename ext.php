@@ -26,7 +26,7 @@
  * @subpackage	Loginpage
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 

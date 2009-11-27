@@ -23,34 +23,8 @@
  * Configure panel widgets to be shown in Project area
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
-
-
-	// add default panel widgets
-$requiredLibraries = array(
-	'TinyMCE'		=> array(
-		'path' 			=> PATH_LIB . '/js/tiny_mce',
-		'downloadURL'	=> 'http://tinymce.moxiecode.com/download.php',
-		'instruction'	=> 'LLL:panelwidget-checklibs.instruction.tinymce'
-	),
-	'JS Calendar'	=> array(
-		'path'			=> PATH_LIB . '/js/jscalendar',
-		'downloadURL'	=> 'http://www.dynarch.com/static/jscalendar-1.0.zip',
-		'instruction'	=> 'LLL:panelwidget-checklibs.instruction.jscalendar'
-	),
-	'PHPMailer'		=> array(
-		'path'			=> PATH_LIB . '/php/phpmailer',
-		'downloadURL'	=> 'http://sourceforge.net/projects/phpmailer/',
-		'instruction'	=> 'LLL:panelwidget-checklibs.instruction.phpmailer'
-	)
-);
-
-TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetCheckLibs', 10, $requiredLibraries );
-
-
-
 $loginHintsConfig	= array(
-	'message'	=> 'todoyu alpha version is developed and tested on Firefox and Internet Explorer v 8.0<br/><br/><img src="ext/loginpage/assets/img/firefox.png" />We recommend using the Firefox browser for testing the current todoyu version!'
+	'message'	=> 'todoyu beta version is developed and tested on Firefox and Internet Explorer v 8.0<br/><br/><img src="ext/loginpage/assets/img/firefox.png" />We recommend using the Firefox browser for testing the current todoyu version!'
 );
 TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginHints', 20, $loginHintsConfig );
 
