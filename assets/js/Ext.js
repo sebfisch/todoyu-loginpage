@@ -67,7 +67,7 @@ Todoyu.Ext.loginpage = {
 					'passhash':	this.getHashedPassword(),
 					'remain':	this.isRemainLoginChecked()
 				},
-				'onComplete':	this.onLoginRequest.bind(this)
+				'onComplete':	this.onLoginRequested.bind(this)
 			}
 			
 			Todoyu.send(url, options);
@@ -100,12 +100,12 @@ Todoyu.Ext.loginpage = {
 		return true;
 	},
 	
-	onLoginRequest: function(response){
+	onLoginRequested: function(response){
 		var status	= response.responseJSON;
 		
 		if( status.success ) {
 			this.displayLoginSuccess();
-			location.href = status.redirect;		
+			location.href = status.redirect;
 		} else {
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
