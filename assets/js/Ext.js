@@ -56,6 +56,10 @@ Todoyu.Ext.loginpage = {
 	onFormSubmit: function(event) {
 		event.stop();
 		
+		this.submitForm();		
+	},
+	
+	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
 			this.displayVerifying();
 			
