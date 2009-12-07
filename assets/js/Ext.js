@@ -27,20 +27,31 @@ Todoyu.Ext.loginpage = {
 	PanelWidget: {},
 
 	Headlet: {},
-	
-	
-	fieldUsername: 'login-field-username',
-	fieldPassword: 'login-field-password',
-	fieldRemain: 'login-field-loginremain',
-	elStatus: 'formElement-login-field-status-inputbox',
+
+
+	fieldUsername:	'login-field-username',
+
+	fieldPassword:	'login-field-password',
+
+	fieldRemain:	'login-field-loginremain',
+
+	elStatus:		'formElement-login-field-status-inputbox',
 
 
 
+	/**
+	 * Init loginpage ext javaScript
+	 */
 	init: function() {
 		this.observeForm();
 		this.focusField();
 	},
-	
+
+
+
+	/**
+	 * Focus username input if empty, otherwise: focus password input
+	 */
 	focusField: function() {
 		if( $F(this.fieldUsername) === '' ) {
 			$(this.fieldUsername).focus();
@@ -48,21 +59,36 @@ Todoyu.Ext.loginpage = {
 			$(this.fieldPassword).focus();
 		}
 	},
-	
+
+
+
+	/**
+	 * Install form onSubmit-observer
+	 */
 	observeForm: function() {
 		$('login-form').observe('submit', this.onFormSubmit.bind(this));
 	},
-	
+
+
+
+	/**
+	 * onSubmit event handler: stop event and evoke form submission
+	 */
 	onFormSubmit: function(event) {
 		event.stop();
-		
+
 		this.submitForm();		
 	},
-	
+
+
+
+	/**
+	 * Evoke login form submission as Todoyu post-request, params taken from form fields 
+	 */
 	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
 			this.displayVerifying();
-			
+
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
 				'parameters': {
@@ -73,22 +99,40 @@ Todoyu.Ext.loginpage = {
 				},
 				'onComplete':	this.onLoginRequested.bind(this)
 			}
-			
+
 			Todoyu.send(url, options);
 		}
 	},
-	
-	
+
+
+
+	/**
+	 * Get MD5 hash of entered password
+	 * 
+	 *	@return	String
+	 */
 	getHashedPassword: function() {
 		return hex_md5($F(this.fieldPassword));
 	},
-	
+
+
+
+	/**
+	 * Check whether field 'remember me on this computer' is checked
+	 * 
+	 *	@return	Boolean
+	 */
 	isRemainLoginChecked: function() {
 		return $(this.fieldRemain).checked === true;
 	},
-	
-	
-	
+
+
+
+	/**
+	 * Check whether all (required) fields of the login form are filled (username, password), if not filled: focus empty field
+	 * 
+	 *	@return	Boolean
+	 */
 	checkFieldsNotEmpty: function() {
 		if( $F(this.fieldUsername) === '' ) {
 			alert('[LLL:Please enter your username]');
@@ -100,13 +144,20 @@ Todoyu.Ext.loginpage = {
 			$(this.fieldPassword).focus();
 			return false;
 		}
-		
+
 		return true;
 	},
-	
+
+
+
+	/**
+	 * Handle login request, evoked from oncomplete of login form submission
+	 * 
+	 *	@param	Object	response
+	 */
 	onLoginRequested: function(response){
 		var status	= response.responseJSON;
-		
+
 		if( status.success ) {
 			this.displayLoginSuccess();
 			location.href = status.redirect;
@@ -115,18 +166,34 @@ Todoyu.Ext.loginpage = {
 			$(this.fieldPassword).select();
 		}
 	},
-	
+
+
+
+	/**
+	 * Display status message when verifying received login data
+	 */
 	displayVerifying: function() {
 		$(this.elStatus).update('Verifying username/password').insert({'top':'<img src="core/assets/img/ajax-loader.gif">'});
 	},
-	
+
+
+
+	/**
+	 * Display status message of successful login
+	 */
 	displayLoginSuccess: function() {
 		$(this.elStatus).update('Login ok');
 	},
-	
+
+
+
+	/**
+	 * Display status message of login error
+	 */
 	displayLoginError: function(message) {
 		$(this.elStatus).update(message);
 	},
+
 
 
 	/**
@@ -140,10 +207,17 @@ Todoyu.Ext.loginpage = {
 			},
 			'onComplete':	this.onLoggedOut.bind(this)
 		};
-		
+
 		Todoyu.send(url, options);
 	},
-	
+
+
+
+	/**
+	 * Handle logging out: clears all params and reloads loginpage
+	 * 
+	 *	@param	Object	response
+	 */
 	onLoggedOut: function(response) {
 			// Remove all parameters from url and reload
 		location.search = '';
