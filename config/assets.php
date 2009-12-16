@@ -41,11 +41,6 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 		),
 		'css' => array(
 			array(
-				'file'		=> 'ext/loginpage/assets/css/ext.css',
-				'media'		=> 'all',
-				'position'	=> 100
-			),
-			array(
 				'file'		=> 'ext/loginpage/assets/css/global.css',
 				'media'		=> 'all',
 				'position'	=> 100
@@ -66,6 +61,11 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 			)
 		),
 		'css' => array(
+			array(
+				'file'		=> 'ext/loginpage/assets/css/ext.css',
+				'media'		=> 'all',
+				'position'	=> 100
+			)
 		)
 	),
 
