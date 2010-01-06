@@ -13,7 +13,7 @@ body.todoyu-loginpage #right .inner {
 body.todoyu-loginpage .content span.lt {display:block;}
 
 body.todoyu-loginpage button span.rgt {
-	background-color:#d3dabb; /* bcl03 */
+	background-color:#d3dabb !important;
 }
 
 span#password-forget {
