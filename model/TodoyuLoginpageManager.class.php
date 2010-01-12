@@ -12,6 +12,13 @@ class TodoyuLoginpageManager {
 		TodoyuFrontend::addMenuEntry('feedback', 'LLL:loginpage.logintab.feedback', 'http://feedback.todoyu.com/', 100);
 	}
 
+	public static function redirectToHome() {
+		$url	= TodoyuDiv::buildUrl(array(), '', true);
+
+		die($url);
+
+		TodoyuHeader::location($url);
+	}
 
 }
 

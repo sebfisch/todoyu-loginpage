@@ -32,6 +32,14 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return	String
 	 */
 	public function defaultAction(array $params) {
+
+		if( TodoyuAuth::isLoggedIn() ) {
+			TodoyuLoginpageManager::redirectToHome();
+		}
+
+
+
+		TodoyuDebug::printInFirebug('xx');
 			// Add loginscreen maintabs
 		TodoyuLoginpageManager::addLoginscreenMainTabs();
 			// Set default tab
