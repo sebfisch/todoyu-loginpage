@@ -84,7 +84,7 @@ class TodoyuLoginpageRenderer {
 	 *
 	 * @return	String
 	 */
-	public function renderExtendedContent() {
+	public static function renderExtendedContent() {
 		$content	= '';
 
 		$funcRefs	= $GLOBALS['CONFIG']['EXT']['loginpage']['extendedContentHooks'];
