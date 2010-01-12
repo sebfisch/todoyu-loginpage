@@ -22,6 +22,8 @@
 /**
  * Ext controller for loginpage
  *
+ * @package		Todoyu
+ * @subpackage	Loginpage
  */
 class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
@@ -33,13 +35,11 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 */
 	public function defaultAction(array $params) {
 
+			// Redirect to default view if already logged in
 		if( TodoyuAuth::isLoggedIn() ) {
 			TodoyuLoginpageManager::redirectToHome();
 		}
 
-
-
-		TodoyuDebug::printInFirebug('xx');
 			// Add loginscreen maintabs
 		TodoyuLoginpageManager::addLoginscreenMainTabs();
 			// Set default tab

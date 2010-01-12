@@ -25,7 +25,6 @@
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-
 class TodoyuPanelWidgetLoginPage extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 	/**
