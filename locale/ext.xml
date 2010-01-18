@@ -7,12 +7,12 @@
 		<label index="logintab.help">Help</label>
 		<label index="logintab.blog">Blog</label>
 		<label index="logintab.feedback">Bugtracker / Feedback</label>
-		<label index="loginbox.title">Login for todoyu</label>
+		<label index="loginbox.title">Login to todoyu</label>
 		<label index="form.field.username">Username</label>
 		<label index="form.field.password">Password</label>
 		<label index="form.field.submit">Login</label>
 		<label index="form.remainLogin">Remember me on this computer</label>
-		<label index="form.loginFailed">The ursername or password is not corredt. Please try again.</label>
+		<label index="form.loginFailed">The username or password is not correct. Please try again.</label>
 		<label index="form.status.enterLoginData">Enter username and password</label>
 		<label index="submenu.logout">Logout</label>
 	</labels>
