@@ -47,7 +47,7 @@ class TodoyuPanelWidgetLoginHints extends TodoyuPanelWidget implements TodoyuPan
 			$idArea											// area ID
 		);
 
-
+		TodoyuPage::addExtAssets('loginpage', 'panelWidgetLoginHints');
 	}
 
 
@@ -58,12 +58,8 @@ class TodoyuPanelWidgetLoginHints extends TodoyuPanelWidget implements TodoyuPan
 	 * @return	String
 	 */
 	public function renderContent() {
-		TodoyuPage::addExtAssets( 'loginpage', 'panelWidgetLoginHints' );
-
 		$tmpl	= 'ext/loginpage/view/panelwidget-loginhints.tmpl';
-//		$data	= array();
-
-		$data	= $this->config;
+		$data	= array();
 
 		$content= render($tmpl, $data);
 

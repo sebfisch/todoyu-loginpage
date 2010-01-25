@@ -2,8 +2,12 @@
 <locallang>
 	<labels lang="en">
 		<label index="title">Information</label>
+		<label index="testedOnBrowser">todoyu is developed and tested on Firefox and Internet Explorer 8. Only the latest browser versions will be supported in the future.</label>
+		<label index="recommendFirefox">We recommend using the Firefox browser for testing the current todoyu version!</label>
 	</labels>
 	<labels lang="de">
 		<label index="title">Informationen</label>
+		<label index="testedOnBrowser">todoyu wird für Firefox und IE8 entwickelt und getestet. Nur die neusten Browser werden in Zukunft unterstützt.</label>
+		<label index="recommendFirefox">Um die aktuelle Version von todoyu zu testen, empfehlen wir den Firefox Browser!</label>
 	</labels>
 </locallang>

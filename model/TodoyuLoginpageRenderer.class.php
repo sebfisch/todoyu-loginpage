@@ -102,24 +102,6 @@ class TodoyuLoginpageRenderer {
 		return $content;
 	}
 
-
-
-	/**
-	 * Render todoyu info
-	 *
-	 * @return	String
-	 */
-	public static function renderTodoyuInfo() {
-		$tmpl	= 'ext/loginpage/view/todoyuinfo.tmpl';
-		$data	= array(
-			'version'	=> TODOYU_VERSION,
-			'update'	=> strtotime(TODOYU_UPDATE)
-		);
-
-		return render($tmpl, $data);
-	}
-
-
 }
 
 

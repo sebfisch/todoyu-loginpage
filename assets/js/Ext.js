@@ -77,13 +77,13 @@ Todoyu.Ext.loginpage = {
 	onFormSubmit: function(event) {
 		event.stop();
 
-		this.submitForm();		
+		this.submitForm();
 	},
 
 
 
 	/**
-	 * Evoke login form submission as Todoyu post-request, params taken from form fields 
+	 * Evoke login form submission as Todoyu post-request, params taken from form fields
 	 */
 	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
@@ -108,7 +108,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Get MD5 hash of entered password
-	 * 
+	 *
 	 *	@return	String
 	 */
 	getHashedPassword: function() {
@@ -119,7 +119,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Check whether field 'remember me on this computer' is checked
-	 * 
+	 *
 	 *	@return	Boolean
 	 */
 	isRemainLoginChecked: function() {
@@ -130,7 +130,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Check whether all (required) fields of the login form are filled (username, password), if not filled: focus empty field
-	 * 
+	 *
 	 *	@return	Boolean
 	 */
 	checkFieldsNotEmpty: function() {
@@ -152,7 +152,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Handle login request, evoked from oncomplete of login form submission
-	 * 
+	 *
 	 *	@param	Object	response
 	 */
 	onLoginRequested: function(response){
@@ -161,7 +161,7 @@ Todoyu.Ext.loginpage = {
 		if( status.success ) {
 			this.displayLoginSuccess();
 			location.href = status.redirect;
-			//console.log(status.redirect);
+			//Todoyu.log(status.redirect);
 		} else {
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
@@ -200,7 +200,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 *	Log out
 	 */
-	logout: function() {		
+	logout: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
 			'parameters': {
@@ -216,7 +216,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Handle logging out: clears all params and reloads loginpage
-	 * 
+	 *
 	 *	@param	Object	response
 	 */
 	onLoggedOut: function(response) {
