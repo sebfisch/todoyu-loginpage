@@ -50,7 +50,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		TodoyuPage::addExtAssets('loginpage');
 
-		$loginStatus		= $params['status'];
+		$loginStatus	= $params['status'];
 
 
 			// Render elements
@@ -122,7 +122,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Build JSON response
 			$response	= array(
 				'success'	=> false,
-				'message'	=> 'Login failed'
+				'message'	=> Label('loginpage.form.status.loginFailed')
 			);
 
 				// Wait at failed login

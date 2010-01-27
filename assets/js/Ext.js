@@ -135,12 +135,12 @@ Todoyu.Ext.loginpage = {
 	 */
 	checkFieldsNotEmpty: function() {
 		if( $F(this.fieldUsername) === '' ) {
-			alert('[LLL:Please enter your username]');
+			alert('[LLL:loginpage.error.enterUsername]');
 			$(this.fieldUsername).focus();
 			return false;
 		}
 		if( $F(this.fieldPassword) === '' ) {
-			alert('[LLL:Please enter your password]');
+			alert('[LLL:loginpage.error.enterPassword]');
 			$(this.fieldPassword).focus();
 			return false;
 		}
@@ -174,7 +174,7 @@ Todoyu.Ext.loginpage = {
 	 * Display status message when verifying received login data
 	 */
 	displayVerifying: function() {
-		$(this.elStatus).update('Verifying username/password').insert({'top':'<img src="core/assets/img/ajax-loader.gif">'});
+		$(this.elStatus).update('[LLL:loginpage.form.status.verifyingLoginData]').insert({'top':'<img src="core/assets/img/ajax-loader.gif">'});
 	},
 
 
@@ -183,7 +183,7 @@ Todoyu.Ext.loginpage = {
 	 * Display status message of successful login
 	 */
 	displayLoginSuccess: function() {
-		$(this.elStatus).update('Login ok');
+		$(this.elStatus).update('[LLL:loginpage.form.status.loginOk]');
 	},
 
 
