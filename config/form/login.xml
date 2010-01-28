@@ -4,6 +4,7 @@
 		<attribute name="action">?ext=loginpage</attribute>
 		<attribute name="name">login</attribute>
 		<attribute name="class">formLogin</attribute>
+		<attribute name="onsubmit">return false</attribute>
 	</attributes>
 	<fieldsets>
 
