@@ -47,11 +47,38 @@ form.formLogin .fElement input.checkbox {
 	width:100%;
 }
 
+form.formLogin .notification {
+	background-color:#f8f9e3 !important;
+	width:656px !important;
+	padding:4px 0 6px 0;
+	text-align:center;
+	border:1px dotted #D3DABB !important;
+}
+	form.formLogin .notification.success {
+		background-color:#c5e8c5 !important;
+		border-color:#008000;
+	}
+		form.formLogin .notification.success .icon {
+			padding:0 0 2px 28px;
+			background:url(../../../../core/assets/img/sprite-notify.png) no-repeat 4px 0;
+		}
+	form.formLogin .notification.failure {
+		background-color:#f6e0e0 !important;
+		border-color:#d1a4a4;
+	}
+		form.formLogin .notification.failure .icon {
+			padding:0 0 2px 28px;
+			background:url(../../../../core/assets/img/sprite-notify.png) no-repeat 4px -48px;
+		}
+
+
+/*
 form.formLogin .loginError {
 	padding:10px 20px;
 	border:1px solid #0065a6;
 	color:#ff0000;
 }
+*/
 
 form.formLogin fieldset {
 	padding:0;

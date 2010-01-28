@@ -174,7 +174,12 @@ Todoyu.Ext.loginpage = {
 	 * Display status message when verifying received login data
 	 */
 	displayVerifying: function() {
-		$(this.elStatus).update('[LLL:loginpage.form.status.verifyingLoginData]').insert({'top':'<img src="core/assets/img/ajax-loader.gif">'});
+		$(this.elStatus).update(
+			'&nbsp; [LLL:loginpage.form.status.verifyingLoginData]'
+		).insert({
+			'top':	'<img src="core/assets/img/ajax-loader.gif"/>'
+		});
+		$(this.elStatus).addClassName('notification')
 	},
 
 
@@ -183,7 +188,13 @@ Todoyu.Ext.loginpage = {
 	 * Display status message of successful login
 	 */
 	displayLoginSuccess: function() {
-		$(this.elStatus).update('[LLL:loginpage.form.status.loginOk]');
+		$(this.elStatus).update(
+			'[LLL:loginpage.form.status.loginOk]'
+		).insert({
+			'top':	'<img class="icon" />'
+		});
+		$(this.elStatus).removeClassName('failure');
+		$(this.elStatus).addClassName('success');
 	},
 
 
@@ -192,7 +203,12 @@ Todoyu.Ext.loginpage = {
 	 * Display status message of login error
 	 */
 	displayLoginError: function(message) {
-		$(this.elStatus).update(message);
+		$(this.elStatus).update(
+			message
+		).insert({
+			'top':	'<img class="icon" />'
+		});
+		$(this.elStatus).addClassName('failure');
 	},
 
 
