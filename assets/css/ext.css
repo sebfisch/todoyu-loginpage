@@ -93,7 +93,7 @@ form.formLogin fieldset.buttons,
 form.formLogin fieldset.buttons div.odd,
 form.formLogin fieldset.buttons div.even,
 form.formLogin fieldset.buttons button span.rgt {
-	background-color:#d3dabb;
+	background-color:#d3dabb !important;
 }
 
 	form.formLogin fieldset.buttons button.buttonLogin {
