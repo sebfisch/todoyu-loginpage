@@ -34,6 +34,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return	String
 	 */
 	public function defaultAction(array $params) {
+//		TodoyuDebug::printHtml($params);
+//		TodoyuDebug::printHtml($_REQUEST);
+//		die("DEFAULT");
 
 			// Redirect to default view if already logged in
 		if( TodoyuAuth::isLoggedIn() ) {
@@ -130,9 +133,18 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			sleep($secondsToWait);
 		}
 
-		TodoyuHeader::sendHeaderJSON();
+			// If ajax request, send json. If normal request, redirect to lo
+		if( TodoyuRequest::isAjaxRequest() ) {
+			TodoyuHeader::sendHeaderJSON();
 
-		return json_encode($response);
+			return json_encode($response);
+		} else {
+			if( $response['success'] ) {
+				TodoyuHeader::location(TODOYU_URL, true);
+			} else {
+				TodoyuHeader::redirect('loginpage', 'ext');
+			}
+		}
 	}
 
 }

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
 	<attributes>
-		<attribute name="action">?ext=loginpage</attribute>
+		<attribute name="action">?ext=loginpage&amp;controller=ext&amp;action=login</attribute>
 		<attribute name="name">login</attribute>
 		<attribute name="class">formLogin</attribute>
 		<attribute name="onsubmit">return false</attribute>
 	</attributes>
+	<hiddenFields>
+		<field name="passhash" />
+	</hiddenFields>
 	<fieldsets>
 
 		<fieldset name="message">

@@ -44,11 +44,12 @@ Todoyu.Ext.loginpage = {
 	 */
 	init: function() {
 		this.observeForm();
+		this.observePasswordField();
 		this.focusField();
 	},
-
-
-
+	
+	
+	
 	/**
 	 * Focus username input if empty, otherwise: focus password input
 	 */
@@ -67,6 +68,27 @@ Todoyu.Ext.loginpage = {
 	 */
 	observeForm: function() {
 		$('login-form').observe('submit', this.onFormSubmit.bind(this));
+	},
+	
+	
+	
+	/**
+	 * Observe the password field for changes
+	 */
+	observePasswordField: function() {
+		$('login-field-password').observe('keyup', this.onPasswordEnter.bind(this));
+		$('login-field-password').observe('change', this.onPasswordEnter.bind(this));
+	},
+	
+	
+	
+	/**
+	 * When passwordfield changes, generate hashed password, if form is submitted normaly (no ajax)
+	 * 
+	 * @param	Event		event
+	 */
+	onPasswordEnter: function(event) {
+		$('login-field-passhash').value = this.getHashedPassword();
 	},
 
 
