@@ -199,7 +199,7 @@ Todoyu.Ext.loginpage = {
 		$(this.elStatus).update(
 			'&nbsp; [LLL:loginpage.form.status.verifyingLoginData]'
 		).insert({
-			'top':	'<img src="core/assets/img/ajax-loader.gif"/>'
+			'top':	'<img src="core/assets/img/ajax-loader.png"/>'
 		});
 		$(this.elStatus).addClassName('notification')
 	},
