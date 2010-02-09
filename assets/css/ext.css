@@ -16,6 +16,10 @@ body.todoyu-loginpage button span.rgt {
 	background-color:#d3dabb !important;
 }
 
+h1.headerLine {
+	margin:32px 0 0 0;
+}
+
 span#password-forget {
 	line-height:23px;
 	padding-right:10px;

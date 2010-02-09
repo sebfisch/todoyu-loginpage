@@ -30,4 +30,37 @@ $CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
 $CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
+
+
+$CONFIG['EXT']['loginpage']['tabs']	= array(
+	array(
+		'position'	=> 10,
+		'key'		=> 'login',
+		'label'		=> 'LLL:loginpage.tab.login',
+		'href'		=> '?ext=loginpage&controller=ext',
+	),
+	array(
+		'position'	=> 20,
+		'key'		=> 'help',
+		'label'		=> 'LLL:loginpage.tab.help',
+		'href'		=> 'http://developer.todoyu.com',
+		'target'	=> '_blank'
+	),
+	array(
+		'position'	=> 30,
+		'key'		=> 'blog',
+		'label'		=> 'LLL:loginpage.tab.blog',
+		'href'		=> 'http://blog.snowflake.ch/de/blog-post/2009/01/31/todoyu-gewinnt-osbf-award/',
+		'target'	=> '_blank'
+	),
+	array(
+		'position'	=> 100,
+		'key'		=> 'bugs',
+		'label'		=> 'LLL:loginpage.tab.bugs',
+		'href'		=> 'http://bugs.todoyu.com/',
+		'target'	=> '_blank'
+	),
+
+);
+
 ?>

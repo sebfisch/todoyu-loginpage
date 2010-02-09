@@ -34,17 +34,13 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return	String
 	 */
 	public function defaultAction(array $params) {
-//		TodoyuDebug::printHtml($params);
-//		TodoyuDebug::printHtml($_REQUEST);
-//		die("DEFAULT");
-
 			// Redirect to default view if already logged in
 		if( TodoyuAuth::isLoggedIn() ) {
 			TodoyuLoginpageManager::redirectToHome();
 		}
 
-			// Add loginscreen maintabs
-		TodoyuLoginpageManager::addLoginscreenMainTabs();
+			// Add login screen maintabs
+		TodoyuLoginpageManager::addLoginScreenMainTabs();
 			// Set default tab
 		TodoyuFrontend::setDefaultTab('login');
 
@@ -54,7 +50,6 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::addExtAssets('loginpage');
 
 		$loginStatus	= $params['status'];
-
 
 			// Render elements
 		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
@@ -108,6 +103,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				'ext'		=> $GLOBALS['CONFIG']['FE']['DEFAULT']['ext'],
 				'controller'=> $GLOBALS['CONFIG']['FE']['DEFAULT']['controller']
 			);
+
 			$response	= array(
 				'success'	=> true,
 				'redirect'	=> TodoyuDiv::buildUrl($params)
