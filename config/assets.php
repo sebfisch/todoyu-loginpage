@@ -70,16 +70,6 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 	),
 
 		// assets of panel widgets
-
-		// check library dependencies panel widget
-	'panelWidgetCheckLibs' => array(
-		'css' => array(
-			array(
-				'file' => 'ext/loginpage/assets/css/panelwidget-checklibs.css',
-				'position' => 110,
-			),
-		)
-	),
 	'panelWidgetLoginHints' => array(
 		'css' => array(
 			array(
