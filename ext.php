@@ -26,8 +26,6 @@
  * @subpackage	Loginpage
  */
 
-
-
 	// Declare ext ID, path
 define('EXTID_LOGINPAGE', 110);
 define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');

@@ -27,7 +27,7 @@
  */
 
 $CONFIG['EXT']['loginpage']['assets'] = array(
-		// default assets: loaded all over the installation always
+		// Default assets: loaded all over the installation always
 	'default' => array(
 		'js' => array(
 			array(
@@ -46,7 +46,7 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 	),
 
 
-		// public assets: basis assets for this extension
+		// Public assets: basis assets for this extension
 	'public' => array(
 		'js' => array(
 			array(
@@ -66,7 +66,7 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 		)
 	),
 
-		// assets of panel widgets
+		// Assets of panel widgets
 	'panelWidgetLoginHints' => array(
 		'css' => array(
 			array(
