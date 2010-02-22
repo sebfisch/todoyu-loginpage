@@ -92,11 +92,11 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 			// Check if login is valid
 		if( TodoyuAuth::isValidLogin($username, $passhash) ) {
-				// Find user-ID by username
-			$idUser = TodoyuPersonManager::getPersonIDByUsername($username);
+				// Find person-ID by username
+			$idPerson = TodoyuPersonManager::getPersonIDByUsername($username);
 
-				// Login user
-			TodoyuAuth::login($idUser);
+				// Login person
+			TodoyuAuth::login($idPerson);
 
 				// Build JSON response
 			$params	= array(
@@ -111,7 +111,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 				// Set remain login cookie
 			if( $remain ) {
-				TodoyuCookieLogin::setRemainLoginCookie($idUser);
+				TodoyuCookieLogin::setRemainLoginCookie($idPerson);
 			}
 
 		} else {
