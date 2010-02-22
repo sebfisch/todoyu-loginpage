@@ -25,18 +25,18 @@
 
 
 $CONFIG['EXT']['loginpage']['info'] = array(
-	'title'				=> 'todoyu login page',
-	'description' 		=> 'todoyu login page',
-	'author' 			=> array(
+	'title'			=> 'todoyu login page',
+	'description' 	=> 'todoyu login page',
+	'author' 		=> array(
 		'name'		=> 'Todoyu Core Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'Snowflake Productions, Zürich'
 	),
-	'state' 			=> 'beta',
-	'version' => '0.1.0',
+	'state' 		=> 'beta',
+	'version' 		=> '0.2.0',
 	'constraints' => array(
 		'depends' => array(
-			'user'			=> '0.1.0',
+			'contact'	=> '0.2.0',
 		),
 		'conflicts' => array(
 
