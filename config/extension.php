@@ -59,8 +59,13 @@ $CONFIG['EXT']['loginpage']['tabs']	= array(
 		'label'		=> 'LLL:loginpage.tab.bugs',
 		'href'		=> 'http://bugs.todoyu.com/',
 		'target'	=> '_blank'
-	),
-
+	)
 );
+
+
+$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
+	'url'	=> 'ext/loginpage/dev/news.html?v=' . TODOYU_VERSION
+);
+
 
 ?>

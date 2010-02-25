@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------
+	Check library dependencies panel widget
+   ------------------------------------------------------------ */
+
+#panelwidget-loginnews #news-live {
+	
+}
+
+#panelwidget-loginnews #news-local {
+	background-color:#ffff00;
+}
+
+#panelwidget-loginnews #loginnews-iframe {
+	width:250px;
+	border:0px;
+	overflow:hidden;
+}

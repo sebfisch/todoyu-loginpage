@@ -32,7 +32,6 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 		'js' => array(
 			array(
 				'file'		=> 'ext/loginpage/assets/js/Ext.js',
-				'media'		=> 'all',
 				'position'	=> 100
 			)
 		),
@@ -68,14 +67,30 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 
 		// Assets of panel widgets
 	'panelWidgetLoginHints' => array(
+
 		'css' => array(
 			array(
 				'file' => 'ext/loginpage/assets/css/panelwidget-loginhints.css',
 				'position' => 115,
-			),
+			)
 		)
 	),
 
+		// Assets of panel widgets
+	'panelwidget-loginnews' => array(
+		'js' => array(
+			array(
+				'file'		=> 'ext/loginpage/assets/js/PanelWidgetLoginNews.js',
+				'position'	=> 120
+			)
+		),
+		'css' => array(
+			array(
+				'file' 		=> 'ext/loginpage/assets/css/panelwidget-loginnews.css',
+				'position' 	=> 115,
+			)
+		)
+	)
 
 );
 

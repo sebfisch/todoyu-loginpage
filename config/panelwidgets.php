@@ -26,10 +26,11 @@
 $loginHintsConfig	= array(
 	'message'	=> 'todoyu beta version is developed and tested on Firefox and Internet Explorer v 8.0<br/><br/><img src="ext/loginpage/assets/img/firefox.png" />We recommend using the Firefox browser for testing the current todoyu version!'
 );
+
 TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginHints', 20, $loginHintsConfig );
 
-
-
 TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginPage', 30);
+
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginNews', 10, $CONFIG['EXT']['loginpage']['panelWidgetLiveNews']);
 
 ?>
