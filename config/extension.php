@@ -32,6 +32,7 @@ $CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
 
 
+	// Configure menu tabs
 $CONFIG['EXT']['loginpage']['tabs']	= array(
 	array(
 		'position'	=> 10,
@@ -52,20 +53,13 @@ $CONFIG['EXT']['loginpage']['tabs']	= array(
 		'label'		=> 'LLL:loginpage.tab.blog',
 		'href'		=> 'http://blog.snowflake.ch/de/blog-post/2009/01/31/todoyu-gewinnt-osbf-award/',
 		'target'	=> '_blank'
-	),
-	array(
-		'position'	=> 100,
-		'key'		=> 'bugs',
-		'label'		=> 'LLL:loginpage.tab.bugs',
-		'href'		=> 'http://bugs.todoyu.com/',
-		'target'	=> '_blank'
 	)
 );
+
 
 
 $CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
 	'url'	=> 'ext/loginpage/dev/news.html?v=' . TODOYU_VERSION
 );
-
 
 ?>

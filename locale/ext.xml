@@ -6,7 +6,6 @@
 		<label index="tab.login">Login</label>
 		<label index="tab.help">Help</label>
 		<label index="tab.blog">Blog</label>
-		<label index="tab.bugs">Bugtracker</label>
 		<label index="loginbox.title">Login to todoyu</label>
 		<label index="form.field.username">Username</label>
 		<label index="form.field.password">Password</label>
@@ -27,7 +26,6 @@
 		<label index="tab.login">Anmeldung</label>
 		<label index="tab.help">Hilfe</label>
 		<label index="tab.blog">Blog</label>
-		<label index="tab.bugs">Bugtracker</label>
 		<label index="loginbox.title">Bei todoyu anmelden</label>
 		<label index="form.field.username">Benutzer</label>
 		<label index="form.field.password">Passwort</label>
