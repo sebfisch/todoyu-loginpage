@@ -51,7 +51,7 @@ $CONFIG['EXT']['loginpage']['tabs']	= array(
 		'position'	=> 30,
 		'key'		=> 'blog',
 		'label'		=> 'LLL:loginpage.tab.blog',
-		'href'		=> 'http://blog.snowflake.ch/de/blog-post/2009/01/31/todoyu-gewinnt-osbf-award/',
+		'href'		=> 'http://blog.snowflake.ch/de/blog-category/todoyu/',
 		'target'	=> '_blank'
 	)
 );
