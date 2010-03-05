@@ -1,6 +1,11 @@
-<div id="news-live" style="display:none">
-	<iframe id="loginnews-iframe" src="{$url}"></iframe>
-</div>
+{if file_exists($filecheck)}
+	<div id="news-live" style="display:none">
+		<iframe src="{$file}" id="loginnews-iframe" >
+			
+		</iframe>
+	</div>
+{/if}
+
 <div id="news-local">
 	<p>Das sind die lokalen News. Wenn die Seite gelanden wird, sollte man diesen Text nicht sehen</p>
 </div>

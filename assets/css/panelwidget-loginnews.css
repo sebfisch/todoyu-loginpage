@@ -2,8 +2,11 @@
 	Check library dependencies panel widget
    ------------------------------------------------------------ */
 
-#panelwidget-loginnews #news-live {
-	
+div #panelwidget-loginnews h1 span.title {
+	background:url('../img/panelwidget-loginnews.png') no-repeat 4px -28px !important;
+	width:258px;
+	margin:0 !important;
+	padding:0 0 12px 24px;
 }
 
 #panelwidget-loginnews #news-local {
@@ -11,7 +14,7 @@
 }
 
 #panelwidget-loginnews #loginnews-iframe {
-	width:250px;
+	width:256px;
 	border:0px;
 	overflow:hidden;
 }

@@ -14,15 +14,10 @@ Todoyu.Ext.loginpage.PanelWidget.LoginNews = {
 		
 		live.hide();
 		
-//		Effect.SlideUp('news-local', {
-//			'duration': 0.3
-//		});
 		$('news-local').hide();
 		Effect.SlideDown('news-live', {
 			'duration': 0.3
 		});
-		
-		//alert("newsLoaded");
 	}
 	
 };

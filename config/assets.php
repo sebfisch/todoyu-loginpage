@@ -66,17 +66,6 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 	),
 
 		// Assets of panel widgets
-	'panelWidgetLoginHints' => array(
-
-		'css' => array(
-			array(
-				'file' => 'ext/loginpage/assets/css/panelwidget-loginhints.css',
-				'position' => 115,
-			)
-		)
-	),
-
-		// Assets of panel widgets
 	'panelwidget-loginnews' => array(
 		'js' => array(
 			array(

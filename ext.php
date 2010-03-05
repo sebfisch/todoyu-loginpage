@@ -33,7 +33,6 @@ define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
 	// Register module locales
 TodoyuLanguage::register('loginpage', PATH_EXT_LOGINPAGE . '/locale/ext.xml');
 TodoyuLanguage::register('panelwidget-loginpage', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginpage.xml');
-TodoyuLanguage::register('panelwidget-loginhints', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginhints.xml');
 TodoyuLanguage::register('panelwidget-loginnews', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginnews.xml');
 
 	// Request configurations

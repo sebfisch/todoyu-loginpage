@@ -59,7 +59,7 @@ $CONFIG['EXT']['loginpage']['tabs']	= array(
 
 
 $CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
-	'url'	=> 'ext/loginpage/dev/news.html?v=' . TODOYU_VERSION
+	'url'	=> 'http://www.todoyu.com/?154&type=101'
 );
 
 ?>
