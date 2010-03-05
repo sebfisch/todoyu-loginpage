@@ -60,9 +60,9 @@ class TodoyuPanelWidgetLoginNewsManager {
 			return false;
 		}
 		
-		curl_setopt($ch, CURLOPT_URL, $CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
+		curl_setopt($curl, CURLOPT_URL, $CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 		
-		$content = curl_exec();
+		$content = curl_exec($curl);
 		
 		curl_close($curl);
 		
