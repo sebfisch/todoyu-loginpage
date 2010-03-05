@@ -91,6 +91,8 @@ class TodoyuPanelWidgetLoginNewsManager {
 	protected static function writeCacheFile($content)	{
 		$file = PATH_CACHE.'/output/loginnews.html';
 		
+		TodoyuFileManager::makeDirDeep(PATH_CACHE.'/output');
+		
 		if(!file_exists($file)) file_put_contents($file, $content);
 		
 		if(! md5(file_get_contents($file)) == md5($content))	{
