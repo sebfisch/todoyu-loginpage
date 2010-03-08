@@ -120,7 +120,7 @@ Todoyu.Ext.loginpage = {
 					'remain':	this.isRemainLoginChecked()
 				},
 				'onComplete':	this.onLoginRequested.bind(this)
-			}
+			};
 
 			Todoyu.send(url, options);
 		}
@@ -201,7 +201,8 @@ Todoyu.Ext.loginpage = {
 		).insert({
 			'top':	'<img src="core/assets/img/ajax-loader.png"/>'
 		});
-		$(this.elStatus).addClassName('notification')
+		
+		$(this.elStatus).addClassName('notification');
 	},
 
 
