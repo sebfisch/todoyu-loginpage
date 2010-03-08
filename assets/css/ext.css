@@ -100,8 +100,12 @@ form.formLogin fieldset.buttons button span.rgt {
 	background-color:#d3dabb !important;
 }
 
+	form.formLogin fieldset.buttons .fieldnameSubmit {
+		float:left;
+	}
+
 	form.formLogin fieldset.buttons button.buttonLogin {
-		margin-left:370px;
+		margin-left:300px;
 	}
 	button.buttonLogin span.icon {
 		background:url('../img/icons.png') no-repeat 0px -64px;
