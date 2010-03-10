@@ -76,10 +76,26 @@ $CONFIG['EXT']['loginpage']['assets'] = array(
 		'css' => array(
 			array(
 				'file' 		=> 'ext/loginpage/assets/css/panelwidget-loginnews.css',
-				'position' 	=> 115,
+				'position' 	=> 120,
 			)
 		)
-	)
+	),
+
+		// Assets of panel widgets
+	'headlet-logout' => array(
+		'js' => array(
+			array(
+				'file'		=> 'ext/loginpage/assets/js/HeadletLogout.js',
+				'position'	=> 120
+			)
+		),
+		'css' => array(
+			array(
+				'file' 		=> 'ext/loginpage/assets/css/headlet-logout.css',
+				'position' 	=> 120,
+			)
+		)
+	),
 
 );
 

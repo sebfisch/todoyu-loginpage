@@ -20,35 +20,23 @@
 ***************************************************************/
 
 /**
- * Logout headlet
- * Logout button
+ * Logout headlet with logout button
  *
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuHeadletLogout extends TodoyuHeadlet {
+class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
 
 	/**
 	 * Initialize headlet
 	 *
 	 */
 	protected function init() {
-		$this->setTemplate('ext/loginpage/view/headlet-logout.tmpl');
+			// Set javascript object which handles events
+		$this->setJsHeadlet('Todoyu.Ext.loginpage.Headlet.Logout');
 
+			// Add assets
 		TodoyuPage::addExtAssets('loginpage', 'headlet-logout');
-	}
-
-
-
-	/**
-	 * Render headlet
-	 *
-	 * @return unknown
-	 */
-	public function render() {
-
-
-		return parent::render();
 	}
 
 }

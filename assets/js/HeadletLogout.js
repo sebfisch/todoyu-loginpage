@@ -21,13 +21,8 @@
 Todoyu.Ext.loginpage.Headlet.Logout = {
 
 	ext: Todoyu.Ext.loginpage,
-
-
-
-	/**
-	 *	Evoke log out
-	 */
-	logout: function() {
+	
+	onButtonClick: function(event) {
 		this.ext.logout();
 	}
 
