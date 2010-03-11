@@ -10,14 +10,14 @@
 		<label index="form.field.username">Username</label>
 		<label index="form.field.password">Password</label>
 		<label index="form.field.submit">Login</label>
-		<label index="form.remainLogin">Remember me on this computer</label>
+		<label index="form.remainLogin">Remember Me On This Computer</label>
 		<label index="form.loginFailed">The username or password is not correct. Please try again.</label>
-		<label index="form.status.enterLoginData">Enter username and password</label>
-		<label index="form.status.verifyingLoginData">Verifying username/password</label>
-		<label index="form.status.loginOk">Login ok</label>
-		<label index="form.status.loginFailed">Login failed</label>
-		<label index="error.enterUsername">Please enter your username</label>
-		<label index="error.enterPassword">Please enter your password</label>
+		<label index="form.status.enterLoginData">Enter Username And Password</label>
+		<label index="form.status.verifyingLoginData">Verifying Username And Password</label>
+		<label index="form.status.loginOk">Login Ok</label>
+		<label index="form.status.loginFailed">Login Failed</label>
+		<label index="error.enterUsername">Please Enter Your username</label>
+		<label index="error.enterPassword">Please Enter Your password</label>
 		<label index="submenu.logout">Logout</label>
 	</labels>
 	<labels lang="de">
