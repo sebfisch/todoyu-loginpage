@@ -39,6 +39,17 @@ class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
 		TodoyuPage::addExtAssets('loginpage', 'headlet-logout');
 	}
 
+
+
+	/**
+	 * Get headlet label
+	 *
+	 * @return	String
+	 */
+	public function getLabel() {
+		return 'Abmelden';
+	}
+
 }
 
 ?>
