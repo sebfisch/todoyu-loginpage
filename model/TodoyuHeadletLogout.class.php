@@ -34,9 +34,6 @@ class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
 	protected function init() {
 			// Set javascript object which handles events
 		$this->setJsHeadlet('Todoyu.Ext.loginpage.Headlet.Logout');
-
-			// Add assets
-		TodoyuPage::addExtAssets('loginpage', 'headlet-logout');
 	}
 
 

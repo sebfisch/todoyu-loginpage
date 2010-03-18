@@ -27,76 +27,47 @@
  */
 
 $CONFIG['EXT']['loginpage']['assets'] = array(
-		// Default assets: loaded all over the installation always
-	'default' => array(
-		'js' => array(
-			array(
-				'file'		=> 'ext/loginpage/assets/js/Ext.js',
-				'position'	=> 100
-			)
+	'js' => array(
+		array(
+			'file'		=> 'ext/loginpage/assets/js/Ext.js',
+			'position'	=> 100
 		),
-		'css' => array(
-			array(
-				'file'		=> 'ext/loginpage/assets/css/global.css',
-				'media'		=> 'all',
-				'position'	=> 100
-			)
+		array(
+			'file'		=> 'lib/js/md5.js',
+			'position'	=> 30,
+			'merge'		=> true,
+			'localize'	=> false,
+			'compress'	=> true
+		),
+		array(
+			'file'		=> 'ext/loginpage/assets/js/PanelWidgetLoginNews.js',
+			'position'	=> 120
+		),
+		array(
+			'file'		=> 'ext/loginpage/assets/js/HeadletLogout.js',
+			'position'	=> 120
 		)
 	),
-
-
-		// Public assets: basis assets for this extension
-	'public' => array(
-		'js' => array(
-			array(
-				'file'		=> 'lib/js/md5.js',
-				'position'	=> 30,
-				'merge'		=> true,
-				'localize'	=> false,
-				'compress'	=> true
-			)
+	'css' => array(
+		array(
+			'file'		=> 'ext/loginpage/assets/css/global.css',
+			'media'		=> 'all',
+			'position'	=> 100
 		),
-		'css' => array(
-			array(
-				'file'		=> 'ext/loginpage/assets/css/ext.css',
-				'media'		=> 'all',
-				'position'	=> 100
-			)
-		)
-	),
-
-		// Assets of panel widgets
-	'panelwidget-loginnews' => array(
-		'js' => array(
-			array(
-				'file'		=> 'ext/loginpage/assets/js/PanelWidgetLoginNews.js',
-				'position'	=> 120
-			)
+		array(
+			'file'		=> 'ext/loginpage/assets/css/ext.css',
+			'media'		=> 'all',
+			'position'	=> 100
 		),
-		'css' => array(
-			array(
-				'file' 		=> 'ext/loginpage/assets/css/panelwidget-loginnews.css',
-				'position' 	=> 120,
-			)
-		)
-	),
-
-		// Assets of panel widgets
-	'headlet-logout' => array(
-		'js' => array(
-			array(
-				'file'		=> 'ext/loginpage/assets/js/HeadletLogout.js',
-				'position'	=> 120
-			)
+		array(
+			'file' 		=> 'ext/loginpage/assets/css/panelwidget-loginnews.css',
+			'position' 	=> 120,
 		),
-		'css' => array(
-			array(
-				'file' 		=> 'ext/loginpage/assets/css/headlet-logout.css',
-				'position' 	=> 120,
-			)
+		array(
+			'file' 		=> 'ext/loginpage/assets/css/headlet-logout.css',
+			'position' 	=> 120,
 		)
-	),
-
+	)
 );
 
 ?>

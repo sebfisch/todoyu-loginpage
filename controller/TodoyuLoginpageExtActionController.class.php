@@ -47,8 +47,6 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::init('ext/loginpage/view/ext.tmpl');
 		TodoyuPage::setTitle('LLL:loginpage.page.title');
 
-		TodoyuPage::addExtAssets('loginpage');
-
 		$loginStatus	= $params['status'];
 
 			// Render elements

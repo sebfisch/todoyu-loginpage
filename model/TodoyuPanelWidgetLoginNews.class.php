@@ -46,8 +46,6 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 			$params,								// widget params
 			$idArea									// area ID
 		);
-
-		TodoyuPage::addExtAssets('loginpage', 'panelwidget-loginnews');
 	}
 
 
@@ -59,19 +57,19 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 	 */
 	public function renderContent() {
 		$tmpl	= 'ext/loginpage/view/panelwidget-loginnews.tmpl';
-		
+
 		TodoyuPanelWidgetLoginNewsManager::makeNewsFile();
-		
+
 		$data	= array(
 			'file'	=> SERVER_URL.PATH_WEB.'/cache/output/loginnews.html',
 			'filecheck'	=> PATH_CACHE.'/output/loginnews.html'
 		);
-		
+
 		$content = render($tmpl, $data);
-		
+
 		$this->setContent($content);
-		
-		
+
+
 		return $content;
 	}
 
