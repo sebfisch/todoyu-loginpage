@@ -118,6 +118,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Set remain login cookie
 			if( $remain ) {
 				TodoyuCookieLogin::setRemainLoginCookie($idPerson);
+				TodoyuLoginpageManager::setRemainLoginFlagCookie();
+			} else {
+				TodoyuLoginpageManager::removeRemainLoginFlagCookie();
 			}
 
 		} else {

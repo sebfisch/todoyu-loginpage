@@ -38,6 +38,37 @@ class TodoyuLoginpageManager {
 	}
 
 
+	/**
+	 * Set a cookie to keep the remain login box checked
+	 *
+	 */
+	public static function setRemainLoginFlagCookie() {
+		setcookie('checkRemainLogin', 1, NOW + TodoyuTime::SECONDS_WEEK, PATH_WEB, null, false, true);
+	}
+
+
+
+	/**
+	 * Remove the cookie which keeps the remain login box checked
+	 *
+	 */
+	public static function removeRemainLoginFlagCookie() {
+		TodoyuDebug::printInFirebug('xxx');
+		setcookie('checkRemainLogin', 55, 1234, PATH_WEB, null, false, true);
+	}
+
+
+
+	/**
+	 * Check if user has the cookie to keep the remain login box checked
+	 *
+	 * @return	Bool
+	 */
+	public static function hasRemainLoginFlagCookie() {
+		return intval($_COOKIE['checkRemainLogin']) === 1;
+	}
+
+
 
 	/**
 	 * Redirect to default view

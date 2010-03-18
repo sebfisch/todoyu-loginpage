@@ -28,21 +28,6 @@
 class TodoyuLoginpageRenderer {
 
 	/**
-	 * Render loginpage headlet (logout button)
-	 *
-	 * @return	String
-	 */
-	public static function renderHeadlet() {
-		$tmpl	= 'ext/loginpage/view/headlet.tmpl';
-		$data	= array(
-			'id'	=> 'loginpage'
-		);
-
-		return render($tmpl, $data);
-	}
-
-
-	/**
 	 * Render loginpage panel widgets
 	 *
 	 * @return	String
@@ -72,6 +57,11 @@ class TodoyuLoginpageRenderer {
 				'class'		=> 'error'
 			);
 			$field	= $form->getFieldset('message')->addFieldElement('info', 'comment', $config);
+		}
+
+			// Check remain login checkbox if last time was checked
+		if( TodoyuLoginpageManager::hasRemainLoginFlagCookie() ) {
+			$form->getField('loginremain')->setChecked();
 		}
 
 		return $form->render();

@@ -20,7 +20,7 @@ body.todoyu-loginpage button span.rgt {
 	background-color:#d3dabb !important;
 }
 
-h1.headerLine {
+#todoyu-loginpage #content h1.headerLine {
 	margin:32px 0 0 0;
 }
 
