@@ -79,6 +79,11 @@ form.formLogin .notification {
 			background:url(../../../../core/assets/img/notify.png) no-repeat 4px -48px;
 		}
 
+	form.formLogin .notification span.icon {
+		float: none;
+		clear: both;
+		display: inline;
+	}	
 
 /*
 form.formLogin .loginError {
