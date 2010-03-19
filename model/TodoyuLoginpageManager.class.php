@@ -53,8 +53,7 @@ class TodoyuLoginpageManager {
 	 *
 	 */
 	public static function removeRemainLoginFlagCookie() {
-		TodoyuDebug::printInFirebug('xxx');
-		setcookie('checkRemainLogin', 55, 1234, PATH_WEB, null, false, true);
+		setcookie('checkRemainLogin', 0, 1000, PATH_WEB, null, false, true);
 	}
 
 
