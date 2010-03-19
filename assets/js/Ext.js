@@ -21,7 +21,6 @@
 /**
  * Ext: loginpage
  */
-
 Todoyu.Ext.loginpage = {
 
 	PanelWidget: {},
@@ -100,6 +99,8 @@ Todoyu.Ext.loginpage = {
 		event.stop();
 
 		this.submitForm();
+		
+		return false;
 	},
 
 

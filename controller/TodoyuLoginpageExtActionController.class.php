@@ -59,7 +59,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::set('extendedContent', $extendedContent);
 		TodoyuPage::set('todoyuInfo', $todoyuInfo);
 
-		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)', 100);
+//		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)', 100);
 
 		return TodoyuPage::render();
 	}
@@ -91,6 +91,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Merge login data with params
 			$params		= array_merge($params, $loginData);
 		}
+
 
 		$username	= trim(strtolower($params['username']));
 		$passhash	= trim(strtolower($params['passhash']));
