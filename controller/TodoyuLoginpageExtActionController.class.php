@@ -99,6 +99,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 			// Check if login is valid
 		if( TodoyuAuth::isValidLogin($username, $passhash) ) {
+			TodoyuDebug::printLastQueryInFirebug();
+
 				// Find person-ID by username
 			$idPerson = TodoyuPersonManager::getPersonIDByUsername($username);
 
