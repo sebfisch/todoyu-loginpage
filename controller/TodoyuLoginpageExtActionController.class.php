@@ -92,15 +92,12 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			$params		= array_merge($params, $loginData);
 		}
 
-
 		$username	= trim(strtolower($params['username']));
 		$passhash	= trim(strtolower($params['passhash']));
 		$remain		= trim(strtolower($params['remain'])) === 'true';
 
 			// Check if login is valid
 		if( TodoyuAuth::isValidLogin($username, $passhash) ) {
-			TodoyuDebug::printLastQueryInFirebug();
-
 				// Find person-ID by username
 			$idPerson = TodoyuPersonManager::getPersonIDByUsername($username);
 
