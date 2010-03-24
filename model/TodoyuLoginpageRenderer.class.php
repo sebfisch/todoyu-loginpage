@@ -77,7 +77,7 @@ class TodoyuLoginpageRenderer {
 	public static function renderExtendedContent() {
 		$content	= '';
 
-		$funcRefs	= $GLOBALS['CONFIG']['EXT']['loginpage']['extendedContentHooks'];
+		$funcRefs	= Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'];
 
 		if (is_array($funcRefs)) {
 			foreach($funcRefs as $funcRef) {

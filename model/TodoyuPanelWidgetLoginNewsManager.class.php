@@ -60,7 +60,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 			return false;
 		}
 		
-		curl_setopt($curl, CURLOPT_URL, $GLOBALS['CONFIG']['EXT']['loginpage']['panelWidgetLiveNews']['url']);
+		curl_setopt($curl, CURLOPT_URL, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		
 		$content = curl_exec($curl);
@@ -78,7 +78,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * @return String
 	 */
 	protected static function makeFileGetContentRequest()	{
-		return @file_get_contents($GLOBALS['CONFIG']['EXT']['loginpage']['panelWidgetLiveNews']['url']);
+		return @file_get_contents(Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 	}
 	
 	

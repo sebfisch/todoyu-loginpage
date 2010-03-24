@@ -32,7 +32,7 @@ class TodoyuLoginpageManager {
 	 */
 	public static function addLoginScreenMainTabs() {
 			// Add menu entries
-		foreach($GLOBALS['CONFIG']['EXT']['loginpage']['tabs'] as $tab) {
+		foreach(Todoyu::$CONFIG['EXT']['loginpage']['tabs'] as $tab) {
 			TodoyuFrontend::addMenuEntry($tab['key'], $tab['label'], $tab['href'], $tab['position'], $tab['target']);
 		}
 	}

@@ -25,6 +25,6 @@
 
 TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginPage', 30);
 
-TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginNews', 10, $CONFIG['EXT']['loginpage']['panelWidgetLiveNews']);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginNews', 10, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']);
 
 ?>

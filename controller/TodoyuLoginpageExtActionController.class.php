@@ -106,8 +106,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 				// Build JSON response
 			$params	= array(
-				'ext'		=> $GLOBALS['CONFIG']['FE']['DEFAULT']['ext'],
-				'controller'=> $GLOBALS['CONFIG']['FE']['DEFAULT']['controller']
+				'ext'		=> Todoyu::$CONFIG['FE']['DEFAULT']['ext'],
+				'controller'=> Todoyu::$CONFIG['FE']['DEFAULT']['controller']
 			);
 
 			$response	= array(
@@ -134,7 +134,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			);
 
 				// Wait at failed login
-			$secondsToWait = intval($GLOBALS['CONFIG']['EXT']['loginpage']['waitAtFailLogin']);
+			$secondsToWait = intval(Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin']);
 			sleep($secondsToWait);
 		}
 

@@ -26,7 +26,7 @@
  * @subpackage	Loginpage
  */
 
-$CONFIG['EXT']['loginpage']['assets'] = array(
+Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 	'js' => array(
 		array(
 			'file'		=> 'ext/loginpage/assets/js/Ext.js',

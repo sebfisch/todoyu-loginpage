@@ -19,21 +19,21 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
+Todoyu::$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
 
-$CONFIG['AUTH']['login'] = array(
+Todoyu::$CONFIG['AUTH']['login'] = array(
 	'ext'		=> 'loginpage',
 	'controller'=> 'ext'
 );
 
-$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
+Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
-$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
+Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
 
 
 	// Configure menu tabs
-$CONFIG['EXT']['loginpage']['tabs']	= array(
+Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 	array(
 		'position'	=> 10,
 		'key'		=> 'login',
@@ -58,7 +58,7 @@ $CONFIG['EXT']['loginpage']['tabs']	= array(
 
 
 
-$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
+Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
 	'url'	=> 'http://www.todoyu.com/?154&type=101'
 );
 
