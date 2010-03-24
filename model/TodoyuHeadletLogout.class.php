@@ -44,7 +44,7 @@ class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
 	 * @return	String
 	 */
 	public function getLabel() {
-		return 'Abmelden';
+		return Label('loginpage.headlet.label');
 	}
 
 }

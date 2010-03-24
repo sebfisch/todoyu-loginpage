@@ -18,7 +18,7 @@
 		<label index="form.status.loginFailed">Login Failed</label>
 		<label index="error.enterUsername">Please Enter Your username</label>
 		<label index="error.enterPassword">Please Enter Your password</label>
-		<label index="submenu.logout">Logout</label>
+		<label index="headlet.label">Logout</label>
 	</labels>
 	<labels lang="de">
 		<label index="ext.title">Anmelde-Seite</label>
@@ -38,6 +38,6 @@
 		<label index="form.status.loginFailed">Login fehlgeschlagen</label>
 		<label index="error.enterUsername">Bitte Ihren Benutzernamen angeben</label>
 		<label index="error.enterPassword">Bitte Ihr Passwort angeben</label>
-		<label index="submenu.logout">Abmelden</label>
+		<label index="headlet.label">Abmelden</label>
 	</labels>
 </locallang>
