@@ -38,10 +38,12 @@ class TodoyuPanelWidgetLoginNewsManager {
 	public static function makeNewsFile()	{
 		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false)	{
 			self::writeCacheFile($content);
+			return;
 		}
 		
 		if(($content = self::makeFileGetContentRequest()) !== false)	{
 			self::writeCacheFile($content);
+			return;
 		}
 	}
 	
@@ -94,7 +96,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 		
 		if(!file_exists($file)) file_put_contents($file, $content);
 		
-		if(! md5(file_get_contents($file)) == md5($content))	{
+		if(! (md5(file_get_contents($file)) == md5($content)))	{
 			file_put_contents($file, $content);
 		}
 	}
