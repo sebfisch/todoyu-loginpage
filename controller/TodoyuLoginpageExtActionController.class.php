@@ -112,7 +112,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 			$response	= array(
 				'success'	=> true,
-				'redirect'	=> TodoyuDiv::buildUrl($params)
+				'redirect'	=> TodoyuString::buildUrl($params)
 			);
 
 				// Set remain login cookie

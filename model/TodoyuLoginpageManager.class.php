@@ -74,7 +74,7 @@ class TodoyuLoginpageManager {
 	 *
 	 */
 	public static function redirectToHome() {
-		$url	= TodoyuDiv::buildUrl(array(), '', true);
+		$url	= TodoyuString::buildUrl(array(), '', true);
 
 		TodoyuHeader::location($url);
 	}
