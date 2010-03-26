@@ -80,9 +80,9 @@ form.formLogin .notification {
 		}
 
 	form.formLogin .notification span.icon {
-		float: none;
-		clear: both;
-		display: inline;
+		float:none;
+		clear:both;
+		display:inline;
 	}	
 
 /*
