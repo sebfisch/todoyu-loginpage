@@ -14,6 +14,6 @@ div #panelwidget-loginnews h1 span.title {
 
 #panelwidget-loginnews #loginnews-iframe {
 	width:256px;
-	border:0px;
+	border:0;
 	overflow:hidden;
 }
