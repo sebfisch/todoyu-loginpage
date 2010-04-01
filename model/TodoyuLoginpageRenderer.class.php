@@ -78,7 +78,7 @@ class TodoyuLoginpageRenderer {
 
 		$funcRefs	= Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'];
 
-		if (is_array($funcRefs)) {
+		if ( is_array($funcRefs) ) {
 			foreach($funcRefs as $funcRef) {
 				if(TodoyuFunction::isFunctionReference($funcRef))	{
 					list($obj, $method) = explode('::', $funcRef);
