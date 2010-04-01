@@ -214,7 +214,7 @@ Todoyu.Ext.loginpage = {
 		$(this.elStatus).update(
 			'[LLL:loginpage.form.status.loginOk]'
 		).insert({
-			'top':	'<span class="icon" />'
+			'top':	'<span class="icon"></span>'
 		});
 		$(this.elStatus).removeClassName('failure');
 		$(this.elStatus).addClassName('success');
@@ -229,7 +229,7 @@ Todoyu.Ext.loginpage = {
 		$(this.elStatus).update(
 			message
 		).insert({
-			'top':	'<span class="icon" />'
+			'top':	'<span class="icon"></span>'
 		});
 		$(this.elStatus).addClassName('failure');
 	},
