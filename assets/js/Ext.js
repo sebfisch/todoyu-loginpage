@@ -81,7 +81,7 @@ Todoyu.Ext.loginpage = {
 	
 	
 	/**
-	 * When passwordfield changes, generate hashed password, if form is submitted normaly (no ajax)
+	 * When password field input changes, generate hashed password, if form is submitted normally (no AJAX)
 	 * 
 	 * @param	Event		event
 	 */

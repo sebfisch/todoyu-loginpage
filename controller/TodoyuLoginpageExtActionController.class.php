@@ -58,7 +58,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::set('extendedContent', $extendedContent);
 		TodoyuPage::set('todoyuInfo', $todoyuInfo);
 
-//		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)', 100);
+		//		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)', 100);
 
 		return TodoyuPage::render();
 	}
@@ -83,7 +83,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return	String
 	 */
 	public function loginAction($params) {
-			// If login form not submitted by ajax, form vars are wrapped in login namespace
+			// If login form not submitted by AJAX, form vars are wrapped in login namespace
 		if( ! TodoyuRequest::isAjaxRequest() ) {
 				// Get login data from login namespace
 			$loginData	= $params['login'];
@@ -132,12 +132,12 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				'message'	=> Label('loginpage.form.status.loginFailed')
 			);
 
-				// Wait at failed login
+				// Wait at failed log-in
 			$secondsToWait = intval(Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin']);
 			sleep($secondsToWait);
 		}
 
-			// If ajax request, send json. If normal request, redirect to lo
+			// If AJAX request, send json. If normal request, redirect to lo
 		if( TodoyuRequest::isAjaxRequest() ) {
 			TodoyuHeader::sendHeaderJSON();
 
