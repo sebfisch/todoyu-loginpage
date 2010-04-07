@@ -41,9 +41,11 @@ Todoyu.Ext.loginpage = {
 	 * Init loginpage ext javaScript
 	 */
 	init: function() {
-		this.observeForm();
-		this.observePasswordField();
-		this.focusField();
+		if( Todoyu.getArea() === 'loginpage' ) {
+			this.observeForm();
+			this.observePasswordField();
+			this.focusField();
+		}
 	},
 	
 	
