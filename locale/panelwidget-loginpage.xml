@@ -5,5 +5,8 @@
 	</labels>
 	<labels lang="de">
 		<label index="title">todoyu 2.0</label>
-	</labels>	
+	</labels>
+	<labels lang="pt">
+		<label index="title">todoyu 2.0</label>
+	</labels>
 </locallang>

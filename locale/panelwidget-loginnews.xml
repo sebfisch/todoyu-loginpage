@@ -6,4 +6,7 @@
 	<labels lang="de">
 		<label index="title">todoyu News</label>
 	</labels>
+	<labels lang="pt">
+		<label index="title">todoyu News</label>
+	</labels>
 </locallang>
