@@ -145,11 +145,16 @@ form.formLogin fieldset.buttons button span.rgt {
  	Todoyu Panelwidget Slogan
    ---------------------------- */
 
+#todoyu-loginpage .panelwidgetContent {
+	position: relative;
+}
+
 #todoyu-loginpage p.slogan {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	padding: 10px;
+	bottom: 0;
+	right: 0;
+	height: 34px;
+	padding: 12px 10px;
 	text-transform: uppercase;
 	color: white;
 	font-size: 13px;
