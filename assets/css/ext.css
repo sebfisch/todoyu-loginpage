@@ -134,11 +134,25 @@ form.formLogin fieldset.buttons button span.rgt {
 	padding:15px;
 }
 
-
-
 /* ----------------------------
  	Loginpage tabs
    ---------------------------- */
 #navi-main-list li.itemBugs {
 	float:right;
+}
+
+/* ----------------------------
+ 	Todoyu Panelwidget Slogan
+   ---------------------------- */
+
+#todoyu-loginpage p.slogan {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
 }
