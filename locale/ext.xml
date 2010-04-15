@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
-	<labels lang="en">
+	<labels lang="en_GB">
 		<label index="ext.title">Loginpage</label>
 		<label index="page.title">Login</label>
 		<label index="tab.login">Login</label>
@@ -20,7 +20,7 @@
 		<label index="error.enterPassword">Please Enter Your password</label>
 		<label index="headlet.label">Logout</label>
 	</labels>
-	<labels lang="de">
+	<labels lang="de_DE">
 		<label index="ext.title">Anmelde-Seite</label>
 		<label index="page.title">Anmeldung</label>
 		<label index="tab.login">Anmeldung</label>
@@ -40,7 +40,7 @@
 		<label index="error.enterPassword">Bitte Ihr Passwort angeben</label>
 		<label index="headlet.label">Abmelden</label>
 	</labels>
-	<labels lang="pt">
+	<labels lang="pt_BR">
 		<label index="ext.title">Login</label>
 		<label index="page.title">Login</label>
 		<label index="tab.login">Login</label>
