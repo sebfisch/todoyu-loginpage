@@ -35,7 +35,7 @@ TodoyuLanguage::register('panelwidget-loginpage', PATH_EXT_LOGINPAGE . '/locale/
 TodoyuLanguage::register('panelwidget-loginnews', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginnews.xml');
 
 	// Request configurations
+	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
 require_once( PATH_EXT_LOGINPAGE . '/config/extension.php' );
-require_once( PATH_EXT_LOGINPAGE . '/config/panelwidgets.php' );
 
 ?>
