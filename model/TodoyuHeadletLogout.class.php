@@ -28,7 +28,6 @@ class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
 
 	/**
 	 * Initialize headlet
-	 *
 	 */
 	protected function init() {
 			// Set javaScript object which handles events

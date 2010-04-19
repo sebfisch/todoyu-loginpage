@@ -85,7 +85,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * When password field input changes, generate hashed password, if form is submitted normally (no AJAX)
 	 * 
-	 * @param	Event		event
+	 * @param	{Event}		event
 	 */
 	onPasswordEnter: function(event) {
 		$('login-field-passhash').value = this.getHashedPassword();
@@ -133,7 +133,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Get MD5 hash of entered password
 	 *
-	 *	@return	String
+	 * @return	String
 	 */
 	getHashedPassword: function() {
 		return hex_md5($F(this.fieldPassword));
@@ -144,7 +144,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Check whether field 'remember me on this computer' is checked
 	 *
-	 *	@return	Boolean
+	 * @return	{Boolean}
 	 */
 	isRemainLoginChecked: function() {
 		return $(this.fieldRemain).checked === true;
@@ -155,7 +155,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Check whether all (required) fields of the login form are filled (username, password), if not filled: focus empty field
 	 *
-	 *	@return	Boolean
+	 * @return	{Boolean}
 	 */
 	checkFieldsNotEmpty: function() {
 		if( $F(this.fieldUsername) === '' ) {
@@ -177,7 +177,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle login request, evoked from oncomplete of login form submission
 	 *
-	 *	@param	Object	response
+	 * @param	{Object}	response
 	 */
 	onLoginRequested: function(response){
 		var status	= response.responseJSON;
@@ -239,7 +239,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 *	Log out
+	 * Log out
 	 */
 	logout: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -258,7 +258,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle logging out: clears all params and reloads loginpage
 	 *
-	 *	@param	Object	response
+	 * @param	{Object}	response
 	 */
 	onLoggedOut: function(response) {
 			// Remove all parameters from url and reload
