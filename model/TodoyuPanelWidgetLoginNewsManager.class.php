@@ -32,8 +32,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * Creates a File with news from todoyu.com
 	 * 
 	 * first try over curl 
-	 * second try over file get contents
-	 * 
+	 * second try over file get contents 
 	 */
 	public static function makeNewsFile()	{
 		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false)	{
