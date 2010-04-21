@@ -56,7 +56,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	protected static function makeCurlRequest()	{
 		$curl = curl_init();
 		
-		if(!$curl)	{
+		if( ! $curl ) {
 			return false;
 		}
 		
@@ -93,9 +93,11 @@ class TodoyuPanelWidgetLoginNewsManager {
 		
 		TodoyuFileManager::makeDirDeep(PATH_CACHE.'/output');
 		
-		if(!file_exists($file)) file_put_contents($file, $content);
-		
-		if(! (md5(file_get_contents($file)) == md5($content)))	{
+		if( ! file_exists($file) ) {
+			file_put_contents($file, $content);
+		}
+
+		if( ! (md5(file_get_contents($file)) == md5($content)) )	{
 			file_put_contents($file, $content);
 		}
 	}

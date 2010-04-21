@@ -57,9 +57,9 @@ class TodoyuLoginpageManager {
 
 
 	/**
-	 * Check if user has the cookie to keep the remain login box checked
+	 * Check whether user has the cookie to keep the remain login box checked
 	 *
-	 * @return	Bool
+	 * @return	Boolean
 	 */
 	public static function hasRemainLoginFlagCookie() {
 		return intval($_COOKIE['checkRemainLogin']) === 1;

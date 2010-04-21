@@ -22,7 +22,6 @@
  * Various loginpage extension info data
  */
 
-
 Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 	'title'			=> 'todoyu Login Page',
 	'description' 	=> 'todoyu Login Page',
