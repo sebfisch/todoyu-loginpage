@@ -42,7 +42,7 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 			'loginnews',							// panel widget ID
 			'LLL:panelwidget-loginnews.title',		// widget title text
 			$config,								// widget config array
-			$params,								// widget params
+			$params,								// widget parameters
 			$idArea									// area ID
 		);
 	}

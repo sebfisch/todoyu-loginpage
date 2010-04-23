@@ -42,7 +42,7 @@ class TodoyuPanelWidgetLoginPage extends TodoyuPanelWidget implements TodoyuPane
 			'loginpage',							// panel widget ID
 			'LLL:panelwidget-loginpage.title',		// widget title text
 			$config,								// widget config array
-			$params,								// widget params
+			$params,								// widget parameters
 			$idArea									// area ID
 		);
 

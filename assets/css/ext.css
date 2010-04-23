@@ -52,7 +52,7 @@ form.formLogin .fElement input {
 }
 
 form.formLogin .fElement input.checkbox {
-	padding: 0;
+	padding:0;
 }
 
 form.formLogin .notification {
@@ -146,18 +146,18 @@ form.formLogin fieldset.buttons button span.rgt {
    ---------------------------- */
 
 #todoyu-loginpage .panelwidgetContent {
-	position: relative;
+	position:relative;
 }
 
 #todoyu-loginpage p.slogan {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	height: 34px;
-	padding: 12px 10px;
-	text-transform: uppercase;
-	color: white;
-	font-size: 13px;
-	font-weight: bold;
-	text-align: right;
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:34px;
+	padding:12px 10px;
+	text-transform:uppercase;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	text-align:right;
 }

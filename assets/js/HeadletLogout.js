@@ -19,8 +19,20 @@
 
 Todoyu.Ext.loginpage.Headlet.Logout = {
 
+	/**
+	 * Extension backlink
+	 *
+	 * @var	{Object}	ext
+	 */
 	ext: Todoyu.Ext.loginpage,
-	
+
+
+
+	/**
+	 * @todo    comment
+	 *
+	 * @param   {Event}  event
+	 */
 	onButtonClick: function(event) {
 		this.ext.logout();
 	}
