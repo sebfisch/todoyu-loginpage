@@ -27,14 +27,19 @@
 class TodoyuLoginpageRenderer {
 
 	/**
+	 * Extension key
+	 */
+	const EXTKEY = 'loginpage';
+
+
+
+	/**
 	 * Render loginpage panel widgets
 	 *
 	 * @return	String
 	 */
 	public static function renderPanelWidgets() {
-		$params	= array();
-
-		return TodoyuPanelWidgetRenderer::renderPanelWidgets('loginpage', $params);
+		return TodoyuPanelWidgetRenderer::renderPanelWidgets(SELF::EXTKEY);
 	}
 
 
