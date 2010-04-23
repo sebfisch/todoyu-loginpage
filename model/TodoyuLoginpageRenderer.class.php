@@ -39,7 +39,7 @@ class TodoyuLoginpageRenderer {
 	 * @return	String
 	 */
 	public static function renderPanelWidgets() {
-		return TodoyuPanelWidgetRenderer::renderPanelWidgets(SELF::EXTKEY);
+		return TodoyuPanelWidgetRenderer::renderPanelWidgets(self::EXTKEY);
 	}
 
 
