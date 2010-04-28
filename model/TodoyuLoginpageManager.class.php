@@ -27,7 +27,7 @@
 class TodoyuLoginpageManager {
 
 	/**
-	 * Add tabs to loginscreen
+	 * Add tabs to login-screen
 	 */
 	public static function addLoginScreenMainTabs() {
 			// Add menu entries

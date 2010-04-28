@@ -34,7 +34,7 @@ class TodoyuLoginpageRenderer {
 
 
 	/**
-	 * Render loginpage panel widgets
+	 * Render login-page panel widgets
 	 *
 	 * @return	String
 	 */

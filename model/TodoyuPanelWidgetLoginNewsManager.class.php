@@ -105,11 +105,12 @@ class TodoyuPanelWidgetLoginNewsManager {
 	
 	
 	/**
-	 * checks if curl is installed
+	 * Check whether Curl is installed
 	 * 
 	 * @return	Boolean
 	 */
 	protected static function checkForCurl()	{
 		return in_array('curl', get_loaded_extensions());
 	}
+
 }

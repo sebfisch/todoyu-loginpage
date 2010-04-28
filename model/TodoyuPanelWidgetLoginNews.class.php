@@ -36,7 +36,7 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 	 */
 	public function __construct(array $config, array $params = array(), $idArea = 0) {
 
-			// construct PanelWidget (init basic configuration)
+			// Construct panelWidget (init basic configuration)
 		parent::__construct(
 			'loginpage',							// ext key
 			'loginnews',							// panel widget ID
@@ -75,7 +75,7 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 
 
 	/**
-	 * Render panelwidget including its content
+	 * Render panelWidget including its content
 	 *
 	 * @return	String
 	 */
