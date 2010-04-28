@@ -124,7 +124,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		} else {
 				// Log failed login
-			Todoyu::log('Login failed', LOG_LEVEL_NOTICE, array('username' => $username, 'passhash' => $passhash));
+			Todoyu::log('Login failed', TodoyuLogger::LEVEL_NOTICE, array('username' => $username, 'passhash' => $passhash));
 
 				// Build JSON response
 			$response	= array(
