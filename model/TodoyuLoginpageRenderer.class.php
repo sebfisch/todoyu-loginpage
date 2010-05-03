@@ -27,7 +27,7 @@
 class TodoyuLoginpageRenderer {
 
 	/**
-	 * Extension key
+	 * @var string		Extension key
 	 */
 	const EXTKEY = 'loginpage';
 
