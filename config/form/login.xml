@@ -23,7 +23,7 @@
 			<elements>
 
 				<field type="comment" name="status">
-					<default>LLL:loginpage.form.status.enterLoginData</default>
+					<comment>LLL:loginpage.form.status.enterLoginData</comment>
 				</field>
 
 				<field type="textinput" name="username">
