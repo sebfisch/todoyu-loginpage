@@ -9,7 +9,8 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-local {
-	background-color:#ffff00;
+	background-color:#FBFFCF;
+    min-height:200px;
 }
 
 #panelwidget-loginnews #loginnews-iframe {
