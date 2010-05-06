@@ -57,7 +57,8 @@ form.formLogin .fElement input.checkbox {
 
 form.formLogin .notification {
 	background-color:#f8f9e3 !important;
-	width:656px !important;
+	width:650px !important;
+	margin-right: 5px;
 	padding:4px 0 6px 0;
 	text-align:center;
 	border:1px dotted #D3DABB !important;
