@@ -14,7 +14,7 @@
 		<label index="form.loginFailed">The username or password is not correct. Please try again.</label>
 		<label index="form.status.enterLoginData">Enter username and password</label>
 		<label index="form.status.verifyingLoginData">Verifying username and password</label>
-		<label index="form.status.loginOk">Login Ok</label>
+		<label index="form.status.loginOk">Login OK</label>
 		<label index="form.status.loginFailed">Login Failed</label>
 		<label index="error.enterUsername">Please enter your username</label>
 		<label index="error.enterPassword">Please enter your password</label>
