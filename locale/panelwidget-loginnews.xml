@@ -9,4 +9,7 @@
 	<labels lang="pt_BR">
 		<label index="title">todoyu News</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="title">Новости todoyu</label>
+	</labels>
 </locallang>

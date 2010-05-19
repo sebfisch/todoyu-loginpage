@@ -9,4 +9,7 @@
 	<labels lang="pt_BR">
 		<label index="title">todoyu 2.0</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="title">todoyu 2.0</label>
+	</labels>
 </locallang>
