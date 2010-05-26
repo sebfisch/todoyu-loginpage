@@ -58,7 +58,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::set('extendedContent', $extendedContent);
 		TodoyuPage::set('todoyuInfo', $todoyuInfo);
 
-		//		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.loginpage.init.bind(Todoyu.Ext.loginpage)', 100);
+			// Prevent robots to index the login page
+		TodoyuPage::addMetatag('robots', 'noindex');
 
 		return TodoyuPage::render();
 	}
