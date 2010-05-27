@@ -42,6 +42,7 @@ Todoyu.Ext.loginpage = {
 	 */
 	init: function() {
 		if( Todoyu.getArea() === 'loginpage' ) {
+
 			this.observeForm();
 			this.observePasswordField();
 			this.focusField();
@@ -225,7 +226,7 @@ Todoyu.Ext.loginpage = {
 	 */
 	displayLoginError: function(message) {
 		$(this.elStatus).update(
-			<span class="icon"></span> + message
+			'<span class="icon"></span>' + message
 		);
 		
 		$(this.elStatus).addClassName('failure');
