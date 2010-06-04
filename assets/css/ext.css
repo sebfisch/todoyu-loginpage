@@ -57,11 +57,10 @@ form.formLogin .fElement input.checkbox {
 
 form.formLogin .notification {
 	background-color:#f8f9e3 !important;
-	width:650px !important;
 	margin-right: 5px;
-	padding:4px 0 6px 0;
 	text-align:center;
 	border:1px dotted #D3DABB !important;
+	width:640px !important;
 }
 	form.formLogin .notification.success {
 		background-color:#c5e8c5 !important;
@@ -121,6 +120,13 @@ form.formLogin fieldset.buttons button span.rgt {
 		background:url('../img/icons.png') no-repeat 0 -64px;
 	}
 
+#formElement-login-field-status-inputbox {
+	/*height:25px;*/
+	padding:5px;
+	margin:0 5px;
+	border:1px solid #EDF1E0;
+}
+
 
 
 /* ----------------------------
@@ -135,12 +141,6 @@ form.formLogin fieldset.buttons button span.rgt {
 	padding:15px;
 }
 
-/* ----------------------------
- 	Loginpage tabs
-   ---------------------------- */
-#navi-main-list li.itemBugs {
-	float:right;
-}
 
 /* ----------------------------
  	Todoyu Panelwidget Slogan

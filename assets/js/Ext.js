@@ -112,7 +112,8 @@ Todoyu.Ext.loginpage = {
 	 */
 	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
-			this.displayVerifying();
+			this.onLoginRequest();
+
 
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
@@ -122,7 +123,7 @@ Todoyu.Ext.loginpage = {
 					'passhash':	this.getHashedPassword(),
 					'remain':	this.isRemainLoginChecked()
 				},
-				'onComplete':	this.onLoginRequested.bind(this)
+				'onComplete':	this.onLoginResponse.bind(this)
 			};
 
 			Todoyu.send(url, options);
@@ -175,23 +176,57 @@ Todoyu.Ext.loginpage = {
 
 
 
+	onLoginRequest: function() {
+		this.toggleLoginFields(false);
+
+		this.displayVerifying();
+	},
+
+
+	toggleLoginFields: function(active) {
+		var opacity, func;
+
+		if( active ) {
+			opacity	= 1.0;
+			func	= 'enable';
+		} else {
+			opacity	= 0.3;
+			func	= 'disable';
+		}
+		
+		$(this.fieldUsername)[func]();
+		$(this.fieldPassword)[func]();
+		$(this.fieldUsername).up('div').setOpacity(opacity);
+		$(this.fieldPassword).up('div').setOpacity(opacity);
+		$('formElement-login-field-loginremain').setOpacity(opacity);
+		$('login-field-submit').setOpacity(opacity);
+	},
+
+
+
+
 	/**
 	 * Handle login request, evoked from oncomplete of login form submission
 	 *
 	 * @param	{Object}	response
 	 */
-	onLoginRequested: function(response){
+	onLoginResponse: function(response){
 		var status	= response.responseJSON;
 
 		if( status.success ) {
 			this.displayLoginSuccess();
-			location.href = status.redirect;
-			//Todoyu.log(status.redirect);
+			//setTimeout('location.href = \'' + status.redirect + '\'', 1000);
+			//location.href = status.redirect;
+			location.reload();
+//			Todoyu.log(status.redirect);
 		} else {
+			this.toggleLoginFields(true);
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
 		}
 	},
+
+	
 
 
 
@@ -200,7 +235,7 @@ Todoyu.Ext.loginpage = {
 	 */
 	displayVerifying: function() {
 		$(this.elStatus).update(
-			'<img src="core/assets/img/ajax-loader.png" /> &nbsp; [LLL:loginpage.form.status.verifyingLoginData]'
+			'<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]'
 		);
 		
 		$(this.elStatus).addClassName('notification');
@@ -217,6 +252,8 @@ Todoyu.Ext.loginpage = {
 		);
 		$(this.elStatus).removeClassName('failure');
 		$(this.elStatus).addClassName('success');
+
+		//
 	},
 
 
@@ -230,6 +267,8 @@ Todoyu.Ext.loginpage = {
 		);
 		
 		$(this.elStatus).addClassName('failure');
+
+		//
 	},
 
 
@@ -254,7 +293,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle logging out: clears all params and reloads loginpage
 	 *
-	 * @param	{Object}	response
+	 * @param	{Ajax.Response}		response
 	 */
 	onLoggedOut: function(response) {
 			// Remove all parameters from url and reload
