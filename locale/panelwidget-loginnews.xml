@@ -15,4 +15,7 @@
 	<labels lang="nl_NL">
 		<label index="title">todoyu nieuws</label>
 	</labels>
+	<labels lang="cs_CZ">
+		<label index="title">Novinky todoyu</label>
+	</labels>
 </locallang>
