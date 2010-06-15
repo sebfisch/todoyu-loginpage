@@ -120,4 +120,24 @@
 		<label index="error.enterPassword">Vložte vaše heslo</label>
 		<label index="headlet.label">Odhlásit</label>
 	</labels>
+	<labels lang="ja_JP">
+		<label index="ext.title">ログインページ</label>
+		<label index="page.title">ログイン</label>
+		<label index="tab.login">ログイン</label>
+		<label index="tab.help">ヘルプ</label>
+		<label index="tab.blog">ブログ</label>
+		<label index="loginbox.title">ようこそ! todyu へログインしてください</label>
+		<label index="form.field.username">ユーザ名</label>
+		<label index="form.field.password">パスワード</label>
+		<label index="form.field.submit">ログイン</label>
+		<label index="form.remainLogin">ログイン状態を保持する</label>
+		<label index="form.loginFailed">ユーザ名かパスワードが正しくありません。もう一度試してください。</label>
+		<label index="form.status.enterLoginData">ユーザ名とパスワードの入力</label>
+		<label index="form.status.verifyingLoginData">ユーザ名とパスワードの確認</label>
+		<label index="form.status.loginOk">ログイン成功</label>
+		<label index="form.status.loginFailed">ログイン失敗</label>
+		<label index="error.enterUsername">ユーザ名を入力してください</label>
+		<label index="error.enterPassword">パスワードを入力してください</label>
+		<label index="headlet.label">ログアウト</label>
+	</labels>
 </locallang>
