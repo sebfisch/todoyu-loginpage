@@ -60,7 +60,7 @@ class TodoyuLoginpageRenderer {
 				'default'	=> 'LLL:loginpage.form.loginFailed',
 				'class'		=> 'error'
 			);
-			$field	= $form->getFieldset('message')->addFieldElement('info', 'comment', $config);
+			$form->getFieldset('message')->addFieldElement('info', 'comment', $config);
 		}
 
 			// Check remain login checkbox if last time was checked
