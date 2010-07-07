@@ -26,7 +26,7 @@
 					<comment>LLL:loginpage.form.status.enterLoginData</comment>
 				</field>
 
-				<field type="textinput" name="username">
+				<field type="text" name="username">
 					<label>loginpage.form.field.username</label>
 					<validate>
 						<isNotEmpty msg="Tell me your name!" />
@@ -34,7 +34,7 @@
 					<required />
 				</field>
 
-				<field type="textinput" name="password">
+				<field type="text" name="password">
 					<label>loginpage.form.field.password</label>
 					<type>password</type>
 					<required />
