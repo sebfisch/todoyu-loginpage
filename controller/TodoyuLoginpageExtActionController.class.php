@@ -104,6 +104,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Login person
 			TodoyuAuth::login($idPerson);
 
+				// Set locale cookie
+			TodoyuLocaleManager::setLocaleCookie();
+
 				// Build JSON response
 			$params	= array(
 				'ext'		=> Todoyu::$CONFIG['FE']['DEFAULT']['ext'],
