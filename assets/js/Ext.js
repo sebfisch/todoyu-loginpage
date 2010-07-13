@@ -26,7 +26,6 @@ Todoyu.Ext.loginpage = {
 
 	Headlet: {},
 
-
 	fieldUsername:	'login-field-username',
 
 	fieldPassword:	'login-field-password',
@@ -48,9 +47,9 @@ Todoyu.Ext.loginpage = {
 			this.focusField();
 		}
 	},
-	
-	
-	
+
+
+
 	/**
 	 * Focus username input if empty, otherwise: focus password input
 	 */
@@ -80,9 +79,9 @@ Todoyu.Ext.loginpage = {
 		$('login-field-password').observe('keyup', this.onPasswordEnter.bind(this));
 		$('login-field-password').observe('change', this.onPasswordEnter.bind(this));
 	},
-	
-	
-	
+
+
+
 	/**
 	 * When password field input changes, generate hashed password, if form is submitted normally (no AJAX)
 	 * 
@@ -113,7 +112,6 @@ Todoyu.Ext.loginpage = {
 	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
 			this.onLoginRequest();
-
 
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
@@ -176,13 +174,21 @@ Todoyu.Ext.loginpage = {
 
 
 
+	/**
+	 * Handle login request: disable login form fields, display verification progress message
+	 */
 	onLoginRequest: function() {
 		this.toggleLoginFields(false);
-
 		this.displayVerifying();
 	},
 
 
+
+	/**
+	 * Disable fields of login form
+	 * 
+	 * @param	{Boolean}	active
+	 */
 	toggleLoginFields: function(active) {
 		var opacity, func;
 
@@ -193,7 +199,7 @@ Todoyu.Ext.loginpage = {
 			opacity	= 0.3;
 			func	= 'disable';
 		}
-		
+
 		$(this.fieldUsername)[func]();
 		$(this.fieldPassword)[func]();
 		$(this.fieldUsername).up('div').setOpacity(opacity);
@@ -204,9 +210,8 @@ Todoyu.Ext.loginpage = {
 
 
 
-
 	/**
-	 * Handle login request, evoked from oncomplete of login form submission
+	 * Handle login request, evoked from onComplete of login form submission
 	 *
 	 * @param	{Object}	response
 	 */
@@ -215,8 +220,8 @@ Todoyu.Ext.loginpage = {
 
 		if( status.success ) {
 			this.displayLoginSuccess();
-			//setTimeout('location.href = \'' + status.redirect + '\'', 1000);
-			//location.href = status.redirect;
+//			setTimeout('location.href = \'' + status.redirect + '\'', 1000);
+//			location.href = status.redirect;
 			location.reload();
 //			Todoyu.log(status.redirect);
 		} else {
@@ -226,18 +231,13 @@ Todoyu.Ext.loginpage = {
 		}
 	},
 
-	
-
 
 
 	/**
 	 * Display status message when verifying received login data
 	 */
 	displayVerifying: function() {
-		$(this.elStatus).update(
-			'<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]'
-		);
-		
+		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]');	
 		$(this.elStatus).addClassName('notification');
 	},
 
@@ -247,28 +247,21 @@ Todoyu.Ext.loginpage = {
 	 * Display status message of successful login
 	 */
 	displayLoginSuccess: function() {
-		$(this.elStatus).update(
-			'<img src="core/assets/img/ajax-loader.png" /> &nbsp; <span class="icon"></span> &nbsp; [LLL:loginpage.form.status.loginOk]'
-		);
+		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.png" /> &nbsp; <span class="icon"></span> &nbsp; [LLL:loginpage.form.status.loginOk]');
 		$(this.elStatus).removeClassName('failure');
 		$(this.elStatus).addClassName('success');
-
-		//
 	},
 
 
 
 	/**
 	 * Display status message of login error
+	 *
+	 * @param	{String}	message
 	 */
 	displayLoginError: function(message) {
-		$(this.elStatus).update(
-			'<span class="icon"></span>' + message
-		);
-		
+		$(this.elStatus).update('<span class="icon"></span>' + message);
 		$(this.elStatus).addClassName('failure');
-
-		//
 	},
 
 
