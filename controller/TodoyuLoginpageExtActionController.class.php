@@ -93,11 +93,11 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		}
 
 		$username	= trim(strtolower($params['username']));
-		$passhash	= trim(strtolower($params['passhash']));
+		$passHash	= trim(strtolower($params['passhash']));
 		$remain		= trim(strtolower($params['remain'])) === 'true';
 
-			// Check if login is valid
-		if( TodoyuAuth::isValidLogin($username, $passhash) ) {
+			// Check whether login is valid
+		if( TodoyuAuth::isValidLogin($username, $passHash) ) {
 				// Find person-ID by username
 			$idPerson = TodoyuPersonManager::getPersonIDByUsername($username);
 
@@ -128,7 +128,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		} else {
 				// Log failed login
-			Todoyu::log('Login failed', TodoyuLogger::LEVEL_NOTICE, array('username' => $username, 'passhash' => $passhash));
+			Todoyu::log('Login failed', TodoyuLogger::LEVEL_NOTICE, array('username' => $username, 'passhash' => $passHash));
 
 				// Build JSON response
 			$response	= array(
