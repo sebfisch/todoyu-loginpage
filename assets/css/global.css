@@ -1,9 +1,0 @@
-/* --------------------------
-	Submenu
-   -------------------------- */
-
-#navi-main-list-todoyu li.itemLogout a {
-	background-image:url(../img/icons.png) !important;
-	background-repeat:no-repeat;
-	background-position:6px 5px;
-}
