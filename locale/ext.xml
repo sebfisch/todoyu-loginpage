@@ -120,6 +120,25 @@
 		<label index="error.enterPassword">Vložte vaše heslo</label>
 		<label index="headlet.label">Odhlásit</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="ext.title">Страница пријаве</label>
+		<label index="page.title">Пријава</label>
+		<label index="tab.login">Пријава</label>
+		<label index="tab.help">Помоћ</label>
+		<label index="tab.blog">Блог</label>
+		<label index="loginbox.title">Добро дошли! Пријавите се на todoyu</label>
+		<label index="form.field.username">Корисницко име</label>
+		<label index="form.field.password">Лозинка</label>
+		<label index="form.field.submit">Пријава</label>
+		<label index="form.remainLogin">Сачувај пријаву на овом рачунару</label>
+		<label index="form.loginFailed">Корисницко име или лозинка нису исправни. Молимо вас пријавите се поново.</label>
+		<label index="form.status.enterLoginData">Унеси корисничко име или лозинку</label>
+		<label index="form.status.verifyingLoginData">Провери корисничко име/лозинку</label>
+		<label index="form.status.loginOk">Пријава је успела. todoyu се припрема</label>
+		<label index="form.status.loginFailed">Пријава није успела</label>
+		<label index="error.enterUsername">Молимо вас уносите ваше корисничко име</label>
+		<label index="error.enterPassword">Молимо вас уносите вашу лозинку</label>
+		<label index="headlet.label">Одјава</label>
 	<labels lang="ja_JP">
 		<label index="ext.title">ログインページ</label>
 		<label index="page.title">ログイン</label>

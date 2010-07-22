@@ -18,6 +18,9 @@
 	<labels lang="cs_CZ">
 		<label index="title">Novinky todoyu</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="title">Новости todoyu</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="title">todoyu ニュース</label>
 	</labels>
