@@ -139,6 +139,7 @@
 		<label index="error.enterUsername">Молимо вас уносите ваше корисничко име</label>
 		<label index="error.enterPassword">Молимо вас уносите вашу лозинку</label>
 		<label index="headlet.label">Одјава</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="ext.title">ログインページ</label>
 		<label index="page.title">ログイン</label>
