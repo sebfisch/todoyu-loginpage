@@ -25,9 +25,9 @@
  * @subpackage	Loginpage
  */
 class TodoyuPanelWidgetLoginNewsManager {
-	
 
-	
+
+
 	/**
 	 * Creates a File with news from todoyu.com
 	 * 
@@ -39,15 +39,15 @@ class TodoyuPanelWidgetLoginNewsManager {
 			self::writeCacheFile($content);
 			return;
 		}
-		
+
 		if(($content = self::makeFileGetContentRequest()) !== false)	{
 			self::writeCacheFile($content);
 			return;
 		}
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Tries to get the file content over curl
 	 * 
@@ -55,23 +55,23 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 */
 	protected static function makeCurlRequest()	{
 		$curl = curl_init();
-		
+
 		if( ! $curl ) {
 			return false;
 		}
-		
+
 		curl_setopt($curl, CURLOPT_URL, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		
+
 		$content = curl_exec($curl);
-		
+
 		curl_close($curl);
-		
+
 		return $content;
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Tries to get the file content over file_get_contents
 	 * 
@@ -80,9 +80,9 @@ class TodoyuPanelWidgetLoginNewsManager {
 	protected static function makeFileGetContentRequest()	{
 		return @file_get_contents(Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Writes the content to a cache file
 	 * 
@@ -90,9 +90,9 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 */
 	protected static function writeCacheFile($content)	{
 		$file = PATH_CACHE.'/output/loginnews.html';
-		
+
 		TodoyuFileManager::makeDirDeep(PATH_CACHE.'/output');
-		
+
 		if( ! file_exists($file) ) {
 			file_put_contents($file, $content);
 		}
@@ -101,9 +101,9 @@ class TodoyuPanelWidgetLoginNewsManager {
 			file_put_contents($file, $content);
 		}
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Check whether Curl is installed
 	 * 

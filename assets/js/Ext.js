@@ -69,9 +69,9 @@ Todoyu.Ext.loginpage = {
 	observeForm: function() {
 		$('login-form').observe('submit', this.onFormSubmit.bind(this));
 	},
-	
-	
-	
+
+
+
 	/**
 	 * Observe the password field for changes
 	 */
@@ -100,7 +100,7 @@ Todoyu.Ext.loginpage = {
 		event.stop();
 
 		this.submitForm();
-		
+
 		return false;
 	},
 
@@ -237,7 +237,7 @@ Todoyu.Ext.loginpage = {
 	 * Display status message when verifying received login data
 	 */
 	displayVerifying: function() {
-		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]');	
+		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]');
 		$(this.elStatus).addClassName('notification');
 	},
 
