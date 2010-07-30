@@ -12,6 +12,9 @@
 	<labels lang="ru_RU">
 		<label index="title">Новости todoyu</label>
 	</labels>
+	<labels lang="fr_FR">
+		<label index="title">Actualités de todoyu</label>
+	</labels>
 	<labels lang="nl_NL">
 		<label index="title">todoyu nieuws</label>
 	</labels>
