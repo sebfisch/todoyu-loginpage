@@ -1,0 +1,2 @@
+Loginpage Extension - JavaScript Hooks
+======================================
