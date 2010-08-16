@@ -56,7 +56,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuPage::set('panelWidgets', $panelWidgets);
 		TodoyuPage::set('loginForm', $loginForm);
 		TodoyuPage::set('extendedContent', $extendedContent);
-		TodoyuPage::set('todoyuInfo', $todoyuInfo);
+//		TodoyuPage::set('todoyuInfo', $todoyuInfo);
+
+//		TodoyuPage::set('content', 'hallo');
 
 			// Prevent robots to index the login page
 		TodoyuPage::addMetatag('robots', 'noindex');
