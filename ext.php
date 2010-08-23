@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * Extension main file for daytracks extension
+ * Extension main file for loginpage extension
  *
  * @package		Todoyu
  * @subpackage	Loginpage
