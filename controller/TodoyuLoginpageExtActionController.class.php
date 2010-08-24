@@ -145,7 +145,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 			// If AJAX request, send json. If normal request, redirect to lo
 		if( TodoyuRequest::isAjaxRequest() ) {
-			TodoyuHeader::sendHeaderJSON();
+			TodoyuHeader::sendTypeJSON();
 
 			return json_encode($response);
 		} else {
