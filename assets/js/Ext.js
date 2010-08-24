@@ -84,7 +84,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * When password field input changes, generate hashed password, if form is submitted normally (no AJAX)
-	 * 
+	 *
 	 * @param	{Event}		event
 	 */
 	onPasswordEnter: function(event) {
@@ -186,7 +186,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Disable fields of login form
-	 * 
+	 *
 	 * @param	{Boolean}	active
 	 */
 	toggleLoginFields: function(active) {
@@ -220,10 +220,8 @@ Todoyu.Ext.loginpage = {
 
 		if( status.success ) {
 			this.displayLoginSuccess();
-//			setTimeout('location.href = \'' + status.redirect + '\'', 1000);
-//			location.href = status.redirect;
+//			console.log('reload');
 			location.reload();
-//			Todoyu.log(status.redirect);
 		} else {
 			this.toggleLoginFields(true);
 			this.displayLoginError(status.message);
