@@ -60,7 +60,7 @@ class TodoyuPanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPane
 		TodoyuPanelWidgetLoginNewsManager::makeNewsFile();
 
 		$data	= array(
-			'file'	=> SERVER_URL.PATH_WEB.'/cache/output/loginnews.html',
+			'file'	=> TODOYU_URL.'/cache/output/loginnews.html',
 			'filecheck'	=> PATH_CACHE.'/output/loginnews.html'
 		);
 
