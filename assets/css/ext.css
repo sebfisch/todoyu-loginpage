@@ -105,10 +105,12 @@ form.formLogin .notification {
 		form.formLogin .notification.failure .icon {
 			background:url(../../../../core/assets/img/notify.png) no-repeat 0 -47px;
 		}
-
 	form.formLogin .notification span.icon {
 		float:none;
 		clear:both;
+		display:inline;
+	}
+	form.formLogin .notification.failure span.icon {
 		display:inline-block;
 		width:16px;
 		height:16px;
