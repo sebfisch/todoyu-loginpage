@@ -95,22 +95,27 @@ form.formLogin .notification {
 		border-color:#008000;
 	}
 		form.formLogin .notification.success .icon {
-			padding:0 0 2px 28px;
-			background:url(../../../../core/assets/img/notify.png) no-repeat 4px 0;
+			padding:0 0 2px 20px;
+			background:url(../../../../core/assets/img/notify.png) no-repeat 4px -1px;
 		}
 	form.formLogin .notification.failure {
 		background-color:#f6e0e0 !important;
 		border-color:#d1a4a4;
 	}
 		form.formLogin .notification.failure .icon {
-			padding:0 0 2px 28px;
-			background:url(../../../../core/assets/img/notify.png) no-repeat 4px -48px;
+			background:url(../../../../core/assets/img/notify.png) no-repeat 0 -47px;
 		}
 
 	form.formLogin .notification span.icon {
 		float:none;
 		clear:both;
-		display:inline;
+		display:inline-block;
+		width:16px;
+		height:16px;
+		position:relative;
+		top:3px;
+		margin-right:5px;
+		margin-left: -20px;
 	}
 
 /*
