@@ -68,6 +68,9 @@ form.formLogin .fElement input {
 	line-height:16px;
 	padding:2px;
 }
+form.formLogin .typeText .fLabel {
+	padding-top: 5px;
+}
 
 form.formLogin .fElement input.checkbox {
 	padding:0;
@@ -76,6 +79,7 @@ form.formLogin .fElement input.checkbox {
 form.formLogin .notification {
 	background-color:#f8f9e3 !important;
 	margin-right: 5px;
+	padding: 5px 0;
 	text-align:center;
 	border:1px dotted #D3DABB !important;
 	width:640px !important;
@@ -84,6 +88,7 @@ form.formLogin .notification {
 	form.formLogin .notification img {
 		position: relative;
 		top: 3px;
+		margin-right: 5px;
 	}
 	form.formLogin .notification.success {
 		background-color:#c5e8c5 !important;
@@ -145,7 +150,6 @@ form.formLogin fieldset.buttons button span.rgt {
 
 #formElement-login-field-status-inputbox {
 	/*height:25px;*/
-	padding:5px 0;
 	border:1px solid #EDF1E0;
 }
 
