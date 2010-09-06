@@ -79,7 +79,12 @@ form.formLogin .notification {
 	text-align:center;
 	border:1px dotted #D3DABB !important;
 	width:640px !important;
+	height: 25px;
 }
+	form.formLogin .notification img {
+		position: relative;
+		top: 3px;
+	}
 	form.formLogin .notification.success {
 		background-color:#c5e8c5 !important;
 		border-color:#008000;
@@ -140,8 +145,7 @@ form.formLogin fieldset.buttons button span.rgt {
 
 #formElement-login-field-status-inputbox {
 	/*height:25px;*/
-	padding:5px;
-	margin:0 5px;
+	padding:5px 0;
 	border:1px solid #EDF1E0;
 }
 
