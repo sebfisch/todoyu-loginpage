@@ -95,6 +95,9 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * onSubmit event handler: stop event and evoke form submission
+	 *
+	 * @param	{Event}		event
+	 * @return	{Boolean}
 	 */
 	onFormSubmit: function(event) {
 		event.stop();
@@ -185,7 +188,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Disable fields of login form
+	 * Enable / disable fields of login form
 	 *
 	 * @param	{Boolean}	active
 	 */
@@ -265,7 +268,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Log out
+	 * Log out current person
 	 */
 	logout: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
