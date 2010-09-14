@@ -30,9 +30,9 @@ class TodoyuPanelWidgetLoginNewsManager {
 
 	/**
 	 * Creates a File with news from todoyu.com
-	 * 
-	 * first try over curl 
-	 * second try over file get contents 
+	 *
+	 * first try over curl
+	 * second try over file get contents
 	 */
 	public static function makeNewsFile()	{
 		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false)	{
@@ -50,7 +50,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 
 	/**
 	 * Tries to get the file content over curl
-	 * 
+	 *
 	 * @return	String
 	 */
 	protected static function makeCurlRequest()	{
@@ -74,7 +74,8 @@ class TodoyuPanelWidgetLoginNewsManager {
 
 	/**
 	 * Tries to get the file content over file_get_contents
-	 * 
+	 *
+	 * @todo	Use core methods, remove @
 	 * @return String
 	 */
 	protected static function makeFileGetContentRequest()	{
@@ -85,7 +86,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 
 	/**
 	 * Writes the content to a cache file
-	 * 
+	 *
 	 * @param	String	$content
 	 */
 	protected static function writeCacheFile($content)	{
@@ -106,7 +107,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 
 	/**
 	 * Check whether Curl is installed
-	 * 
+	 *
 	 * @return	Boolean
 	 */
 	protected static function checkForCurl()	{
