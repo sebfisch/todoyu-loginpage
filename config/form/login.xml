@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
 	<attributes>
-		<attribute name="action">?ext=loginpage&amp;controller=ext&amp;action=login</attribute>
+		<attribute name="action">index.php?ext=loginpage&amp;controller=ext&amp;action=login</attribute>
 		<attribute name="name">login</attribute>
 	</attributes>
 	<hiddenFields>
