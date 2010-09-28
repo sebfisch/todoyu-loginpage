@@ -30,9 +30,9 @@ define('EXTID_LOGINPAGE', 110);
 define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
 
 	// Register module locales
-TodoyuLanguage::register('loginpage', PATH_EXT_LOGINPAGE . '/locale/ext.xml');
-TodoyuLanguage::register('panelwidget-loginpage', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginpage.xml');
-TodoyuLanguage::register('panelwidget-loginnews', PATH_EXT_LOGINPAGE . '/locale/panelwidget-loginnews.xml');
+TodoyuLabelManager::register('loginpage', 'loginpage', 'ext.xml');
+TodoyuLabelManager::register('panelwidget-loginpage', 'loginpage', 'panelwidget-loginpage.xml');
+TodoyuLabelManager::register('panelwidget-loginnews', 'loginpage', 'panelwidget-loginnews.xml');
 
 	// Request configurations
 	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search

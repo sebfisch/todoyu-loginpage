@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Přihlašovací stránka</label>
+	<label index="page.title">Příhlášení</label>
+	<label index="tab.login">Přihlášení</label>
+	<label index="tab.help">Nápověda</label>
+	<label index="tab.blog">Blog</label>
+	<label index="loginbox.title">Vítejte! Přihlašte se do todoyu</label>
+	<label index="form.field.username">Uživatel</label>
+	<label index="form.field.password">Heslo</label>
+	<label index="form.field.submit">Přihlásit</label>
+	<label index="form.remainLogin">Zapamatuj si mě na tomto počítači</label>
+	<label index="form.loginFailed">Uživatelské jméno nebo heslo je nesprávné. Prosím opakujte zadání.</label>
+	<label index="form.status.enterLoginData">Vložte uživatelské jméno a heslo</label>
+	<label index="form.status.verifyingLoginData">Ověřuji uživatelské jméno a heslo</label>
+	<label index="form.status.loginOk">Přihlášeno</label>
+	<label index="form.status.loginFailed">Chybné přihlášení</label>
+	<label index="error.enterUsername">Vložte vaše uživatelské jméno</label>
+	<label index="error.enterPassword">Vložte vaše heslo</label>
+	<label index="headlet.label">Odhlásit</label>
+</labels>
