@@ -41,11 +41,14 @@ Todoyu.Ext.loginpage = {
 	 */
 	init: function() {
 		if( Todoyu.getArea() === 'loginpage' ) {
-
 			this.observeForm();
 			this.observePasswordField();
 			this.focusField();
+			this.removePanelWidgetToggle();
 		}
+//		if( Todoyu.exists('headlets') ) {
+//			this.Relogin.init();
+//		}
 	},
 
 
@@ -64,10 +67,22 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
+	 * Remove toggle for panelwidget on loginpage
+	 * Can't save and is not necessary
+	 */
+	removePanelWidgetToggle: function() {
+		$('panel').select('span.toggle').each(function(element){
+			$(element).remove();
+		});
+	},
+
+
+
+	/**
 	 * Install form onSubmit-observer
 	 */
 	observeForm: function() {
-		$('login-form').observe('submit', this.onFormSubmit.bind(this));
+		$('login-form').observe('submit', this.onFormSubmit.bindAsEventListener(this));
 	},
 
 
