@@ -44,7 +44,7 @@ Todoyu.Ext.loginpage = {
 			this.observeForm();
 			this.observePasswordField();
 			this.focusField();
-			this.removePanelWidgetToggle();
+			this.disableToggleSave();
 		}
 //		if( Todoyu.exists('headlets') ) {
 //			this.Relogin.init();
@@ -67,13 +67,11 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Remove toggle for panelwidget on loginpage
-	 * Can't save and is not necessary
+	 * Override panelwidget save function, to prevent access denied message
+	 * because the user isn't logged in
 	 */
-	removePanelWidgetToggle: function() {
-		$('panel').select('span.toggle').each(function(element){
-			$(element).remove();
-		});
+	disableToggleSave: function() {
+		Todoyu.PanelWidget.saveToggleStatus = Prototype.emptyFunction;
 	},
 
 
