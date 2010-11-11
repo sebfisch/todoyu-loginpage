@@ -18,7 +18,14 @@
 *****************************************************************************/
 
 /**
- * Ext: loginpage
+ * @module	Loginpage
+ */
+
+/**
+ * Loginpage main object
+ *
+ * @class		loginpage
+ * @namespace	Todoyu.Ext
  */
 Todoyu.Ext.loginpage = {
 
