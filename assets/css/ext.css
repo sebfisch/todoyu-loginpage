@@ -148,14 +148,21 @@ form.formLogin fieldset.buttons button span.rgt {
 		float:left;
 	}
 
-	form.formLogin fieldset.buttons button.buttonLogin {
+	form.formLogin fieldset.buttons button.buttonLogin,
+	form.formLogin fieldset.buttons button.sendNewPasswordButton{
 		margin-left:300px;
 	}
+
 	button.buttonLogin span.icon {
-		background:url('../img/icons.png') no-repeat 0 -64px;
+		background:url('../img/icons.png') no-repeat 0 -58px;
 	}
 
-#formElement-login-field-status-inputbox {
+	button.sendNewPasswordButton span.icon {
+		background:url('../img/icons.png') no-repeat 0 -86px;
+	}
+
+#formElement-login-field-status-inputbox,
+#formElement-forgotpassword-field-status-inputbox	{
 	/*height:25px;*/
 	border:1px solid #EDF1E0;
 }
@@ -194,4 +201,25 @@ form.formLogin fieldset.buttons button span.rgt {
 	font-size:13px;
 	font-weight:bold;
 	text-align:right;
+}
+
+/* ------------------------
+	Confirmation page
+   ------------------------ */
+
+div.passwordResetConfirmationText	{
+	padding: 5px;
+	border: 1px dotted #ccc;
+
+}
+
+
+div.passwordResetConfirmationText.failure {
+	background-color: #F6E0E0 !important;
+	border-color: #D1A4A4;
+}
+
+div.passwordResetConfirmationText.successful {
+	background-color:#c5e8c5 !important;
+	border-color:#008000;
 }

@@ -96,6 +96,32 @@ class TodoyuLoginpageRenderer {
 		return $content;
 	}
 
+
+
+	/**
+	 * @static
+	 * @return String
+	 */
+	public static function renderForgotPasswordLink()	{
+		return render('ext/loginpage/view/forgotpasswordlink.tmpl', array());
+	}
+
+
+
+	/**
+	 * @static
+	 * @param string $username
+	 * @return 
+	 */
+	public static function renderForgotPasswordForm($username = '')	{
+		$xmlPath	= 'ext/loginpage/config/form/forgotpassword.xml';
+
+		$form		= TodoyuFormManager::getForm($xmlPath);
+		$form->setUseRecordID(false);
+
+		return $form->render();
+	}
+
 }
 
 ?>

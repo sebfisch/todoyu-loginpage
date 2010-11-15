@@ -76,6 +76,43 @@ class TodoyuLoginpageManager {
 		TodoyuHeader::location($url);
 	}
 
+
+
+	/**
+	 * @static
+	 * @param  $userName
+	 * @return void
+	 */
+	public static function sendConfirmationMail($userName)	{
+		$idPerson	= TodoyuPersonManager::getPersonIDByUsername($userName);
+
+		$oldPassword	= TodoyuPersonManager::getPerson($idPerson)->get('password');
+
+		$hash	= md5($userName . $oldPassword);
+
+		TodoyuLoginpageMailer::sendConfirmationMail($idPerson, $hash, $userName);
+	}
+
+
+
+	/**
+	 * creates a new password an sends it to the user
+	 *
+	 * @static
+	 * @param	String	$userName
+	 * @return	void
+	 */
+	public static function createAndSendNewPassword($userName)	{
+		$newPasswordPlain	= TodoyuString::generateGoodPassword();
+		$newPasswordHash	= md5($newPasswordPlain);
+
+		$idPerson	= TodoyuPersonManager::getPersonIDByUsername($userName);
+
+		TodoyuPersonManager::updatePassword($idPerson, $newPasswordHash, true);
+
+		TodoyuLoginpageMailer::sendNewPasswordMail($idPerson, $newPasswordPlain);
+	}
+
 }
 
 ?>

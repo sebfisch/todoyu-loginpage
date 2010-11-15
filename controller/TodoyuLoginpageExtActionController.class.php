@@ -154,6 +154,82 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		}
 	}
 
+
+
+	/**
+	 * @return void
+	 */
+	public function loadForgotPasswordFormAction($params)	{
+		return TodoyuLoginpageRenderer::renderForgotPasswordForm();
+	}
+
+
+
+	/**
+	 *
+	 * @return void
+	 */
+	public function forgotPasswordAction($params)	{
+		$xml	= 'ext/loginpage/config/form/forgotpassword.xml';
+
+		$forgotPasswordData	= $params['forgotpassword'];
+
+		$form	= TodoyuFormManager::getForm($xml, 0, array());
+		$form->addFormData($forgotPasswordData);
+		$form->setRecordID(false);
+
+		if($form->isValid())	{
+			if(TodoyuPersonManager::personExists($forgotPasswordData['username']))	{
+				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
+				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
+ 			} else {
+				TodoyuHeader::sendTodoyuErrorHeader();
+				$response['message'] = '[Invalid username]';
+				$response['form'] = $form->render();
+			}
+		} else {
+			TodoyuHeader::sendTodoyuErrorHeader();
+			$response['form'] = $form->render();
+		}
+
+		TodoyuHeader::sendTypeJSON();
+		return json_encode($response);
+	}
+
+
+
+	/**
+	 * @param  $params
+	 * @return String
+	 */
+	public function confirmationmailAction($params)	{
+		$userName	= $params['userName'];
+		$hash		= $params['hash'];
+
+		$idPerson	= TodoyuPersonManager::getPersonIDByUsername($userName);
+
+		$person		= TodoyuPersonManager::getPerson($idPerson);
+
+		TodoyuPage::init('ext/loginpage/view/confirmationpage.tmpl');
+
+		if($hash === md5($person->getUsername() . $person->get('password')))	{
+			TodoyuLoginpageManager::createAndSendNewPassword($userName);
+
+			TodoyuPage::set('class', 'successful');
+			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
+			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.text'));
+
+		} else {
+
+			TodoyuPage::set('class', 'failure');
+			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
+			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
+			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.text'));
+		}
+
+		return TodoyuPage::render();
+	}
+
 }
 
 ?>

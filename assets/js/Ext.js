@@ -41,6 +41,8 @@ Todoyu.Ext.loginpage = {
 
 	elStatus:		'formElement-login-field-status-inputbox',
 
+	forgotPasswordElStatus:		'formElement-forgotpassword-field-status-inputbox',
+
 
 
 	/**
@@ -288,6 +290,41 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
+	 * Display status message when verifying received login data
+	 */
+	displayForgotPasswordVerifying: function() {
+		$(this.forgotPasswordElStatus).update('<img src="core/assets/img/ajax-loader.png" /> [LLL:loginpage.form.status.verifyingLoginData]');
+		$(this.forgotPasswordElStatus).addClassName('notification');
+	},
+
+
+
+	/**
+	 * Display status message of successful login
+	 */
+	displayForgotPasswordSuccess: function() {
+		$(this.elStatus).update('<span class="icon"></span> &nbsp; [LLL:loginpage.forgotpawwword.form.field.notification.success]');
+		$(this.elStatus).addClassName('notification');
+		$(this.elStatus).removeClassName('failure');
+		$(this.elStatus).addClassName('success');
+	},
+
+
+
+	/**
+	 * Display status message of forgot password error
+	 * 
+	 * @param	{String}	message
+	 */
+	displayForgotPasswordError: function(message)	{
+		$(this.forgotPasswordElStatus).update('<span class="icon"></span>' + message);
+		$(this.forgotPasswordElStatus).addClassName('notification');
+		$(this.forgotPasswordElStatus).addClassName('failure');
+	},
+
+
+
+	/**
 	 * Log out current person
 	 */
 	logout: function() {
@@ -312,6 +349,68 @@ Todoyu.Ext.loginpage = {
 	onLoggedOut: function(response) {
 			// Remove all parameters from url and reload
 		location.search = '';
-	}
+	},
 
+
+
+	/**
+	 * 
+	 */
+	loadForgotPasswordForm: function()	{
+		var url		= Todoyu.getUrl('loginpage', 'ext');
+		var options	= {
+			'parameters': {
+				'action':	'loadForgotPasswordForm'
+			},
+			'onComplete':	this.onForgotPasswordFormLoaded.bind(this)
+		};
+
+		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * 
+	 * @param response
+	 */
+	onForgotPasswordFormLoaded: function(response)	{
+		$('login-form').replace(response.responseText);
+	},
+
+
+
+	/**
+	 * 
+	 */
+	submitForgotPasswordForm: function(form)	{
+		this.displayForgotPasswordVerifying();
+		
+		$(form).request({
+			'parameters': {
+				'action':	'forgotPassword'
+			},
+			onComplete: this.onForgotPasswordResponse.bind(this)
+		});
+	},
+
+
+
+	/**
+	 *
+	 * @param response
+	 */
+	onForgotPasswordResponse: function(response)	{
+		var status	= response.responseJSON;
+
+		if(response.hasTodoyuError())	{
+			$('forgotpassword-form').replace(status.form);
+
+			if(status.message != null) this.displayForgotPasswordError(status.message);
+		} else {
+			$('forgotpassword-form').replace(status.form);
+
+			this.displayForgotPasswordSuccess();
+		}
+	}
 };
