@@ -188,9 +188,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 				$message = TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername')
 							. '<br /><br />'
-							. '<a href="mailto:' . Todoyu::$CONFIG['SYSTEM']['email'] . '">'
-							. TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername.adminlink')
-							. '</a>';
+							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername.adminlink'));
 
 				$response['message'] = $message;
 				$response['form'] = $form->render();
@@ -220,11 +218,20 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		TodoyuPage::init('ext/loginpage/view/confirmationpage.tmpl');
 
+				// Add login screen maintabs
+		TodoyuLoginpageManager::addLoginScreenMainTabs();
+			// Set default tab
+		TodoyuFrontend::setDefaultTab('login');
+
+		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
+		TodoyuPage::set('panelWidgets', $panelWidgets);
+		
 		if($hash === md5($person->getUsername() . $person->get('password')))	{
 			TodoyuLoginpageManager::createAndSendNewPassword($userName);
 
 			TodoyuPage::set('class', 'successful');
 			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
+			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
 			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.text'));
 
 		} else {
@@ -232,7 +239,12 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			TodoyuPage::set('class', 'failure');
 			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
 			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
-			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.text'));
+
+			$replaceArray	=  TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], '', true);
+
+			$label = str_replace(array('%s', '%e'), $replaceArray, Label('LLL:loginpage.forgotpassword.confirmpage.failure.text'));
+
+			TodoyuPage::set('confirmationpagetext', $label);
 		}
 
 		return TodoyuPage::render();

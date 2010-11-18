@@ -40,14 +40,14 @@
 					<required />
 				</field>
 
-				<field type="comment">
+				<field type="checkbox" name="loginremain">
+					<label>loginpage.form.remainLogin</label>
+				</field>
+
+				<field type="comment" name="forgotpassword">
 					<comment type="function">
 						<function>TodoyuLoginpageRenderer::renderForgotPasswordLink</function>
 					</comment>
-				</field>
-
-				<field type="checkbox" name="loginremain">
-					<label>loginpage.form.remainLogin</label>
 				</field>
 
 			</elements>

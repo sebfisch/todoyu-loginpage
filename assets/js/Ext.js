@@ -230,6 +230,7 @@ Todoyu.Ext.loginpage = {
 		$(this.fieldUsername).up('div').setOpacity(opacity);
 		$(this.fieldPassword).up('div').setOpacity(opacity);
 		$('formElement-login-field-loginremain').setOpacity(opacity);
+		$('formElement-login-field-forgotpassword').setOpacity(opacity);
 		$('login-field-submit').setOpacity(opacity);
 	},
 
@@ -303,7 +304,7 @@ Todoyu.Ext.loginpage = {
 	 * Display status message of successful login
 	 */
 	displayForgotPasswordSuccess: function() {
-		$(this.elStatus).update('<span class="icon"></span> &nbsp; [LLL:loginpage.forgotpawwword.form.field.notification.success]');
+		$(this.elStatus).update('<span class="icon"></span> &nbsp; [LLL:loginpage.forgotpassword.form.field.notification.success]');
 		$(this.elStatus).addClassName('notification');
 		$(this.elStatus).removeClassName('failure');
 		$(this.elStatus).addClassName('success');

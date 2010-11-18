@@ -41,5 +41,5 @@
 	<label index="forgotpassword.confirmpage.successful.title">Your password was successfully reset</label>
 	<label index="forgotpassword.confirmpage.successful.text">Your password was successfully reset. The new password has been sent to your email address. If you wish to change the password again, just login and go to the personal settings. In the password tab you can set your desired password.</label>
 	<label index="forgotpassword.confirmpage.failure.title">We are sorry but..</label>
-	<label index="forgotpassword.confirmpage.failure.text">..this link is no longer available. Your new password should have already been sent to your email address. If you wish further information please contact your Administrator.</label>
+	<label index="forgotpassword.confirmpage.failure.text">..this link is no longer available. Your new password should have already been sent to your email address. If you wish further information please contact your %sAdministrator%e.</label>
 </labels>
