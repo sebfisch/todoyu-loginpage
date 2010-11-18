@@ -43,6 +43,8 @@ Todoyu.Ext.loginpage = {
 
 	forgotPasswordElStatus:		'formElement-forgotpassword-field-status-inputbox',
 
+	popup: null,
+
 
 
 	/**
@@ -55,6 +57,9 @@ Todoyu.Ext.loginpage = {
 			this.focusField();
 			this.disableToggleSave();
 		}
+
+		this.registerHooks();
+
 //		if( Todoyu.exists('headlets') ) {
 //			this.Relogin.init();
 //		}
@@ -100,6 +105,15 @@ Todoyu.Ext.loginpage = {
 	observePasswordField: function() {
 		$('login-field-password').observe('keyup', this.onPasswordEnter.bind(this));
 		$('login-field-password').observe('change', this.onPasswordEnter.bind(this));
+	},
+
+
+
+	/**
+	 * register hooks
+	 */
+	registerHooks: function()	{
+		Todoyu.Hook.add('core.notloggedin', this.onLoggedOutAuto.bind(this));
 	},
 
 
@@ -414,6 +428,74 @@ Todoyu.Ext.loginpage = {
 
 			this.displayForgotPasswordSuccess();
 			this.init();
+		}
+	},
+
+
+
+	/**
+	 * 
+	 */
+	onLoggedOutAuto: function()	{
+		var url		= Todoyu.getUrl('loginpage', 'ext');
+
+		var options = {
+			'parameters': {
+					'action': 'reloginPopup'
+			},
+			'onComplete': this.onLoggedOutFormLoaded.bind(this)
+		};
+
+		var idPopup	= 'reLoginPopup';
+		var width	= 700;
+
+		this.popup = Todoyu.Popup.openWindow(idPopup, 'test', width, url, options);
+	},
+
+
+
+	/**
+	 * 
+	 */
+	onLoggedOutFormLoaded: function()	{
+		$('login-form').observe('submit', this.onReLoginFormSubmit.bindAsEventListener(this));
+		this.observePasswordField();
+		this.focusField();
+		this.disableToggleSave();
+	},
+
+
+
+	onReLoginFormSubmit: function()	{
+		if( this.checkFieldsNotEmpty() ) {
+			this.onLoginRequest();
+
+			var url		= Todoyu.getUrl('loginpage', 'ext');
+			var	options	= {
+				'parameters': {
+					'action':	'login',
+					'username':	$F(this.fieldUsername),
+					'passhash':	this.getHashedPassword(),
+					'remain':	this.isRemainLoginChecked()
+				},
+				'onComplete':	this.onReLoginResponse.bind(this)
+			};
+
+			Todoyu.send(url, options);
+		}
+	},
+
+
+
+	onReLoginResponse: function(response)	{
+		var status	= response.responseJSON;
+
+		if( status.success ) {
+			this.popup.close();
+		} else {
+			this.toggleLoginFields(true);
+			this.displayLoginError(status.message);
+			$(this.fieldPassword).select();
 		}
 	}
 };

@@ -250,6 +250,22 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		return TodoyuPage::render();
 	}
 
+
+
+	/**
+	 * @param  $params
+	 * @return void
+	 */
+	public function reloginPopupAction(array $params)	{
+		$xml	= 'ext/loginpage/config/form/login.xml'; 
+		TodoyuDebug::printInFirebug(personid());
+
+		$form	= TodoyuFormManager::getForm($xml, 0, array());
+		$form->setRecordID(false);
+
+		return $form->render();
+	}
+
 }
 
 ?>
