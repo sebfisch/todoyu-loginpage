@@ -22,20 +22,24 @@
 	<label index="forgotpassword">Forgot your password?</label>
 
 	<label index="forgotpassword.tologin">Click here to go to the login page</label>
+	<label index="forgotpassword.invalidusername">The entered username does not exist.</label>
+	<label index="forgotpassword.invalidusername.adminlink">I cannot remember my username</label>
 
 	<label index="forgotpassword.form.field.submit">Send me my new password</label>
-	<label index="forgotpawwword.form.field.notification.success">A confirmation mail has been sent to your e-mail address</label>
+	<label index="forgotpassword.form.field.notification.success">A confirmation mail has been sent to your email address</label>
+	<label index="forgotpassword.form.field.comment">You forgot your password? No Problem! Enter your username and click the send button. You will receive an email to confirm your password reset.</label>
 
 	<label index="forgotpassword.mail.subject.newpassword">Your new password</label>
-	<label index="forgotpassword.mail.confirmation.title">Confirmation</label>
+	<label index="forgotpassword.mail.confirmation.title">Password reset confirmation</label>
+	<label index="forgotpassword.mail.confirmation.text">You requested a new password. Please confirm your password reset by clicking the link below. Your new password will be sent immediately to your email address.</label>
 	<label index="forgotpassword.mail.passwordreset.title">Your password has been reset</label>
-	<label index="forgotpassword.mail.passwordreset.text">[Fill in some fancy text]</label>
+	<label index="forgotpassword.mail.passwordreset.text">You will find your new password in this email. If you wish to change the password again, just login and go to the personal settings. In the password tab you can set your desired password.</label>
 	<label index="forgotpassword.tologin">Click here to go to the login page</label>
 	<label index="forgotpassword.mail.toconfirmation">Click here to reset your password</label>
-	<label index="forgotpassword.mail.yournewpassword">Your new password</label>
+	<label index="forgotpassword.mail.yournewpassword">Your new password for todoyu</label>
 
-	<label index="forgotpassword.confirmpage.successful.title">[Your password has been reset]</label>
-	<label index="forgotpassword.confirmpage.successful.text">[Your password was successfully reset. The new password has been sent to your email address.]</label>
-	<label index="forgotpassword.confirmpage.failure.title">[Sorry but..]</label>
-	<label index="forgotpassword.confirmpage.failure.text">[..this link is no longer available. Your new password should already been sent to your email address. [...]]. For further Information contact your Administrator.</label>
+	<label index="forgotpassword.confirmpage.successful.title">Your password was successfully reset</label>
+	<label index="forgotpassword.confirmpage.successful.text">Your password was successfully reset. The new password has been sent to your email address. If you wish to change the password again, just login and go to the personal settings. In the password tab you can set your desired password.</label>
+	<label index="forgotpassword.confirmpage.failure.title">We are sorry but..</label>
+	<label index="forgotpassword.confirmpage.failure.text">..this link is no longer available. Your new password should have already been sent to your email address. If you wish further information please contact your Administrator.</label>
 </labels>

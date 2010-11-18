@@ -160,7 +160,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return void
 	 */
 	public function loadForgotPasswordFormAction($params)	{
-		return TodoyuLoginpageRenderer::renderForgotPasswordForm();
+		$username	= $params['username'];
+		return TodoyuLoginpageRenderer::renderForgotPasswordForm($username);
 	}
 
 
@@ -184,7 +185,14 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
  			} else {
 				TodoyuHeader::sendTodoyuErrorHeader();
-				$response['message'] = '[Invalid username]';
+
+				$message = TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername')
+							. '<br /><br />'
+							. '<a href="mailto:' . Todoyu::$CONFIG['SYSTEM']['email'] . '">'
+							. TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername.adminlink')
+							. '</a>';
+
+				$response['message'] = $message;
 				$response['form'] = $form->render();
 			}
 		} else {

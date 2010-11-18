@@ -118,6 +118,7 @@ class TodoyuLoginpageRenderer {
 
 		$form		= TodoyuFormManager::getForm($xmlPath);
 		$form->setUseRecordID(false);
+		$form->addFormData(array('username' => $username));
 
 		return $form->render();
 	}

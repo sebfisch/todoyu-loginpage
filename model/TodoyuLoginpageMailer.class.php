@@ -100,12 +100,12 @@ class TodoyuLoginpageMailer {
 
 			// Set "replyTo", "subject"
 		$mail->AddReplyTo($fromAddress, $fromName);
-		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.mail.subject.newpassword');
+		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.mail.confirmation.title');
 
 		$data	= array(
 			'confirmationlink'	=> TodoyuString::buildUrl(array('ext' => 'loginpage',
 																'controller'	=> 'ext',
-																'action'		=>  'confirmationmail',
+																'action'		=> 'confirmationmail',
 																'hash'			=> $hash,
 																'userName'		=> $userName), '', true),
 			'isConfirmation'	=> true

@@ -360,7 +360,8 @@ Todoyu.Ext.loginpage = {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
 			'parameters': {
-				'action':	'loadForgotPasswordForm'
+				'action':	'loadForgotPasswordForm',
+				'username':	$F(this.fieldUsername)
 			},
 			'onComplete':	this.onForgotPasswordFormLoaded.bind(this)
 		};
@@ -411,6 +412,7 @@ Todoyu.Ext.loginpage = {
 			$('forgotpassword-form').replace(status.form);
 
 			this.displayForgotPasswordSuccess();
+			this.init();
 		}
 	}
 };
