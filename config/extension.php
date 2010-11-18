@@ -18,12 +18,7 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-Todoyu::$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
 
-Todoyu::$CONFIG['AUTH']['login'] = array(
-	'ext'		=> 'loginpage',
-	'controller'=> 'ext'
-);
 
 Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
