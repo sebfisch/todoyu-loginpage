@@ -449,7 +449,7 @@ Todoyu.Ext.loginpage = {
 		var idPopup	= 'reLoginPopup';
 		var width	= 700;
 
-		this.popup = Todoyu.Popup.openWindow(idPopup, 'test', width, url, options);
+		this.popup = Todoyu.Popup.openWindow(idPopup, '[LLL:loginpage.loginexpired.title]', width, url, options);
 	},
 
 
