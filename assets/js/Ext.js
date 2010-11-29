@@ -447,9 +447,9 @@ Todoyu.Ext.loginpage = {
 		};
 
 		var idPopup	= 'reLoginPopup';
-		var width	= 700;
+		var width	= 500;
 
-		this.popup = Todoyu.Popup.openWindow(idPopup, '[LLL:loginpage.loginexpired.title]', width, url, options);
+		if(!this.popup) this.popup = Todoyu.Popup.openWindow(idPopup, '[LLL:loginpage.loginexpired.title]', width, url, options);
 	},
 
 

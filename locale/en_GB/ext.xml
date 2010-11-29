@@ -44,4 +44,5 @@
 	<label index="forgotpassword.confirmpage.failure.text">..this link is no longer available. Your new password should have already been sent to your email address. If you wish further information please contact your %sAdministrator%e.</label>
 
 	<label index="loginexpired.title">Your login has expired</label>
+	<label index="loginexpired.message">Your login has expired. Please enter your account credentials in the following form to relogin.</label>
 </labels>

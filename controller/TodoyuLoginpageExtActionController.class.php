@@ -257,12 +257,18 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @return void
 	 */
 	public function reloginPopupAction(array $params)	{
-		$xml	= 'ext/loginpage/config/form/login.xml'; 
+		$tmpl	= 'ext/loginpage/view/reloginpopup.tmpl';
+		$xml	= 'ext/loginpage/config/form/login.xml';
 
 		$form	= TodoyuFormManager::getForm($xml, 0, array());
 		$form->setRecordID(false);
 
-		return $form->render();
+		$data	= array(
+			'message'	=> TodoyuLanguage::getLabel('loginpage.loginexpired.message'),
+			'form'		=> $form->render()
+		);
+
+		return render($tmpl, $data);
 	}
 
 }

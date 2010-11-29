@@ -222,3 +222,40 @@ div.passwordResetConfirmationText.successful {
 	background-color:#c5e8c5 !important;
 	border-color:#008000;
 }
+
+/* ----------------------
+	Loginpage
+   ---------------------- */
+
+#reLoginPopup {
+	text-align: left;
+}
+
+#reLoginPopup #relgin-popup-message {
+	margin: 5px 5px 0 5px;
+	border-bottom: 1px #ccc dotted;
+	background-color: #e9ebc6;
+	height: 50px;
+	padding: 18px 0 5px 70px;
+	background: #e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
+}
+
+#reLoginPopup form.formLogin fieldset.buttons,
+#reLoginPopup form.formLogin fieldset.buttons div.odd,
+#reLoginPopup form.formLogin fieldset.buttons div.even,
+#reLoginPopup form.formLogin fieldset.buttons button span.rgt {
+	background-color: #e2e2e2 !important;
+}
+
+#reLoginPopup form.formLogin div.odd,
+#reLoginPopup form.formLogin div.even {
+	background-color: #f6f8f1;
+}
+
+#reLoginPopup form.formLogin .fElement input {
+	width: 75%;
+}
+
+#reLoginPopup form.formLogin .notification {
+	width: 480px !important;
+}
