@@ -48,7 +48,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Init loginpage ext javaScript
+	 * Init loginpage ext JavaScript
 	 */
 	init: function() {
 		if( Todoyu.getArea() === 'loginpage' ) {
