@@ -59,10 +59,6 @@ Todoyu.Ext.loginpage = {
 		}
 
 		this.registerHooks();
-
-//		if( Todoyu.exists('headlets') ) {
-//			this.Relogin.init();
-//		}
 	},
 
 
