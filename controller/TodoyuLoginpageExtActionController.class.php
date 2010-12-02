@@ -140,7 +140,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			sleep($secondsToWait);
 		}
 
-			// If AJAX request, send json. If normal request, redirect to lo
+			// If AJAX request, send JSON. If normal request, redirect to lo
 		if( TodoyuRequest::isAjaxRequest() ) {
 			TodoyuHeader::sendTypeJSON();
 
