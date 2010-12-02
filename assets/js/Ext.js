@@ -45,6 +45,8 @@ Todoyu.Ext.loginpage = {
 
 	popup: null,
 
+	oldRequest: null,
+
 
 
 	/**
@@ -432,7 +434,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * 
 	 */
-	onLoggedOutAuto: function()	{
+	onLoggedOutAuto: function(response)	{
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 
 		var options = {
@@ -445,7 +447,9 @@ Todoyu.Ext.loginpage = {
 		var idPopup	= 'reLoginPopup';
 		var width	= 500;
 
-		if(!this.popup) this.popup = Todoyu.Popup.openWindow(idPopup, '[LLL:loginpage.loginexpired.title]', width, url, options);
+		this.oldRequest = response.request;
+
+		if( !this.popup || !this.popup.isVisible() ) this.popup = Todoyu.Popup.openWindow(idPopup, '[LLL:loginpage.loginexpired.title]', width, url, options)
 	},
 
 
@@ -487,7 +491,11 @@ Todoyu.Ext.loginpage = {
 		var status	= response.responseJSON;
 
 		if( status.success ) {
-			this.popup.close();
+			Todoyu.Popup.close('reLoginPopup');
+			Todoyu.Notification.fadeAllNotes();
+			this.popup = null;
+			this.oldRequest.options.onComplete = this.oldRequest.options.backupOnComplete;
+			Todoyu.send(this.oldRequest.url, this.oldRequest.options);
 		} else {
 			this.toggleLoginFields(true);
 			this.displayLoginError(status.message);
