@@ -227,10 +227,13 @@ div.passwordResetConfirmationText.successful {
 	Loginpage
    ---------------------- */
 
+
 #reLoginPopup {
 	text-align: left;
 }
 
+#loginform-cookiecheck,
+#loginform-javascriptcheck,
 #reLoginPopup #relgin-popup-message {
 	margin: 5px 5px 0 5px;
 	border-bottom: 1px #ccc dotted;
@@ -258,4 +261,16 @@ div.passwordResetConfirmationText.successful {
 
 #reLoginPopup form.formLogin .notification {
 	width: 480px !important;
+}
+
+#loginform-cookiecheck,
+#loginform-javascriptcheck {
+	background-color: #fbfdd5;
+	border: 1px #d3dabb dotted;
+}
+
+#loginform-cookiecheck .fField,
+#formElement-login-field-javascript .fField {
+	float: none;
+	width: 75%;
 }

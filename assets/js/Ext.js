@@ -411,7 +411,6 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 *
 	 * @param response
 	 */
 	onForgotPasswordResponse: function(response)	{
@@ -432,7 +431,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * 
+	 * this method is called by the onLoggedOut hook. Sends the request to load the relogin form
 	 */
 	onLoggedOutAuto: function(response)	{
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -455,7 +454,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * 
+	 * handle the loaded re-login form
 	 */
 	onLoggedOutFormLoaded: function()	{
 		$('login-form').observe('submit', this.onReLoginFormSubmit.bindAsEventListener(this));
@@ -466,6 +465,9 @@ Todoyu.Ext.loginpage = {
 
 
 
+	/**
+	 * Submits the login form
+	 */
 	onReLoginFormSubmit: function()	{
 		if( this.checkFieldsNotEmpty() ) {
 			this.onLoginRequest();
@@ -487,6 +489,21 @@ Todoyu.Ext.loginpage = {
 
 
 
+	/**
+	 * Handle the relogin request.
+	 *
+	 * If login was successful:
+	 * 	- close the popup
+	 * 	- fade the Notifications
+	 * 	- resend the request
+	 *
+	 * If login was not successful
+	 * 	- re-enable the form fields
+	 * 	- display the error message in the form
+	 * 	- preselect the password field
+	 *
+	 * @param response
+	 */
 	onReLoginResponse: function(response)	{
 		var status	= response.responseJSON;
 
@@ -500,6 +517,42 @@ Todoyu.Ext.loginpage = {
 			this.toggleLoginFields(true);
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
+		}
+	},
+
+
+
+	/**
+	 * Sends an request to check if cookies are enabled in the browser
+	 */
+	sendCookieCheck: function()	{
+		var url = Todoyu.getUrl('loginpage', 'ext');
+
+		var options = {
+			parameters: {
+				action: 'cookiecheck'
+			},
+			onComplete: this.onCookieCheckComplete.bind(this)
+		};
+
+		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * if cookies are disabled show the warning - message.
+	 * Otherwise hide the whole form - field to prevent displaying an empty div
+	 *
+	 * @param response
+	 */
+	onCookieCheckComplete: function(response)	{
+		if( response.hasTodoyuError() )	{
+			if( $('formElement-login-field-javascript') )	{
+				$('formElement-login-field-javascript').select('.commenttext')[0].insert('<div id="loginform-cookiecheck">' + response.responseText + '</div>');
+			}
+		} else {
+			$('formElement-login-field-javascript').hide();
 		}
 	}
 };

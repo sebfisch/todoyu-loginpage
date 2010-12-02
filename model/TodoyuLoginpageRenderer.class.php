@@ -123,6 +123,23 @@ class TodoyuLoginpageRenderer {
 		return $form->render();
 	}
 
+
+
+	/**
+	 * Renders the noscript javascript check an sets a cookie.
+	 * To check if javaScript & cookies are enabled
+	 *
+	 * @static
+	 * @return String
+	 */
+	public static function renderJavascriptAndCookieCheck()	{
+		$tmpl	=	'ext/loginpage/view/javascriptcheck.tmpl';
+
+		setcookie("check", 1, 0);
+
+		return render($tmpl, array());
+	}
+
 }
 
 ?>

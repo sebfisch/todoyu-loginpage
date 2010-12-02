@@ -271,6 +271,26 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		return render($tmpl, $data);
 	}
 
+
+
+	/**
+	 * if the cookie check is empty, cookies are not enabled in the browser and todoyu has to show an warning message.
+	 *
+	 * if the cookie exists delete it
+	 *
+	 * @param  $params
+	 * @return String
+	 */
+	public function cookiecheckAction(array $params)	{
+		if( empty($_COOKIE['check']) )	{
+			TodoyuHeader::sendTodoyuErrorHeader();
+
+			return TodoyuLanguage::getLabel('LLL:loginpage.form.cookiecheck');
+		} else {
+			setcookie('check', 0, NOW-1);
+		}
+	}
+
 }
 
 ?>

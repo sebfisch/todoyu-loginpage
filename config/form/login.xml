@@ -22,6 +22,12 @@
 			<class>loginForm</class>
 			<elements>
 
+				<field type="comment" name="javascript">
+					<comment type="function">
+						<function>TodoyuLoginpageRenderer::renderJavascriptAndCookieCheck</function>
+					</comment>
+				</field>
+
 				<field type="comment" name="status">
 					<comment>LLL:loginpage.form.status.enterLoginData</comment>
 				</field>
