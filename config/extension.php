@@ -24,6 +24,15 @@ Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
 Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
+	// Add the ext controller to the noLoginRequired list
+Todoyu::$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
+
+	// Define the extension as login fallback
+Todoyu::$CONFIG['AUTH']['login'] = array(
+	'ext'		=> 'loginpage',
+	'controller'=> 'ext'
+);
+
 
 
 	// Configure menu tabs
