@@ -1,9 +1,9 @@
-{if file_exists($filecheck)}
-	<div id="news-live" style="display:none">
-		<iframe frameBorder="0" src="{$file}" id="loginnews-iframe" ></iframe>
-	</div>
-{/if}
-
 <div id="news-local">
 	<p>todoyu is optimized for Firefox. We also support Safari, Chrome and Internet Explorer.</p>
 </div>
+
+{if file_exists($filecheck)}
+	<div id="news-live" style="display:none">
+		{$content}
+	</div>
+{/if}
