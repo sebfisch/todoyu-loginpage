@@ -18,11 +18,14 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+	// Declare ext ID, path
+define('EXTID_LOGINPAGE', 110);
+define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
 
-
-Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
-
-Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
+	// Register module locales
+TodoyuLabelManager::register('loginpage', 'loginpage', 'ext.xml');
+TodoyuLabelManager::register('panelwidget-loginpage', 'loginpage', 'panelwidget-loginpage.xml');
+TodoyuLabelManager::register('panelwidget-loginnews', 'loginpage', 'panelwidget-loginnews.xml');
 
 	// Add the ext controller to the noLoginRequired list
 Todoyu::$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
@@ -33,36 +36,6 @@ Todoyu::$CONFIG['AUTH']['login'] = array(
 	'controller'=> 'ext'
 );
 
-
-
-	// Configure menu tabs
-Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
-	array(
-		'position'	=> 10,
-		'key'		=> 'login',
-		'label'		=> 'LLL:loginpage.tab.login',
-		'href'		=> '?ext=loginpage&controller=ext',
-	),
-	array(
-		'position'	=> 20,
-		'key'		=> 'help',
-		'label'		=> 'LLL:loginpage.tab.help',
-		'href'		=> 'http://developer.todoyu.com',
-		'target'	=> '_blank'
-	),
-	array(
-		'position'	=> 30,
-		'key'		=> 'blog',
-		'label'		=> 'LLL:loginpage.tab.blog',
-		'href'		=> 'http://blog.snowflake.ch/de/blog-category/todoyu/',
-		'target'	=> '_blank'
-	)
-);
-
-
-
-Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
-	'url'	=> 'http://www.todoyu.com/?154&type=101'
-);
+Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
 ?>

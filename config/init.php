@@ -18,24 +18,35 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-/**
- * Extension main file for loginpage extension
- *
- * @package		Todoyu
- * @subpackage	Loginpage
- */
 
-	// Declare ext ID, path
-define('EXTID_LOGINPAGE', 110);
-define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
+Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
-	// Register module locales
-TodoyuLabelManager::register('loginpage', 'loginpage', 'ext.xml');
-TodoyuLabelManager::register('panelwidget-loginpage', 'loginpage', 'panelwidget-loginpage.xml');
-TodoyuLabelManager::register('panelwidget-loginnews', 'loginpage', 'panelwidget-loginnews.xml');
+	// Configure menu tabs
+Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
+	array(
+		'position'	=> 10,
+		'key'		=> 'login',
+		'label'		=> 'LLL:loginpage.tab.login',
+		'href'		=> '?ext=loginpage&controller=ext',
+	),
+	array(
+		'position'	=> 20,
+		'key'		=> 'help',
+		'label'		=> 'LLL:loginpage.tab.help',
+		'href'		=> 'http://developer.todoyu.com',
+		'target'	=> '_blank'
+	),
+	array(
+		'position'	=> 30,
+		'key'		=> 'blog',
+		'label'		=> 'LLL:loginpage.tab.blog',
+		'href'		=> 'http://blog.snowflake.ch/de/blog-category/todoyu/',
+		'target'	=> '_blank'
+	)
+);
 
-	// Request configurations
-	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
-require_once( PATH_EXT_LOGINPAGE . '/config/extension.php' );
+Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
+	'url'	=> 'http://www.todoyu.com/?154&type=101'
+);
 
 ?>
