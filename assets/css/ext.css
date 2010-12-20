@@ -61,6 +61,16 @@ form.formLogin .fElement {
 	padding-bottom:10px;
 	border-top:1px dotted #fff;
 }
+form.formLogin .fElement.fieldnameStatus,
+form.formLogin .fElement.fieldnameSubmit {
+	padding:10px;
+	border-top:none;
+	float:none;
+}
+form.formLogin .fElement.fieldnameSubmit {
+	margin-left:40%;
+	padding-left:0;
+}
 
 form.formLogin .fElement input {
 	width:50%;
@@ -77,16 +87,17 @@ form.formLogin .fElement input.checkbox {
 }
 
 form.formLogin .notification {
-	background-color:#f8f9e3 !important;
-	margin-right:5px;
+	width:100% !important;
+	/*margin-right:5px;*/
 	padding:5px 0;
 	text-align:center;
-	border:1px dotted #D3DABB !important;
-	width:640px !important;
+	line-height:21px;
+	border:1px dotted #fff !important;
+	background-color:#f8f9e3 !important;
 }
 	form.formLogin .notification img {
 		position:relative;
-		top:3px;
+		top:4px;
 		margin-right:5px;
 	}
 	form.formLogin .notification.success {
@@ -94,8 +105,9 @@ form.formLogin .notification {
 		border-color:#008000;
 	}
 		form.formLogin .notification.success .icon {
-			padding:0 0 2px 20px;
-			background:url(../../../../core/assets/img/notify.png) no-repeat 4px -1px;
+			padding-left:15px;
+			margin-right:5px;
+			background:url(../../../../core/assets/img/notify.png) no-repeat 0 -1px;
 		}
 	form.formLogin .notification.failure {
 		background-color:#f6e0e0 !important;
@@ -136,22 +148,19 @@ form.formLogin div.even {
 	background-color:#edf1e0; /* bcl01 */
 }
 
+form.formLogin fieldset.buttons {
+	text-align:left;
+}
+form.formLogin fieldset.buttons .fElement .fField {
+	float: none;
+}
+
 form.formLogin fieldset.buttons,
 form.formLogin fieldset.buttons div.odd,
 form.formLogin fieldset.buttons div.even,
 form.formLogin fieldset.buttons button span.rgt {
 	background-color:#d3dabb !important;
 }
-
-	form.formLogin fieldset.buttons .fieldnameSubmit {
-		float:left;
-	}
-
-	form.formLogin fieldset.buttons button.buttonLogin,
-	form.formLogin fieldset.buttons button.sendNewPasswordButton{
-		margin-left:300px;
-	}
-
 	button.buttonLogin span.icon {
 		background:url('../img/icons.png') no-repeat 0 -58px;
 	}
@@ -161,7 +170,7 @@ form.formLogin fieldset.buttons button span.rgt {
 	}
 
 #formElement-login-field-status-inputbox,
-#formElement-forgotpassword-field-status-inputbox	{
+#formElement-forgotpassword-field-status-inputbox {
 	/*height:25px;*/
 	border:1px solid #EDF1E0;
 }
@@ -207,16 +216,16 @@ form.formLogin fieldset.buttons button span.rgt {
 	Confirmation page
    ------------------------ */
 
-div.passwordResetConfirmationText	{
-	padding: 5px;
-	border: 1px dotted #ccc;
+div.passwordResetConfirmationText {
+	padding:5px;
+	border:1px dotted #ccc;
 
 }
 
 
 div.passwordResetConfirmationText.failure {
-	background-color: #F6E0E0 !important;
-	border-color: #D1A4A4;
+	background-color:#F6E0E0 !important;
+	border-color:#D1A4A4;
 }
 
 div.passwordResetConfirmationText.successful {
@@ -236,42 +245,42 @@ div.passwordResetConfirmationText.successful {
 #loginform-cookiecheck,
 #loginform-javascriptcheck,
 #reLoginPopup #relgin-popup-message {
-	margin: 5px 5px 0 5px;
-	border-bottom: 1px #ccc dotted;
-	background-color: #e9ebc6;
-	height: 50px;
-	padding: 18px 0 5px 70px;
-	background: #e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
+	margin:5px 5px 0 5px;
+	border-bottom:1px #ccc dotted;
+	background-color:#e9ebc6;
+	height:50px;
+	padding:18px 0 5px 70px;
+	background:#e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
 }
 
 #reLoginPopup form.formLogin fieldset.buttons,
 #reLoginPopup form.formLogin fieldset.buttons div.odd,
 #reLoginPopup form.formLogin fieldset.buttons div.even,
 #reLoginPopup form.formLogin fieldset.buttons button span.rgt {
-	background-color: #e2e2e2 !important;
+	background-color:#e2e2e2 !important;
 }
 
 #reLoginPopup form.formLogin div.odd,
 #reLoginPopup form.formLogin div.even {
-	background-color: #f6f8f1;
+	background-color:#f6f8f1;
 }
 
 #reLoginPopup form.formLogin .fElement input {
-	width: 75%;
+	width:75%;
 }
 
 #reLoginPopup form.formLogin .notification {
-	width: 480px !important;
+	width:480px !important;
 }
 
 #loginform-cookiecheck,
 #loginform-javascriptcheck {
-	background-color: #fbfdd5;
-	border: 1px #d3dabb dotted;
+	background-color:#fbfdd5;
+	border:1px #d3dabb dotted;
 }
 
 #loginform-cookiecheck .fField,
 #formElement-login-field-javascript .fField {
-	float: none;
-	width: 75%;
+	float:none;
+	width:75%;
 }
