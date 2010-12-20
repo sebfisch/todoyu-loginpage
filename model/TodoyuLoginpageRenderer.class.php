@@ -135,9 +135,13 @@ class TodoyuLoginpageRenderer {
 	public static function renderJavascriptAndCookieCheck()	{
 		$tmpl	=	'ext/loginpage/view/javascriptcheck.tmpl';
 
+		$data	=	array(
+			'javaScriptManual'	=>	Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['javascript']
+		);
+		
 		setcookie("check", 1, 0);
 
-		return render($tmpl, array());
+		return render($tmpl, $data);
 	}
 
 }

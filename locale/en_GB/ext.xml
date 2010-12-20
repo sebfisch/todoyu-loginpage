@@ -47,5 +47,7 @@
 	<label index="loginexpired.message">Your login has expired. Please enter your account credentials in the following form to relogin.</label>
 
 	<label index="form.javascriptcheck">JavaScript is deactivated in your Browser. Please activate JavaScript in your browser setting to log-in.</label>
+	<label index="form.javascriptcheck.linklabel">How can I activate JavaScript in my Browser?</label>
 	<label index="form.cookiecheck">Cookies are deactivated in your Browser. Please enable cookies in your browser settings to log-in.</label>
+	<label index="form.cookiecheck.linklabel">How can I activate Cookies in my Browser?</label>
 </labels>
