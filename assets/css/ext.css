@@ -56,40 +56,52 @@ span#password-forget {
 /* -------------------------------
 	Login form
    ------------------------------- */
+form.formLogin {
+	padding:0;
+	background:none;
+}
 form.formLogin .fElement {
-	padding-top:10px;
-	padding-bottom:10px;
+	padding:10px;
 	border-top:1px dotted #fff;
+}
+form.formLogin .fElement .fLabel {
+	width:180px;
+	padding:5px;
+}
+form.formLogin .fElement input {
+	width:220px;
+	padding:2px;
+	font-size:13px;
+	line-height:16px;
 }
 form.formLogin .fElement.fieldnameStatus,
 form.formLogin .fElement.fieldnameSubmit {
-	padding:10px;
-	border-top:none;
+	margin:0;
 	float:none;
+	border-top:none;
 }
-form.formLogin .fElement.fieldnameSubmit {
-	margin-left:40%;
-	padding-left:0;
+form.formLogin .fElement.fieldnameStatus .fLabel,
+form.formLogin .fElement.fieldnameSubmit .fLabel {
+	display:none;
 }
-
-form.formLogin .fElement input {
-	width:50%;
-	font-size:13px;
-	line-height:16px;
-	padding:2px;
+form.formLogin .fElement.fieldnameStatus .fField {
+	margin:0 0 0 195px;
 }
-form.formLogin .typeText .fLabel {
-	padding-top:5px;
+form.formLogin .fElement.fieldnameSubmit .fField {
+	margin:0;
 }
-
 form.formLogin .fElement input.checkbox {
-	padding:0;
+	top:3px;
 }
 
+form.formLogin .fElement.fieldnameStatus .fField.notification {
+	margin-left:0;
+}
 form.formLogin .notification {
-	width:100% !important;
-	/*margin-right:5px;*/
+	width:auto;
+	margin:0;
 	padding:5px 0;
+	float:none;
 	text-align:center;
 	line-height:21px;
 	border:1px dotted #fff !important;
@@ -142,6 +154,13 @@ form.formLogin .loginError {
 form.formLogin fieldset {
 	padding:0;
 }
+form.formLogin fieldset.message {
+	margin:0;
+	border:none;
+}
+	form.formLogin fieldset legend {
+		display:none;
+	}
 
 form.formLogin div.odd,
 form.formLogin div.even {
@@ -152,7 +171,7 @@ form.formLogin fieldset.buttons {
 	text-align:left;
 }
 form.formLogin fieldset.buttons .fElement .fField {
-	float: none;
+	float:none;
 }
 
 form.formLogin fieldset.buttons,
@@ -161,6 +180,9 @@ form.formLogin fieldset.buttons div.even,
 form.formLogin fieldset.buttons button span.rgt {
 	background-color:#d3dabb !important;
 }
+	button.buttonLogin {
+		margin-left:195px;
+	}
 	button.buttonLogin span.icon {
 		background:url('../img/icons.png') no-repeat 0 -58px;
 	}
@@ -172,7 +194,7 @@ form.formLogin fieldset.buttons button span.rgt {
 #formElement-login-field-status-inputbox,
 #formElement-forgotpassword-field-status-inputbox {
 	/*height:25px;*/
-	border:1px solid #EDF1E0;
+	border:1px solid #edf1e0;
 }
 
 
@@ -263,10 +285,6 @@ div.passwordResetConfirmationText.successful {
 #reLoginPopup form.formLogin div.odd,
 #reLoginPopup form.formLogin div.even {
 	background-color:#f6f8f1;
-}
-
-#reLoginPopup form.formLogin .fElement input {
-	width:75%;
 }
 
 #reLoginPopup form.formLogin .notification {
