@@ -11,17 +11,6 @@ h1.extIconLoginpage .title {
 
 
 
-/* --------------------------
-	Sub menu
-   -------------------------- */
-#navi-main-list-todoyu li.itemLogout a {
-	background-image:url(../img/icons.png) !important;
-	background-repeat:no-repeat;
-	background-position:6px 5px;
-}
-
-
-
 /* -------------------------------
 	Default layout changes
    ------------------------------- */
@@ -33,10 +22,12 @@ body.todoyu-loginpage #right .inner {
 	background-color:#edf1e0; /* bcl01 */
 }
 
-body.todoyu-loginpage .content span.lt {display:block;}
+body.todoyu-loginpage .content span.lt {
+	display:block;
+}
 
 body.todoyu-loginpage button span.rgt {
-	background-color:#d3dabb !important;
+	background-color:#d3dabb;
 }
 
 #todoyu-loginpage #content h1.headerLine {
@@ -59,6 +50,9 @@ span#password-forget {
 form.formLogin {
 	padding:0;
 	background:none;
+}
+form.formLogin fieldset {
+	border:none;
 }
 form.formLogin .fElement {
 	padding:10px;
@@ -206,7 +200,7 @@ form.formLogin fieldset.buttons button span.rgt {
 	border:1px solid #d3dabb;
 	background-color:#edf1e0;
 	clear:both;
-	margin-top:20px;
+	margin-top:5px;
 	margin-bottom:10px;
 	padding:15px;
 }

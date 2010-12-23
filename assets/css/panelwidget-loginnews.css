@@ -2,13 +2,13 @@
 	Check library dependencies panel widget
    ------------------------------------------------------------ */
 div #panelwidget-loginnews h1 span.title {
-	background:url('../img/panelwidget-loginnews.png') no-repeat 4px -28px !important;
-	margin:0 !important;
+	background:url('../img/panelwidget-loginnews.png') no-repeat 4px -28px;
+	margin:0;
 	padding:0 0 12px 24px;
 }
 
 #panelwidget-loginnews #news-local {
-	background-color:#FBFFCF;
+	background-color:#eee;
 	min-height:200px;
 }
 
@@ -21,7 +21,7 @@ div #panelwidget-loginnews h1 span.title {
 #panelwidget-loginnews #news-live {
 	margin: 0;
 	padding: 10px 5px;
-	background: #FBFFCF;
+	background: #eee;
 	font-family: Arial,Verdana,Helvetica,sans-serif;
 	font-size: 11px;
 }
