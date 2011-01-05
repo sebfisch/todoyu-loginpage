@@ -180,7 +180,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		if($form->isValid())	{
-			if(TodoyuPersonManager::personExists($forgotPasswordData['username']))	{
+			if( TodoyuPersonManager::personExists($forgotPasswordData['username']))	{
 				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
  			} else {
