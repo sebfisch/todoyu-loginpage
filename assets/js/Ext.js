@@ -110,7 +110,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * register hooks
 	 */
-	registerHooks: function()	{
+	registerHooks: function() {
 		Todoyu.Hook.add('core.notloggedin', this.onLoggedOutAuto.bind(this));
 	},
 
@@ -329,7 +329,7 @@ Todoyu.Ext.loginpage = {
 	 * 
 	 * @param	{String}	message
 	 */
-	displayForgotPasswordError: function(message)	{
+	displayForgotPasswordError: function(message) {
 		$(this.forgotPasswordElStatus).update('<span class="icon"></span>' + message);
 		$(this.forgotPasswordElStatus).addClassName('notification');
 		$(this.forgotPasswordElStatus).addClassName('failure');
@@ -369,7 +369,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * 
 	 */
-	loadForgotPasswordForm: function()	{
+	loadForgotPasswordForm: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
 			'parameters': {
@@ -388,7 +388,7 @@ Todoyu.Ext.loginpage = {
 	 * 
 	 * @param response
 	 */
-	onForgotPasswordFormLoaded: function(response)	{
+	onForgotPasswordFormLoaded: function(response) {
 		$('login-form').replace(response.responseText);
 	},
 
@@ -397,7 +397,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * 
 	 */
-	submitForgotPasswordForm: function(form)	{
+	submitForgotPasswordForm: function(form) {
 		this.displayForgotPasswordVerifying();
 		
 		$(form).request({
@@ -413,10 +413,10 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * @param response
 	 */
-	onForgotPasswordResponse: function(response)	{
+	onForgotPasswordResponse: function(response) {
 		var status	= response.responseJSON;
 
-		if(response.hasTodoyuError())	{
+		if( response.hasTodoyuError() ) {
 			$('forgotpassword-form').replace(status.form);
 
 			if(status.message != null) this.displayForgotPasswordError(status.message);
@@ -433,7 +433,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * this method is called by the onLoggedOut hook. Sends the request to load the relogin form
 	 */
-	onLoggedOutAuto: function(response)	{
+	onLoggedOutAuto: function(response) {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 
 		var options = {
@@ -456,7 +456,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * handle the loaded re-login form
 	 */
-	onLoggedOutFormLoaded: function()	{
+	onLoggedOutFormLoaded: function() {
 		$('login-form').observe('submit', this.onReLoginFormSubmit.bindAsEventListener(this));
 		this.observePasswordField();
 		this.focusField();
@@ -468,7 +468,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Submits the login form
 	 */
-	onReLoginFormSubmit: function()	{
+	onReLoginFormSubmit: function() {
 		if( this.checkFieldsNotEmpty() ) {
 			this.onLoginRequest();
 
@@ -504,7 +504,7 @@ Todoyu.Ext.loginpage = {
 	 *
 	 * @param response
 	 */
-	onReLoginResponse: function(response)	{
+	onReLoginResponse: function(response) {
 		var status	= response.responseJSON;
 
 		if( status.success ) {
@@ -525,7 +525,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Sends an request to check if cookies are enabled in the browser
 	 */
-	sendCookieCheck: function()	{
+	sendCookieCheck: function() {
 		var url = Todoyu.getUrl('loginpage', 'ext');
 
 		var options = {
@@ -546,9 +546,9 @@ Todoyu.Ext.loginpage = {
 	 *
 	 * @param response
 	 */
-	onCookieCheckComplete: function(response)	{
-		if( response.hasTodoyuError() )	{
-			if( $('formElement-login-field-javascript') )	{
+	onCookieCheckComplete: function(response) {
+		if( response.hasTodoyuError() ) {
+			if( $('formElement-login-field-javascript') ) {
 				$('formElement-login-field-javascript').select('.commenttext')[0].insert('<div id="loginform-cookiecheck">' + response.responseText + '</div>');
 			}
 		} else {
