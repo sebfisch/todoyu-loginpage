@@ -29,7 +29,7 @@ Todoyu.Ext.loginpage.Headlet.Logout = {
 
 
 	/**
-	 * @todo    comment
+	 * Handle click on loginpage's logout headlet
 	 *
 	 * @param   {Event}  event
 	 */
