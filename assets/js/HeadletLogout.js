@@ -31,7 +31,7 @@ Todoyu.Ext.loginpage.Headlet.Logout = {
 	/**
 	 * Handle click on loginpage's logout headlet
 	 *
-	 * @param   {Event}  event
+	 * @param	{Event}		event
 	 */
 	onButtonClick: function(event) {
 		this.ext.logout();
