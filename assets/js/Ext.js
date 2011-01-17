@@ -251,7 +251,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle login request, evoked from onComplete of login form submission
 	 *
-	 * @param	{Object}	response
+	 * @param	{Ajax.Response}		response
 	 */
 	onLoginResponse: function(response){
 		var status	= response.responseJSON;
