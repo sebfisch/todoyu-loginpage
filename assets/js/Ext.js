@@ -399,7 +399,7 @@ Todoyu.Ext.loginpage = {
 	 */
 	submitForgotPasswordForm: function(form) {
 		this.displayForgotPasswordVerifying();
-		
+
 		$(form).request({
 			'parameters': {
 				'action':	'forgotPassword'
