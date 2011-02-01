@@ -18,10 +18,11 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-
 Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'] = array();
 
-	// Configure menu tabs
+/* ----------------------------
+	Menu Tabs Configuration
+   ---------------------------- */
 Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 	array(
 		'position'	=> 10,
@@ -45,6 +46,12 @@ Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 	)
 );
 
+
+
+/* ------------
+	Widgets
+   ------------ */
+	// Feed URL for todoyu news widget
 Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
 	'url'	=> 'http://www.todoyu.com/?154&type=101'
 );
