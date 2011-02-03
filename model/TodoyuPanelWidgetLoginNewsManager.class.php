@@ -26,8 +26,6 @@
  */
 class TodoyuPanelWidgetLoginNewsManager {
 
-
-
 	/**
 	 * Creates a File with news from todoyu.com
 	 *
@@ -35,12 +33,12 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * second try over file get contents
 	 */
 	public static function makeNewsFile()	{
-		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false)	{
+		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false) {
 			self::writeCacheFile($content);
 			return;
 		}
 
-		if(($content = self::makeFileGetContentRequest()) !== false)	{
+		if(($content = self::makeFileGetContentRequest()) !== false) {
 			self::writeCacheFile($content);
 			return;
 		}
@@ -53,21 +51,8 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 *
 	 * @return	String
 	 */
-	protected static function makeCurlRequest()	{
-		$curl = curl_init();
-
-		if( ! $curl ) {
-			return false;
-		}
-
-		curl_setopt($curl, CURLOPT_URL, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-		$content = curl_exec($curl);
-
-		curl_close($curl);
-
-		return $content;
+	protected static function makeCurlRequest() {
+		return TodoyuFileManager::downloadFile(Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 	}
 
 
@@ -78,7 +63,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * @todo	Use core methods, remove @
 	 * @return String
 	 */
-	protected static function makeFileGetContentRequest()	{
+	protected static function makeFileGetContentRequest() {
 		return @file_get_contents(Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']['url']);
 	}
 
@@ -89,7 +74,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 *
 	 * @param	String	$content
 	 */
-	protected static function writeCacheFile($content)	{
+	protected static function writeCacheFile($content) {
 		$file = PATH_CACHE.'/output/loginnews.html';
 
 		// get content between the body tags
@@ -114,7 +99,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 *
 	 * @return	Boolean
 	 */
-	protected static function checkForCurl()	{
+	protected static function checkForCurl() {
 		return in_array('curl', get_loaded_extensions());
 	}
 
