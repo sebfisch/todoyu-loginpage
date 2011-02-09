@@ -159,7 +159,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	/**
 	 * @return void
 	 */
-	public function loadForgotPasswordFormAction($params)	{
+	public function loadForgotPasswordFormAction($params) {
 		$username	= $params['username'];
 		return TodoyuLoginpageRenderer::renderForgotPasswordForm($username);
 	}
@@ -170,7 +170,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 *
 	 * @return void
 	 */
-	public function forgotPasswordAction($params)	{
+	public function forgotPasswordAction($params) {
 		$xml	= 'ext/loginpage/config/form/forgotpassword.xml';
 
 		$forgotPasswordData	= $params['forgotpassword'];
@@ -180,7 +180,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		if( $form->isValid() ) {
-			if( TodoyuPersonManager::personExists($forgotPasswordData['username']))	{
+			if( TodoyuPersonManager::personExists($forgotPasswordData['username']) ) {
 				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
  			} else {
@@ -208,7 +208,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @param  $params
 	 * @return String
 	 */
-	public function confirmationmailAction($params)	{
+	public function confirmationmailAction($params) {
 		$userName	= $params['userName'];
 		$hash		= $params['hash'];
 
@@ -256,7 +256,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @param  $params
 	 * @return void
 	 */
-	public function reloginPopupAction(array $params)	{
+	public function reloginPopupAction(array $params) {
 		$tmpl	= 'ext/loginpage/view/reloginpopup.tmpl';
 		$xml	= 'ext/loginpage/config/form/login.xml';
 
@@ -281,8 +281,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @param  $params
 	 * @return String
 	 */
-	public function cookiecheckAction(array $params)	{
-		if( empty($_COOKIE['check']) )	{
+	public function cookiecheckAction(array $params) {
+		if( empty($_COOKIE['check']) ) {
 			TodoyuHeader::sendTodoyuErrorHeader();
 
 			return TodoyuLanguage::getLabel('LLL:loginpage.form.cookiecheck')

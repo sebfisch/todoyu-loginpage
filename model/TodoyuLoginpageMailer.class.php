@@ -31,7 +31,7 @@ class TodoyuLoginpageMailer {
 	 * @param	String	$password
 	 * @return	Boolean
 	 */
-	public static function sendNewPasswordMail($idPerson, $password)	{
+	public static function sendNewPasswordMail($idPerson, $password) {
 		$person	= TodoyuPersonManager::getPerson($idPerson);
 
 			// Set mail config
@@ -85,7 +85,7 @@ class TodoyuLoginpageMailer {
 	 * @param  $userName
 	 * @return bool
 	 */
-	public static function sendConfirmationMail($idPerson, $hash, $userName)	{
+	public static function sendConfirmationMail($idPerson, $hash, $userName) {
 		$person	= TodoyuPersonManager::getPerson($idPerson);
 
 			// Set mail config

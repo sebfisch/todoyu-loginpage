@@ -32,7 +32,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * first try over curl
 	 * second try over file get contents
 	 */
-	public static function makeNewsFile()	{
+	public static function makeNewsFile() {
 		if( self::checkForCurl() && ($content = self::makeCurlRequest()) !== false ) {
 			self::writeCacheFile($content);
 			return;
@@ -87,7 +87,7 @@ class TodoyuPanelWidgetLoginNewsManager {
 			file_put_contents($file, $content);
 		}
 
-		if( ! (md5(file_get_contents($file)) == md5($content)) )	{
+		if( ! (md5(file_get_contents($file)) == md5($content)) ) {
 			file_put_contents($file, $content);
 		}
 	}

@@ -83,7 +83,7 @@ class TodoyuLoginpageManager {
 	 * @param  $userName
 	 * @return void
 	 */
-	public static function sendConfirmationMail($userName)	{
+	public static function sendConfirmationMail($userName) {
 		$idPerson	= TodoyuPersonManager::getPersonIDByUsername($userName);
 
 		$oldPassword	= TodoyuPersonManager::getPerson($idPerson)->get('password');
@@ -102,7 +102,7 @@ class TodoyuLoginpageManager {
 	 * @param	String	$userName
 	 * @return	void
 	 */
-	public static function createAndSendNewPassword($userName)	{
+	public static function createAndSendNewPassword($userName) {
 		$newPasswordPlain	= TodoyuString::generateGoodPassword();
 		$newPasswordHash	= md5($newPasswordPlain);
 

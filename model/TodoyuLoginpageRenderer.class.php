@@ -102,7 +102,7 @@ class TodoyuLoginpageRenderer {
 	 * @static
 	 * @return String
 	 */
-	public static function renderForgotPasswordLink()	{
+	public static function renderForgotPasswordLink() {
 		return render('ext/loginpage/view/forgotpasswordlink.tmpl', array());
 	}
 
@@ -113,7 +113,7 @@ class TodoyuLoginpageRenderer {
 	 * @param string $username
 	 * @return 
 	 */
-	public static function renderForgotPasswordForm($username = '')	{
+	public static function renderForgotPasswordForm($username = '') {
 		$xmlPath	= 'ext/loginpage/config/form/forgotpassword.xml';
 
 		$form		= TodoyuFormManager::getForm($xmlPath);
@@ -132,7 +132,7 @@ class TodoyuLoginpageRenderer {
 	 * @static
 	 * @return String
 	 */
-	public static function renderJavascriptAndCookieCheck()	{
+	public static function renderJavascriptAndCookieCheck() {
 		$tmpl	= 'ext/loginpage/view/javascriptcheck.tmpl';
 
 		$data	= array(
