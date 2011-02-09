@@ -33,12 +33,12 @@ class TodoyuPanelWidgetLoginNewsManager {
 	 * second try over file get contents
 	 */
 	public static function makeNewsFile()	{
-		if(self::checkForCurl() && ($content = self::makeCurlRequest()) !== false) {
+		if( self::checkForCurl() && ($content = self::makeCurlRequest()) !== false ) {
 			self::writeCacheFile($content);
 			return;
 		}
 
-		if(($content = self::makeFileGetContentRequest()) !== false) {
+		if( ($content = self::makeFileGetContentRequest()) !== false ) {
 			self::writeCacheFile($content);
 			return;
 		}

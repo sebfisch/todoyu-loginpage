@@ -179,7 +179,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->addFormData($forgotPasswordData);
 		$form->setRecordID(false);
 
-		if($form->isValid())	{
+		if( $form->isValid() ) {
 			if( TodoyuPersonManager::personExists($forgotPasswordData['username']))	{
 				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
@@ -226,16 +226,16 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
 		TodoyuPage::set('panelWidgets', $panelWidgets);
 		
-		if($hash === md5($person->getUsername() . $person->get('password')))	{
+		if( $hash === md5($person->getUsername() . $person->get('password')) ) {
+				// Hash is valid
 			TodoyuLoginpageManager::createAndSendNewPassword($userName);
 
 			TodoyuPage::set('class', 'successful');
 			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
 			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
 			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.text'));
-
 		} else {
-
+				// Hash validation failed
 			TodoyuPage::set('class', 'failure');
 			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
 			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));

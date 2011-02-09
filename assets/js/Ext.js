@@ -419,7 +419,9 @@ Todoyu.Ext.loginpage = {
 		if( response.hasTodoyuError() ) {
 			$('forgotpassword-form').replace(status.form);
 
-			if(status.message != null) this.displayForgotPasswordError(status.message);
+			if( status.message != null ) {
+				this.displayForgotPasswordError(status.message);
+			}
 		} else {
 			$('forgotpassword-form').replace(status.form);
 
