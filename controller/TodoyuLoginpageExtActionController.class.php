@@ -264,7 +264,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		$data	= array(
-			'message'	=> TodoyuLanguage::getLabel('loginpage.loginexpired.message'),
+			'message'	=> TodoyuLabelManager::getLabel('loginpage.loginexpired.message'),
 			'form'		=> $form->render()
 		);
 
@@ -285,9 +285,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		if( empty($_COOKIE['check']) ) {
 			TodoyuHeader::sendTodoyuErrorHeader();
 
-			return TodoyuLanguage::getLabel('LLL:loginpage.form.cookiecheck')
+			return TodoyuLabelManager::getLabel('LLL:loginpage.form.cookiecheck')
 					. '<br />'
-					. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], TodoyuLanguage::getLabel('LLL:loginpage.form.cookiecheck.linklabel')); 
+					. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], TodoyuLabelManager::getLabel('LLL:loginpage.form.cookiecheck.linklabel'));
 		} else {
 			setcookie('check', 0, NOW-1);
 		}
