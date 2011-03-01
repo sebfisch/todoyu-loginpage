@@ -17,16 +17,7 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-Todoyu.Ext.loginpage.Headlet.Logout = {
-
-	/**
-	 * Extension backlink
-	 *
-	 * @var	{Object}	ext
-	 */
-	ext: Todoyu.Ext.loginpage,
-
-
+Todoyu.Ext.loginpage.Headlet.Logout = Class.create(Todoyu.Headlet, {
 
 	/**
 	 * Handle click on loginpage's logout headlet
@@ -34,7 +25,7 @@ Todoyu.Ext.loginpage.Headlet.Logout = {
 	 * @param	{Event}		event
 	 */
 	onButtonClick: function(event) {
-		this.ext.logout();
+		Todoyu.Ext.loginpage.logout();
 	}
 
-};
+});
