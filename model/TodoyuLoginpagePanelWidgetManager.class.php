@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuPanelWidgetLoginNewsManager {
+class TodoyuLoginpagePanelWidgetManager {
 
 	/**
 	 * Creates a File with news from todoyu.com

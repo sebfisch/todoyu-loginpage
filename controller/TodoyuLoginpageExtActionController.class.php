@@ -98,7 +98,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			// Check whether login is valid
 		if( TodoyuAuth::isValidLogin($username, $passHash) ) {
 				// Find person-ID by username
-			$idPerson = TodoyuPersonManager::getPersonIDByUsername($username);
+			$idPerson = TodoyuContactPersonManager::getPersonIDByUsername($username);
 
 				// Login person
 			TodoyuAuth::login($idPerson);
@@ -180,7 +180,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		if( $form->isValid() ) {
-			if( TodoyuPersonManager::personExists($forgotPasswordData['username']) ) {
+			if( TodoyuContactPersonManager::personExists($forgotPasswordData['username']) ) {
 				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
  			} else {
@@ -212,9 +212,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$userName	= $params['userName'];
 		$hash		= $params['hash'];
 
-		$idPerson	= TodoyuPersonManager::getPersonIDByUsername($userName);
+		$idPerson	= TodoyuContactPersonManager::getPersonIDByUsername($userName);
 
-		$person		= TodoyuPersonManager::getPerson($idPerson);
+		$person		= TodoyuContactPersonManager::getPerson($idPerson);
 
 		TodoyuPage::init('ext/loginpage/view/confirmationpage.tmpl');
 
@@ -225,7 +225,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
 		TodoyuPage::set('panelWidgets', $panelWidgets);
-		
+
 		if( $hash === md5($person->getUsername() . $person->get('password')) ) {
 				// Hash is valid
 			TodoyuLoginpageManager::createAndSendNewPassword($userName);

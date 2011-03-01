@@ -32,7 +32,7 @@ class TodoyuLoginpageMailer {
 	 * @return	Boolean
 	 */
 	public static function sendNewPasswordMail($idPerson, $password) {
-		$person	= TodoyuPersonManager::getPerson($idPerson);
+		$person	= TodoyuContactPersonManager::getPerson($idPerson);
 
 			// Set mail config
 		$mail			= new PHPMailerLite(true);
@@ -86,7 +86,7 @@ class TodoyuLoginpageMailer {
 	 * @return bool
 	 */
 	public static function sendConfirmationMail($idPerson, $hash, $userName) {
-		$person	= TodoyuPersonManager::getPerson($idPerson);
+		$person	= TodoyuContactPersonManager::getPerson($idPerson);
 
 			// Set mail config
 		$mail			= new PHPMailerLite(true);

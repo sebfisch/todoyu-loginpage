@@ -18,6 +18,6 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-TodoyuHeadManager::addHeadlet('TodoyuHeadletLogout', 10);
+TodoyuHeadManager::addHeadlet('TodoyuLoginpageHeadletLogout', 10);
 
 ?>

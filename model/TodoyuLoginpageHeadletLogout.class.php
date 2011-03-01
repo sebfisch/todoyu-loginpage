@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuHeadletLogout extends TodoyuHeadletTypeButton {
+class TodoyuLoginpageHeadletLogout extends TodoyuHeadletTypeButton {
 
 	/**
 	 * Initialize headlet

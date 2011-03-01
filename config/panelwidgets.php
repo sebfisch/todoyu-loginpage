@@ -22,8 +22,8 @@
  * Configure panel widgets to be shown in Project area
  */
 
-TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginPage', 30);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuLoginpagePanelWidgetLoginPage', 30);
 
-TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuPanelWidgetLoginNews', 10, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']);
+TodoyuPanelWidgetManager::addDefaultPanelWidget('loginpage', 'TodoyuLoginpagePanelWidgetLoginNews', 10, Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews']);
 
 ?>

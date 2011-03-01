@@ -19,12 +19,12 @@
 *****************************************************************************/
 
 /**
- * Panel widget for the login page
+ * Panel widget for the login news
  *
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuPanelWidgetLoginPage extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuLoginpagePanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 	/**
 	 * Initialize projectTree PanelWidget
@@ -39,30 +39,36 @@ class TodoyuPanelWidgetLoginPage extends TodoyuPanelWidget implements TodoyuPane
 			// Construct panelWidget (init basic configuration)
 		parent::__construct(
 			'loginpage',							// ext key
-			'loginpage',							// panel widget ID
-			'LLL:panelwidget-loginpage.title',		// widget title text
+			'loginnews',							// panel widget ID
+			'LLL:panelwidget-loginnews.title',		// widget title text
 			$config,								// widget config array
 			$params,								// widget parameters
 			$idArea									// area ID
 		);
-
-
 	}
 
 
 
 	/**
-	 * Render panelWidget content
+	 * Render panelwidget content
 	 *
 	 * @return	String
 	 */
 	public function renderContent() {
-		$tmpl	= 'ext/loginpage/view/panelwidget-loginpage.tmpl';
+		$tmpl	= 'ext/loginpage/view/panelwidget-loginnews.tmpl';
 		$data	= array();
 
-		$content= render($tmpl, $data);
+		TodoyuLoginpagePanelWidgetManager::makeNewsFile();
+
+		if( file_exists(PATH_CACHE.'/output/loginnews.html') ) {
+			$data['content']	= file_get_contents(PATH_CACHE.'/output/loginnews.html');
+			$data['filecheck']	= PATH_CACHE.'/output/loginnews.html';
+		}
+
+		$content = render($tmpl, $data);
 
 		$this->setContent($content);
+
 
 		return $content;
 	}
