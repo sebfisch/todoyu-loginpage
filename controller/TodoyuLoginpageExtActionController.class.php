@@ -44,7 +44,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuFrontend::setDefaultTab('login');
 
 		TodoyuPage::init('ext/loginpage/view/ext.tmpl');
-		TodoyuPage::setTitle('LLL:loginpage.page.title');
+		TodoyuPage::setTitle('LLL:loginpage.ext.page.title');
 
 		$loginStatus	= $params['status'];
 
@@ -132,7 +132,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Build JSON response
 			$response	= array(
 				'success'	=> false,
-				'message'	=> Label('loginpage.form.status.loginFailed')
+				'message'	=> Label('loginpage.ext.form.status.loginFailed')
 			);
 
 				// Wait at failed log-in
@@ -186,9 +186,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
  			} else {
 				TodoyuHeader::sendTodoyuErrorHeader();
 
-				$message = TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername')
+				$message = TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.invalidusername')
 							. '<br /><br />'
-							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.invalidusername.adminlink'));
+							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.invalidusername.adminlink'));
 
 				$response['message'] = $message;
 				$response['form'] = $form->render();
@@ -231,18 +231,18 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			TodoyuLoginpageManager::createAndSendNewPassword($userName);
 
 			TodoyuPage::set('class', 'successful');
-			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
-			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.title'));
-			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.successful.text'));
+			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.confirmpage.successful.title'));
+			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.confirmpage.successful.title'));
+			TodoyuPage::set('confirmationpagetext', TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.confirmpage.successful.text'));
 		} else {
 				// Hash validation failed
 			TodoyuPage::set('class', 'failure');
-			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
-			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.confirmpage.failure.title'));
+			TodoyuPage::setTitle(TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.confirmpage.failure.title'));
+			TodoyuPage::set('title', TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.confirmpage.failure.title'));
 
 			$replaceArray	=  TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], '', true);
 
-			$label = str_replace(array('%s', '%e'), $replaceArray, Label('LLL:loginpage.forgotpassword.confirmpage.failure.text'));
+			$label = str_replace(array('%s', '%e'), $replaceArray, Label('LLL:loginpage.ext.forgotpassword.confirmpage.failure.text'));
 
 			TodoyuPage::set('confirmationpagetext', $label);
 		}
@@ -264,7 +264,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		$data	= array(
-			'message'	=> TodoyuLabelManager::getLabel('loginpage.loginexpired.message'),
+			'message'	=> TodoyuLabelManager::getLabel('loginpage.ext.loginexpired.message'),
 			'form'		=> $form->render()
 		);
 
@@ -285,9 +285,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		if( empty($_COOKIE['check']) ) {
 			TodoyuHeader::sendTodoyuErrorHeader();
 
-			return TodoyuLabelManager::getLabel('LLL:loginpage.form.cookiecheck')
+			return TodoyuLabelManager::getLabel('LLL:loginpage.ext.form.cookiecheck')
 					. '<br />'
-					. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], TodoyuLabelManager::getLabel('LLL:loginpage.form.cookiecheck.linklabel'));
+					. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], TodoyuLabelManager::getLabel('LLL:loginpage.ext.form.cookiecheck.linklabel'));
 		} else {
 			setcookie('check', 0, NOW-1);
 		}

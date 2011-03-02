@@ -42,7 +42,7 @@ class TodoyuLoginpageHeadletLogout extends TodoyuHeadletTypeButton {
 	 * @return	String
 	 */
 	public function getLabel() {
-		return Label('loginpage.headlet.label');
+		return Label('loginpage.ext.headlet.label');
 	}
 
 }

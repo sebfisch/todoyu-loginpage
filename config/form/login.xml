@@ -29,11 +29,11 @@
 				</field>
 
 				<field type="comment" name="status">
-					<comment>LLL:loginpage.form.status.enterLoginData</comment>
+					<comment>LLL:loginpage.ext.form.status.enterLoginData</comment>
 				</field>
 
 				<field type="text" name="username">
-					<label>loginpage.form.field.username</label>
+					<label>loginpage.ext.form.field.username</label>
 					<validate>
 						<isNotEmpty msg="Tell me your name!" />
 					</validate>
@@ -41,13 +41,13 @@
 				</field>
 
 				<field type="text" name="password">
-					<label>loginpage.form.field.password</label>
+					<label>loginpage.ext.form.field.password</label>
 					<type>password</type>
 					<required />
 				</field>
 
 				<field type="checkbox" name="loginremain">
-					<label>loginpage.form.remainLogin</label>
+					<label>loginpage.ext.form.remainLogin</label>
 				</field>
 
 				<field type="comment" name="forgotpassword">
@@ -64,7 +64,7 @@
 			<class>buttons</class>
 			<elements>
 				<field type="button" name="submit">
-					<text>LLL:loginpage.form.field.submit</text>
+					<text>LLL:loginpage.ext.form.field.submit</text>
 					<type>submit</type>
 					<class>buttonLogin</class>
 					<hasIcon />

@@ -46,7 +46,7 @@ class TodoyuLoginpageMailer {
 
 			// Set "replyTo", "subject"
 		$mail->AddReplyTo($fromAddress, $fromName);
-		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.mail.subject.newpassword');
+		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.mail.subject.newpassword');
 
 		$data	= array(
 			'newPassword'	=> $password,
@@ -100,7 +100,7 @@ class TodoyuLoginpageMailer {
 
 			// Set "replyTo", "subject"
 		$mail->AddReplyTo($fromAddress, $fromName);
-		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.forgotpassword.mail.confirmation.title');
+		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.mail.confirmation.title');
 
 		$data	= array(
 			'confirmationlink'	=> TodoyuString::buildUrl(array('ext' => 'loginpage',

@@ -57,7 +57,7 @@ class TodoyuLoginpageRenderer {
 			// If status is failed, show error message
 		if( $status === 'failed' ) {
 			$config	= array(
-				'default'	=> 'LLL:loginpage.form.loginFailed',
+				'default'	=> 'LLL:loginpage.ext.form.loginFailed',
 				'class'		=> 'error'
 			);
 			$form->getFieldset('message')->addFieldElement('info', 'comment', $config);
@@ -111,7 +111,7 @@ class TodoyuLoginpageRenderer {
 	/**
 	 * @static
 	 * @param string $username
-	 * @return 
+	 * @return
 	 */
 	public static function renderForgotPasswordForm($username = '') {
 		$xmlPath	= 'ext/loginpage/config/form/forgotpassword.xml';
@@ -138,7 +138,7 @@ class TodoyuLoginpageRenderer {
 		$data	= array(
 			'javaScriptManual'	=>	Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['javascript']
 		);
-		
+
 		setcookie("check", 1, 0);
 
 		return render($tmpl, $data);
