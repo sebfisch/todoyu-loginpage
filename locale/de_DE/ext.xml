@@ -18,4 +18,18 @@
 	<label index="error.enterUsername">Bitte Ihren Benutzernamen angeben</label>
 	<label index="error.enterPassword">Bitte Ihr Passwort angeben</label>
 	<label index="headlet.label">Abmelden</label>
+	<label index="forgotpassword">Passwort vergessen?</label>
+	<label index="forgotpassword.tologin">Hier klicken, um zur Login-Seite zu springen</label>
+	<label index="forgotpassword.invalidusername">Der eingegebene Benutzername konnte nicht gefunden werden.</label>
+	<label index="forgotpassword.invalidusername.adminlink">Ich habe meinen Benutzernamen vergessen</label>
+	<label index="forgotpassword.form.field.submit">Neues Passwort per Email anfordern</label>
+	<label index="forgotpassword.form.field.notification.success">Eine Bestätigungs-Email wurde an Ihre Email-Adresse gesendet</label>
+	<label index="forgotpassword.form.field.comment">Passwort vergessen? Kein Problem! Geben Sie Ihren Benutzernamen ein und klicken Sie auf den Absenden Button. Sie erhalten dann eine Email, um das Zurücksetzen des Passwortes zu bestätigen.</label>
+	<label index="forgotpassword.mail.subject.newpassword">Ihr neues Passwort</label>
+	<label index="forgotpassword.mail.confirmation.title">Bestätigung der Passwort-Zurücksetzung</label>
+	<label index="forgotpassword.mail.confirmation.text">Sie haben ein neues Passwort angefordert. Bitte bestätigen Sie Ihr Passwort durch Klick auf den untenstehenden Hyperlink. Sie erhalten Ihr neues Passwort umgehend per Email.</label>
+	<label index="forgotpassword.mail.passwordreset.title">Ihr Passwort wurde zurückgesetzt</label>
+	<label index="forgotpassword.tologin">Hier klicken, um zur Login-Seite zu springen</label>
+	<label index="forgotpassword.mail.toconfirmation">Klicken Sie hier um Ihr Password zurück zu setzen</label>
+	<label index="forgotpassword.mail.yournewpassword">Ihr neues todoyu Passwort</label>
 </labels>
