@@ -22,11 +22,6 @@
 define('EXTID_LOGINPAGE', 110);
 define('PATH_EXT_LOGINPAGE', PATH_EXT . '/loginpage');
 
-	// Register module locales
-//TodoyuLabelManager::register('loginpage', 'loginpage', 'ext.xml');
-//TodoyuLabelManager::register('panelwidget-loginpage', 'loginpage', 'panelwidget-loginpage.xml');
-//TodoyuLabelManager::register('panelwidget-loginnews', 'loginpage', 'panelwidget-loginnews.xml');
-
 	// Add the ext controller to the noLoginRequired list
 Todoyu::$CONFIG['AUTH']['noLoginRequired']['loginpage'] = array('ext');
 
