@@ -263,10 +263,9 @@ div.passwordResetConfirmationText.successful {
 #reLoginPopup #relgin-popup-message {
 	margin:5px 5px 0 5px;
 	border-bottom:1px #ccc dotted;
-	background-color:#e9ebc6;
+	background:#e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
 	height:50px;
 	padding:18px 0 5px 70px;
-	background:#e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
 }
 
 #reLoginPopup form.formLogin fieldset.buttons,
