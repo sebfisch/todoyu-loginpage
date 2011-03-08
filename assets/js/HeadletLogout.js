@@ -22,6 +22,7 @@ Todoyu.Ext.loginpage.Headlet.Logout = Class.create(Todoyu.Headlet, {
 	/**
 	 * Handle click on loginpage's logout headlet
 	 *
+	 * @method	onButtonClick
 	 * @param	{Event}		event
 	 */
 	onButtonClick: function(event) {
