@@ -51,6 +51,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Init loginpage ext JavaScript
+	 *
+	 * @method	init
 	 */
 	init: function() {
 		if( Todoyu.getArea() === 'loginpage' ) {
@@ -67,6 +69,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Focus username input if empty, otherwise: focus password input
+	 *
+	 * @method	focusField
 	 */
 	focusField: function() {
 		if( $F(this.fieldUsername) === '' ) {
@@ -79,8 +83,9 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Override panelwidget save function, to prevent access denied message
-	 * because the user isn't logged in
+	 * Override panelwidget save function, to prevent access denied message because the user isn't logged in
+	 *
+	 * @method	disableToggleSave
 	 */
 	disableToggleSave: function() {
 		Todoyu.PanelWidget.saveToggleStatus = Prototype.emptyFunction;
@@ -90,6 +95,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Install form onSubmit-observer
+	 *
+	 * @method	observeForm
 	 */
 	observeForm: function() {
 		$('login-form').observe('submit', this.onFormSubmit.bindAsEventListener(this));
@@ -99,6 +106,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Observe the password field for changes
+	 *
+	 * @method	observePasswordField
 	 */
 	observePasswordField: function() {
 		$('login-field-password').observe('keyup', this.onPasswordEnter.bind(this));
@@ -108,7 +117,9 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * register hooks
+	 * Register hooks
+	 *
+	 * @method	registerHooks
 	 */
 	registerHooks: function() {
 		Todoyu.Hook.add('core.global.notloggedin', this.onLoggedOutAuto.bind(this));
@@ -119,6 +130,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * When password field input changes, generate hashed password, if form is submitted normally (no AJAX)
 	 *
+	 * @method	onPasswordEnter
 	 * @param	{Event}		event
 	 */
 	onPasswordEnter: function(event) {
@@ -130,6 +142,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * onSubmit event handler: stop event and evoke form submission
 	 *
+	 * @method	onFormSubmit
 	 * @param	{Event}		event
 	 * @return	{Boolean}
 	 */
@@ -145,6 +158,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Evoke login form submission as Todoyu post-request, params taken from form fields
+	 *
+	 * @method	submitForm
 	 */
 	submitForm: function() {
 		if( this.checkFieldsNotEmpty() ) {
@@ -170,6 +185,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Get MD5 hash of entered password
 	 *
+	 * @method	getHashedPassword
 	 * @return	String
 	 */
 	getHashedPassword: function() {
@@ -181,6 +197,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Check whether field 'remember me on this computer' is checked
 	 *
+	 * @method	isRemainLoginChecked
 	 * @return	{Boolean}
 	 */
 	isRemainLoginChecked: function() {
@@ -192,6 +209,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Check whether all (required) fields of the login form are filled (username, password), if not filled: focus empty field
 	 *
+	 * @method	checkFieldsNotEmpty
 	 * @return	{Boolean}
 	 */
 	checkFieldsNotEmpty: function() {
@@ -213,6 +231,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Handle login request: disable login form fields, display verification progress message
+	 *
+	 * @method	onLoginRequest
 	 */
 	onLoginRequest: function() {
 		this.toggleLoginFields(false);
@@ -224,6 +244,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Enable / disable fields of login form
 	 *
+	 * @method	toggleLoginFields
 	 * @param	{Boolean}	active
 	 */
 	toggleLoginFields: function(active) {
@@ -251,6 +272,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle login request, evoked from onComplete of login form submission
 	 *
+	 * @method	onLoginResponse
 	 * @param	{Ajax.Response}		response
 	 */
 	onLoginResponse: function(response){
@@ -258,7 +280,6 @@ Todoyu.Ext.loginpage = {
 
 		if( status.success ) {
 			this.displayLoginSuccess();
-//			console.log('reload');
 			location.reload();
 		} else {
 			this.toggleLoginFields(true);
@@ -271,6 +292,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Display status message when verifying received login data
+	 *
+	 * @method	displayVerifying
 	 */
 	displayVerifying: function() {
 		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
@@ -281,6 +304,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Display status message of successful login
+	 *
+	 * @method	displayLoginSuccess
 	 */
 	displayLoginSuccess: function() {
 		$(this.elStatus).update('<img src="core/assets/img/ajax-loader_success.gif" /><span class="icon"></span>[LLL:loginpage.ext.form.status.loginOk]');
@@ -293,6 +318,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Display status message of login error
 	 *
+	 * @method	displayLoginError
 	 * @param	{String}	message
 	 */
 	displayLoginError: function(message) {
@@ -304,6 +330,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Display status message when verifying received login data
+	 *
+	 * @method	displayForgotPasswordVerifying
 	 */
 	displayForgotPasswordVerifying: function() {
 		$(this.forgotPasswordElStatus).update('<img src="core/assets/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
@@ -314,6 +342,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Display status message of successful login
+	 *
+	 * @method	displayForgotPasswordSuccess
 	 */
 	displayForgotPasswordSuccess: function() {
 		$(this.elStatus).update('<span class="icon"></span>[LLL:loginpage.ext.forgotpassword.form.field.notification.success]');
@@ -327,6 +357,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Display status message of forgot password error
 	 *
+	 * @method	displayForgotPasswordError
 	 * @param	{String}	message
 	 */
 	displayForgotPasswordError: function(message) {
@@ -339,6 +370,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Log out current person
+	 *
+	 * @method	logout
 	 */
 	logout: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -357,6 +390,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Handle logging out: clears all params and reloads loginpage
 	 *
+	 * @method	onLoggedOut
 	 * @param	{Ajax.Response}		response
 	 */
 	onLoggedOut: function(response) {
@@ -368,6 +402,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 *
+	 * @method	loadForgotPasswordForm
 	 */
 	loadForgotPasswordForm: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -385,8 +420,10 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
+	 * Handler when forget-password form has been loaded - set content from response
 	 *
-	 * @param response
+	 * @method	onForgotPasswordFormLoaded
+	 * @param	{Ajax.Response}		response
 	 */
 	onForgotPasswordFormLoaded: function(response) {
 		$('login-form').replace(response.responseText);
@@ -396,6 +433,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 *
+	 * @method	submitForgotPasswordForm
+	 * @param	{Element}	form
 	 */
 	submitForgotPasswordForm: function(form) {
 		this.displayForgotPasswordVerifying();
@@ -411,7 +450,8 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * @param response
+	 * @method	onForgotPasswordResponse
+	 * @param	{Ajax.Response}		response
 	 */
 	onForgotPasswordResponse: function(response) {
 		var status	= response.responseJSON;
@@ -433,7 +473,9 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * this method is called by the onLoggedOut hook. Sends the request to load the relogin form
+	 * This method is called by the onLoggedOut hook. Sends the request to load the relogin form
+	 *
+	 * @method	onLoggedOutAuto
 	 */
 	onLoggedOutAuto: function(response) {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -456,7 +498,9 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * handle the loaded re-login form
+	 * Handle the loaded re-login form
+	 *
+	 * @method	onLoggedOutFormLoaded
 	 */
 	onLoggedOutFormLoaded: function() {
 		$('login-form').observe('submit', this.onReLoginFormSubmit.bindAsEventListener(this));
@@ -468,7 +512,9 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Submits the login form
+	 * Handler to re-submit login form
+	 *
+	 * @method	onReLoginFormSubmit
 	 */
 	onReLoginFormSubmit: function() {
 		if( this.checkFieldsNotEmpty() ) {
@@ -492,7 +538,7 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Handle the relogin request.
+	 * Handle the re-login request.
 	 *
 	 * If login was successful:
 	 * 	- close the popup
@@ -504,7 +550,8 @@ Todoyu.Ext.loginpage = {
 	 * 	- display the error message in the form
 	 * 	- preselect the password field
 	 *
-	 * @param response
+	 * @method	onReLoginResponse
+	 * @param	{Ajax.Response}	response
 	 */
 	onReLoginResponse: function(response) {
 		var status	= response.responseJSON;
@@ -526,6 +573,8 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Sends an request to check if cookies are enabled in the browser
+	 *
+	 * @method	sendCookieCheck
 	 */
 	sendCookieCheck: function() {
 		var url = Todoyu.getUrl('loginpage', 'ext');
@@ -546,7 +595,8 @@ Todoyu.Ext.loginpage = {
 	 * if cookies are disabled show the warning - message.
 	 * Otherwise hide the whole form - field to prevent displaying an empty div
 	 *
-	 * @param response
+	 * @method	onCookieCheckComplete
+	 * @param	{Ajax.Response}		response
 	 */
 	onCookieCheckComplete: function(response) {
 		if( response.hasTodoyuError() ) {
@@ -557,4 +607,5 @@ Todoyu.Ext.loginpage = {
 			$('formElement-login-field-javascript').hide();
 		}
 	}
+
 };

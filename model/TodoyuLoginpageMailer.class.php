@@ -79,11 +79,12 @@ class TodoyuLoginpageMailer {
 
 
 	/**
-	 * @static
-	 * @param  $idPerson
-	 * @param  $hash
-	 * @param  $userName
-	 * @return bool
+	 * Send confirmation email
+	 *
+	 * @param	Integer		$idPerson
+	 * @param	String		$hash
+	 * @param	String		$userName
+	 * @return	Boolean
 	 */
 	public static function sendConfirmationMail($idPerson, $hash, $userName) {
 		$person	= TodoyuContactPersonManager::getPerson($idPerson);
@@ -103,11 +104,16 @@ class TodoyuLoginpageMailer {
 		$mail->Subject	= TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.mail.confirmation.title');
 
 		$data	= array(
-			'confirmationlink'	=> TodoyuString::buildUrl(array('ext' => 'loginpage',
-																'controller'	=> 'ext',
-																'action'		=> 'confirmationmail',
-																'hash'			=> $hash,
-																'userName'		=> $userName), '', true),
+			'confirmationlink'	=> TodoyuString::buildUrl(
+				array('ext' => 'loginpage',
+					  'controller'	=> 'ext',
+					  'action'		=> 'confirmationmail',
+					  'hash'			=> $hash,
+					  'userName'		=> $userName
+				),
+				'',		// Hash
+				true	// absolute
+			),
 			'isConfirmation'	=> true
 		);
 

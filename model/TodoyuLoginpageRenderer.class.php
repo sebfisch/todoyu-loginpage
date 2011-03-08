@@ -109,9 +109,10 @@ class TodoyuLoginpageRenderer {
 
 
 	/**
-	 * @static
-	 * @param string $username
-	 * @return
+	 * Render form for requesting email with forgotten password
+	 *
+	 * @param	String	$username
+	 * @return	String
 	 */
 	public static function renderForgotPasswordForm($username = '') {
 		$xmlPath	= 'ext/loginpage/config/form/forgotpassword.xml';
