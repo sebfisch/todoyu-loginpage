@@ -79,9 +79,9 @@ class TodoyuLoginpageManager {
 
 
 	/**
-	 * @static
-	 * @param  $userName
-	 * @return void
+	 * Send confirmation email to user of given username
+	 *
+	 * @param	String	$userName
 	 */
 	public static function sendConfirmationMail($userName) {
 		$idPerson	= TodoyuContactPersonManager::getPersonIDByUsername($userName);
@@ -96,11 +96,9 @@ class TodoyuLoginpageManager {
 
 
 	/**
-	 * creates a new password an sends it to the user
+	 * Create new password and send it to the user's email address
 	 *
-	 * @static
 	 * @param	String	$userName
-	 * @return	void
 	 */
 	public static function createAndSendNewPassword($userName) {
 		$newPasswordPlain	= TodoyuString::generateGoodPassword();

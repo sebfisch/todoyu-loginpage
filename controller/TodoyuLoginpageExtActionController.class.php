@@ -157,7 +157,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
-	 * @return void
+	 * Render forgot-password form
+	 *
+	 * @param	Array	$params
+	 * @return	String
 	 */
 	public function loadForgotPasswordFormAction($params) {
 		$username	= $params['username'];
@@ -167,8 +170,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
+	 * Get password-forgotten form
 	 *
-	 * @return void
+	 * @param	Array	$params
+	 * @return	String	JSON encoded password-forgotten form
 	 */
 	public function forgotPasswordAction($params) {
 		$xml	= 'ext/loginpage/config/form/forgotpassword.xml';
@@ -205,8 +210,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
-	 * @param  $params
-	 * @return String
+	 * Render confirmation email screen
+	 *
+	 * @param	Array	$params
+	 * @return	String
 	 */
 	public function confirmationmailAction($params) {
 		$userName	= $params['userName'];
@@ -218,7 +225,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 		TodoyuPage::init('ext/loginpage/view/confirmationpage.tmpl');
 
-				// Add login screen maintabs
+				// Add login screen main tabs
 		TodoyuLoginpageManager::addLoginScreenMainTabs();
 			// Set default tab
 		TodoyuFrontend::setDefaultTab('login');
@@ -253,8 +260,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
-	 * @param  $params
-	 * @return void
+	 * Render relogin popup message with form
+	 *
+	 * @param	Array	$params
+	 * @return	String
 	 */
 	public function reloginPopupAction(array $params) {
 		$tmpl	= 'ext/loginpage/view/reloginpopup.tmpl';
@@ -274,11 +283,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
-	 * if the cookie check is empty, cookies are not enabled in the browser and todoyu has to show an warning message.
-	 *
+	 * If the cookie check is empty, cookies are not enabled in the browser and todoyu has to show an warning message.
 	 * if the cookie exists delete it
 	 *
-	 * @param  $params
+	 * @param	Array	$params
 	 * @return String
 	 */
 	public function cookiecheckAction(array $params) {
