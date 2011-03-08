@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuLoginpagePanelWidgetLoginNews extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuLoginpagePanelWidgetLoginNews extends TodoyuPanelWidget {
 
 	/**
 	 * Initialize projectTree PanelWidget
@@ -65,25 +65,7 @@ class TodoyuLoginpagePanelWidgetLoginNews extends TodoyuPanelWidget implements T
 			$data['filecheck']	= PATH_CACHE.'/output/loginnews.html';
 		}
 
-		$content = render($tmpl, $data);
-
-		$this->setContent($content);
-
-
-		return $content;
-	}
-
-
-
-	/**
-	 * Render panelWidget including its content
-	 *
-	 * @return	String
-	 */
-	public function render() {
-		$this->renderContent();
-
-		return parent::render();
+		return render($tmpl, $data);
 	}
 
 }

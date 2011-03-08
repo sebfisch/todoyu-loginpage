@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Loginpage
  */
-class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 
 	/**
 	 * Initialize projectTree PanelWidget
@@ -60,24 +60,7 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget implements T
 		$tmpl	= 'ext/loginpage/view/panelwidget-loginpage.tmpl';
 		$data	= array();
 
-		$content= render($tmpl, $data);
-
-		$this->setContent($content);
-
-		return $content;
-	}
-
-
-
-	/**
-	 * Render panelWidget including its content
-	 *
-	 * @return	String
-	 */
-	public function render() {
-		$this->renderContent();
-
-		return parent::render();
+		return render($tmpl, $data);
 	}
 
 }
