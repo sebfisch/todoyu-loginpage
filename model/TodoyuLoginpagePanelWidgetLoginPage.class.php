@@ -34,7 +34,7 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 	 * @param	Integer		$idArea
 	 * @param	Boolean		$expanded
 	 */
-	public function __construct(array $config, array $params = array(), $idArea = 0) {
+	public function __construct(array $config, array $params = array()) {
 
 			// Construct panelWidget (init basic configuration)
 		parent::__construct(
@@ -42,8 +42,7 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 			'loginpage',							// panel widget ID
 			'LLL:loginpage.panelwidget-loginpage.title',		// widget title text
 			$config,								// widget config array
-			$params,								// widget parameters
-			$idArea									// area ID
+			$params								// widget parameters
 		);
 
 
