@@ -18,6 +18,10 @@
 *****************************************************************************/
 
 /**
+ * @module	Loginpage
+ */
+
+/**
  * Loginnews Panelwidget
  * Load news from todoyu website to a panelwidget displayed at the loginscreen
  *

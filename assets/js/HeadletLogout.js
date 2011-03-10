@@ -17,6 +17,10 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+/**
+ * @module	Loginpage
+ */
+
 Todoyu.Ext.loginpage.Headlet.Logout = Class.create(Todoyu.Headlet, {
 
 	/**
