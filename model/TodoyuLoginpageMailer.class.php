@@ -57,7 +57,6 @@ class TodoyuLoginpageMailer {
 		$htmlTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl';
 		$htmlBody		= render($htmlTmpl, $data);
 
-
 		$plainTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyplain.tmpl';
 		$mail->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
 		$mail->AltBody	= render($plainTmpl, $data);
