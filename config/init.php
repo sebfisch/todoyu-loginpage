@@ -34,14 +34,14 @@ Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 		'position'	=> 20,
 		'key'		=> 'help',
 		'label'		=> 'LLL:loginpage.ext.tab.help',
-		'href'		=> 'http://developer.todoyu.com',
+		'href'		=> 'http://www.todoyu.com/community/forum/',
 		'target'	=> '_blank'
 	),
 	array(
 		'position'	=> 30,
 		'key'		=> 'blog',
 		'label'		=> 'LLL:loginpage.ext.tab.blog',
-		'href'		=> 'http://blog.snowflake.ch/de/blog-category/todoyu/',
+		'href'		=> 'http://www.todoyu.com/community/blog/',
 		'target'	=> '_blank'
 	)
 );
