@@ -296,7 +296,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	displayVerifying
 	 */
 	displayVerifying: function() {
-		$(this.elStatus).update('<img src="core/assets/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
+		$(this.elStatus).update('<img src="core/asset/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
 		$(this.elStatus).addClassName('notification');
 	},
 
@@ -308,7 +308,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	displayLoginSuccess
 	 */
 	displayLoginSuccess: function() {
-		$(this.elStatus).update('<img src="core/assets/img/ajax-loader_success.gif" /><span class="icon"></span>[LLL:loginpage.ext.form.status.loginOk]');
+		$(this.elStatus).update('<img src="core/asset/img/ajax-loader_success.gif" /><span class="icon"></span>[LLL:loginpage.ext.form.status.loginOk]');
 		$(this.elStatus).removeClassName('failure');
 		$(this.elStatus).addClassName('success');
 	},
@@ -334,7 +334,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	displayForgotPasswordVerifying
 	 */
 	displayForgotPasswordVerifying: function() {
-		$(this.forgotPasswordElStatus).update('<img src="core/assets/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
+		$(this.forgotPasswordElStatus).update('<img src="core/asset/img/ajax-loader.gif" />[LLL:loginpage.ext.form.status.verifyingLoginData]');
 		$(this.forgotPasswordElStatus).addClassName('notification');
 	},
 

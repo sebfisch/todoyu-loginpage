@@ -28,7 +28,7 @@
 Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 	'js' => array(
 		array(
-			'file'		=> 'ext/loginpage/assets/js/Ext.js',
+			'file'		=> 'ext/loginpage/asset/js/Ext.js',
 			'position'	=> 100
 		),
 		array(
@@ -39,26 +39,26 @@ Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 			'compress'	=> true
 		),
 		array(
-			'file'		=> 'ext/loginpage/assets/js/PanelWidgetLoginNews.js',
+			'file'		=> 'ext/loginpage/asset/js/PanelWidgetLoginNews.js',
 			'position'	=> 120
 		),
 		array(
-			'file'		=> 'ext/loginpage/assets/js/HeadletLogout.js',
+			'file'		=> 'ext/loginpage/asset/js/HeadletLogout.js',
 			'position'	=> 120
 		)
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/loginpage/assets/css/ext.css',
+			'file'		=> 'ext/loginpage/asset/css/ext.css',
 			'media'		=> 'all',
 			'position'	=> 100
 		),
 		array(
-			'file' 		=> 'ext/loginpage/assets/css/panelwidget-loginnews.css',
+			'file' 		=> 'ext/loginpage/asset/css/panelwidget-loginnews.css',
 			'position' 	=> 120,
 		),
 		array(
-			'file' 		=> 'ext/loginpage/assets/css/headlet-logout.css',
+			'file' 		=> 'ext/loginpage/asset/css/headlet-logout.css',
 			'position' 	=> 120,
 		)
 	)

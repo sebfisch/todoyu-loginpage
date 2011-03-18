@@ -113,14 +113,14 @@ form.formLogin .notification {
 		form.formLogin .notification.success .icon {
 			padding-left:15px;
 			margin-right:5px;
-			background:url(../../../../core/assets/img/notify.png) no-repeat 0 -1px;
+			background:url(../../../../core/asset/img/notify.png) no-repeat 0 -1px;
 		}
 	form.formLogin .notification.failure {
 		background-color:#f6e0e0 !important;
 		border-color:#d1a4a4;
 	}
 		form.formLogin .notification.failure .icon {
-			background:url(../../../../core/assets/img/notify.png) no-repeat 0 -47px;
+			background:url(../../../../core/asset/img/notify.png) no-repeat 0 -47px;
 		}
 	form.formLogin .notification span.icon {
 		float:none;
