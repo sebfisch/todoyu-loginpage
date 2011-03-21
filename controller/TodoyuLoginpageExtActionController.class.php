@@ -191,9 +191,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
  			} else {
 				TodoyuHeader::sendTodoyuErrorHeader();
 
-				$message = TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.invalidusername')
+				$message = Label('loginpage.ext.forgotpassword.invalidusername')
 							. '<br /><br />'
-							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], TodoyuLabelManager::getLabel('LLL:loginpage.ext.forgotpassword.invalidusername.adminlink'));
+							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], Label('loginpage.ext.forgotpassword.invalidusername.adminlink'));
 
 				$response['message'] = $message;
 				$response['form'] = $form->render();
