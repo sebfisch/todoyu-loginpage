@@ -29,7 +29,7 @@
 	<label index="forgotpassword.mail.confirmation.title">Bestätigung der Passwort-Zurücksetzung</label>
 	<label index="forgotpassword.mail.confirmation.text">Sie haben ein neues Passwort angefordert. Bitte bestätigen Sie Ihr Passwort durch Klick auf den untenstehenden Hyperlink. Sie erhalten Ihr neues Passwort umgehend per Email.</label>
 	<label index="forgotpassword.mail.passwordreset.title">Ihr Passwort wurde zurückgesetzt</label>
-	<label index="forgotpassword.tologin">Hier klicken, um zur Login-Seite zu springen</label>
+	<label index="forgotpassword.mail.tologin">Hier klicken, um zur Login-Seite zu springen</label>
 	<label index="forgotpassword.mail.toconfirmation">Klicken Sie hier um Ihr Password zurück zu setzen</label>
 	<label index="forgotpassword.mail.yournewpassword">Ihr neues todoyu Passwort</label>
 </labels>
