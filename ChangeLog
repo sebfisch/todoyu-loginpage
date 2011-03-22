@@ -1,4 +1,6 @@
 todoyu loginpage extension changelog
 
 dev 1.0.6
-	* Added changelog
+	* Bugfix: Removed whitespace after password in email body to prevent copy/paste problems
+	* Bugfix: fixed label key: forgotpassword.mail.tologin
+ 	* Added changelog
