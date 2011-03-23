@@ -122,7 +122,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	registerHooks
 	 */
 	registerHooks: function() {
-		Todoyu.Hook.add('core.global.notloggedin', this.onLoggedOutAuto.bind(this));
+		Todoyu.Hook.add('core.notloggedin', this.onLoggedOutAuto.bind(this));
 	},
 
 
@@ -213,12 +213,13 @@ Todoyu.Ext.loginpage = {
 	 * @return	{Boolean}
 	 */
 	checkFieldsNotEmpty: function() {
-		if( $F(this.fieldUsername) === '' ) {
+		if( $F(this.fieldUsername).trim() === '' ) {
 			alert('[LLL:loginpage.ext.error.enterUsername]');
+			$(this.fieldUsername).value = '';
 			$(this.fieldUsername).focus();
 			return false;
 		}
-		if( $F(this.fieldPassword) === '' ) {
+		if( $F(this.fieldPassword).trim() === '' ) {
 			alert('[LLL:loginpage.ext.error.enterPassword]');
 			$(this.fieldPassword).focus();
 			return false;
