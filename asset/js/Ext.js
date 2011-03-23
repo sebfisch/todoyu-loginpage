@@ -167,13 +167,13 @@ Todoyu.Ext.loginpage = {
 
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
-				'parameters': {
-					'action':	'login',
+				parameters: {
+					action:	'login',
 					'username':	$F(this.fieldUsername),
 					'passhash':	this.getHashedPassword(),
 					'remain':	this.isRemainLoginChecked()
 				},
-				'onComplete':	this.onLoginResponse.bind(this)
+				onComplete:	this.onLoginResponse.bind(this)
 			};
 
 			Todoyu.send(url, options);
@@ -376,10 +376,10 @@ Todoyu.Ext.loginpage = {
 	logout: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
-			'parameters': {
-				'action':	'logout'
+			parameters: {
+				action:	'logout'
 			},
-			'onComplete':	this.onLoggedOut.bind(this)
+			onComplete:	this.onLoggedOut.bind(this)
 		};
 
 		Todoyu.send(url, options);
@@ -407,11 +407,11 @@ Todoyu.Ext.loginpage = {
 	loadForgotPasswordForm: function() {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
-			'parameters': {
-				'action':	'loadForgotPasswordForm',
+			parameters: {
+				action:	'loadForgotPasswordForm',
 				'username':	$F(this.fieldUsername)
 			},
-			'onComplete':	this.onForgotPasswordFormLoaded.bind(this)
+			onComplete:	this.onForgotPasswordFormLoaded.bind(this)
 		};
 
 		Todoyu.send(url, options);
@@ -440,8 +440,8 @@ Todoyu.Ext.loginpage = {
 		this.displayForgotPasswordVerifying();
 
 		$(form).request({
-			'parameters': {
-				'action':	'forgotPassword'
+			parameters: {
+				action:	'forgotPassword'
 			},
 			onComplete: this.onForgotPasswordResponse.bind(this)
 		});
@@ -481,10 +481,10 @@ Todoyu.Ext.loginpage = {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 
 		var options = {
-			'parameters': {
-					'action': 'reloginPopup'
+			parameters: {
+					action: 'reloginPopup'
 			},
-			'onComplete': this.onLoggedOutFormLoaded.bind(this)
+			onComplete: this.onLoggedOutFormLoaded.bind(this)
 		};
 
 		var idPopup	= 'reLoginPopup';
@@ -522,13 +522,13 @@ Todoyu.Ext.loginpage = {
 
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
-				'parameters': {
-					'action':	'login',
+				parameters: {
+					action:	'login',
 					'username':	$F(this.fieldUsername),
 					'passhash':	this.getHashedPassword(),
 					'remain':	this.isRemainLoginChecked()
 				},
-				'onComplete':	this.onReLoginResponse.bind(this)
+				onComplete:	this.onReLoginResponse.bind(this)
 			};
 
 			Todoyu.send(url, options);
