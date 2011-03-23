@@ -489,7 +489,7 @@ Todoyu.Ext.loginpage = {
 		};
 
 		var idPopup	= 'reLoginPopup';
-		var width	= 500;
+		var width	= 540;
 
 		this.oldRequest = response.request;
 
