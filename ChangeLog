@@ -1,6 +1,11 @@
 todoyu loginpage extension changelog
 
-dev 1.0.6
+loginpage 1.1.0 - beta release
+	* Changed: Requires core 2.1
+	* Changed: Structure for 2.1
+	* Changed: All classes are prefixed with extension name
+
+loginpage 1.0.6
 	* Bugfix: Removed whitespace after password in email body to prevent copy/paste problems
 	* Bugfix: fixed label key: forgotpassword.mail.tologin
  	* Added changelog
