@@ -21,49 +21,31 @@
 class TodoyuLoginpageMailer {
 
 	/**
-	 * @static
-	 * @param	Integer	$idPerson
-	 * @param	String	$password
+	 *
+	 * @param	Integer		$idPerson
+	 * @param	String		$password
 	 * @return	Boolean
 	 */
 	public static function sendNewPasswordMail($idPerson, $password) {
 		$person	= TodoyuContactPersonManager::getPerson($idPerson);
 
-			// Get mailer
-		$mailer	= TodoyuMailManager::getPHPMailerLite(true);
-
-			// Set "from" (sender) name and email address
-		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
-		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
-		$mailer->SetFrom($fromAddress, $fromName);
-
-			// Set "replyTo", "subject"
-		$mailer->AddReplyTo($fromAddress, $fromName);
-		$mailer->Subject	= Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
-
 		$data	= array(
 			'newPassword'	=> $password,
-			'loginlink'	=> TodoyuString::buildUrl(array(), '', true)
+			'loginlink'		=> TodoyuString::buildUrl(array(), '', true)
 		);
 
-			// Add message body as HTML and plain text
-		$htmlTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl';
-		$htmlBody		= render($htmlTmpl, $data);
+		$mailSubject	= Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
+		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
+		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
+		$toAddress		= $person->getEmail();
+		$toName			= $person->getFullName();
+		$htmlBody		= render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
+		$textBody		= render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
 
-		$plainTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyplain.tmpl';
-		$mailer->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
-		$mailer->AltBody	= render($plainTmpl, $data);
+		$baseURL	= PATH_EXT_LOGINPAGE;
 
-			// Add "to" (recipient) address
-		$mailer->AddAddress($person->getEmail(), $person->getFullName());
-
-		try {
-			$sendStatus	= $mailer->Send();
-		} catch(phpmailerException $e) {
-			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
-		} catch(Exception $e) {
-			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
-		}
+			// Send mail
+		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL);
 
 		return $sendStatus;
 	}
@@ -79,19 +61,14 @@ class TodoyuLoginpageMailer {
 	 * @return	Boolean
 	 */
 	public static function sendConfirmationMail($idPerson, $hash, $userName) {
-		$person	= TodoyuContactPersonManager::getPerson($idPerson);
+		$idPerson	= intval($idPerson);
+		$person		= TodoyuContactPersonManager::getPerson($idPerson);
 
-			// Get mailer
-		$mailer	= TodoyuMailManager::getPHPMailerLite(true);
-
-			// Set "from" (sender) name and email address
-		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
-		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
-		$mailer->SetFrom($fromAddress, $fromName);
-
-			// Set "replyTo", "subject"
-		$mailer->AddReplyTo($fromAddress, $fromName);
-		$mailer->Subject	= Label('loginpage.ext.forgotpassword.mail.confirmation.title');
+		$mailSubject= Label('loginpage.ext.forgotpassword.mail.confirmation.title');
+		$fromAddress= Todoyu::$CONFIG['SYSTEM']['email'];
+		$fromName	= Todoyu::$CONFIG['SYSTEM']['name'];
+		$toAddress	= $person->getEmail();
+		$toName		= $person->getFullName();
 
 		$data	= array(
 			'confirmationlink'	=> TodoyuString::buildUrl(
@@ -106,29 +83,17 @@ class TodoyuLoginpageMailer {
 			),
 			'isConfirmation'	=> true
 		);
+		$htmlBody	= render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
+		$textBody	= render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
 
-			// Add message body as HTML and plain text
-		$htmlTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl';
-		$htmlBody		= render($htmlTmpl, $data);
+		$baseURL	= PATH_EXT_LOGINPAGE;
 
-
-		$plainTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyplain.tmpl';
-		$mailer->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
-		$mailer->AltBody	= render($plainTmpl, $data);
-
-			// Add "to" (recipient) address
-		$mailer->AddAddress($person->getEmail(), $person->getFullName());
-
-		try {
-			$sendStatus	= $mailer->Send();
-		} catch(phpmailerException $e) {
-			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
-		} catch(Exception $e) {
-			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
-		}
+			// Send mail
+		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL);
 
 		return $sendStatus;
 	}
+
 }
 
 ?>
