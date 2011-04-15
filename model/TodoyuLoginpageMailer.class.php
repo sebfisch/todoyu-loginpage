@@ -18,12 +18,7 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-	// Include mail library
-require_once( PATH_LIB . '/php/phpmailer/class.phpmailer-lite.php' );
-
 class TodoyuLoginpageMailer {
-
-
 
 	/**
 	 * @static
@@ -34,19 +29,17 @@ class TodoyuLoginpageMailer {
 	public static function sendNewPasswordMail($idPerson, $password) {
 		$person	= TodoyuContactPersonManager::getPerson($idPerson);
 
-			// Set mail config
-		$mail			= new PHPMailerLite(true);
-		$mail->Mailer	= 'mail';
-		$mail->CharSet	= 'utf-8';
+			// Get mailer
+		$mailer	= TodoyuMailManager::getPHPMailerLite(true);
 
 			// Set "from" (sender) name and email address
 		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
 		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
-		$mail->SetFrom($fromAddress, $fromName);
+		$mailer->SetFrom($fromAddress, $fromName);
 
 			// Set "replyTo", "subject"
-		$mail->AddReplyTo($fromAddress, $fromName);
-		$mail->Subject	= Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
+		$mailer->AddReplyTo($fromAddress, $fromName);
+		$mailer->Subject	= Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
 
 		$data	= array(
 			'newPassword'	=> $password,
@@ -58,14 +51,14 @@ class TodoyuLoginpageMailer {
 		$htmlBody		= render($htmlTmpl, $data);
 
 		$plainTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyplain.tmpl';
-		$mail->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
-		$mail->AltBody	= render($plainTmpl, $data);
+		$mailer->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
+		$mailer->AltBody	= render($plainTmpl, $data);
 
 			// Add "to" (recipient) address
-		$mail->AddAddress($person->getEmail(), $person->getFullName());
+		$mailer->AddAddress($person->getEmail(), $person->getFullName());
 
 		try {
-			$sendStatus	= $mail->Send();
+			$sendStatus	= $mailer->Send();
 		} catch(phpmailerException $e) {
 			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
 		} catch(Exception $e) {
@@ -88,19 +81,17 @@ class TodoyuLoginpageMailer {
 	public static function sendConfirmationMail($idPerson, $hash, $userName) {
 		$person	= TodoyuContactPersonManager::getPerson($idPerson);
 
-			// Set mail config
-		$mail			= new PHPMailerLite(true);
-		$mail->Mailer	= 'mail';
-		$mail->CharSet	= 'utf-8';
+			// Get mailer
+		$mailer	= TodoyuMailManager::getPHPMailerLite(true);
 
 			// Set "from" (sender) name and email address
 		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
 		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
-		$mail->SetFrom($fromAddress, $fromName);
+		$mailer->SetFrom($fromAddress, $fromName);
 
 			// Set "replyTo", "subject"
-		$mail->AddReplyTo($fromAddress, $fromName);
-		$mail->Subject	= Label('loginpage.ext.forgotpassword.mail.confirmation.title');
+		$mailer->AddReplyTo($fromAddress, $fromName);
+		$mailer->Subject	= Label('loginpage.ext.forgotpassword.mail.confirmation.title');
 
 		$data	= array(
 			'confirmationlink'	=> TodoyuString::buildUrl(
@@ -122,14 +113,14 @@ class TodoyuLoginpageMailer {
 
 
 		$plainTmpl	= 'ext/loginpage/view/forgotpassword-mailbodyplain.tmpl';
-		$mail->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
-		$mail->AltBody	= render($plainTmpl, $data);
+		$mailer->MsgHTML($htmlBody, PATH_EXT_LOGINPAGE);
+		$mailer->AltBody	= render($plainTmpl, $data);
 
 			// Add "to" (recipient) address
-		$mail->AddAddress($person->getEmail(), $person->getFullName());
+		$mailer->AddAddress($person->getEmail(), $person->getFullName());
 
 		try {
-			$sendStatus	= $mail->Send();
+			$sendStatus	= $mailer->Send();
 		} catch(phpmailerException $e) {
 			Todoyu::log($e->getMessage(), TodoyuLogger::LEVEL_ERROR);
 		} catch(Exception $e) {
