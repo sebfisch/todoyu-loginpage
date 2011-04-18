@@ -78,7 +78,7 @@ class TodoyuLoginpagePanelWidgetManager {
 		$file = PATH_CACHE.'/output/loginnews.html';
 
 		// get content between the body tags
-		$content = substr($content, strpos($content, '<body>')+6);
+		$content = substr($content, strpos($content, '<body>') + 6);
 		$content = substr($content, 0, strlen($content) - (strlen($content)-strpos($content, '</body>')));
 
 		TodoyuFileManager::makeDirDeep(PATH_CACHE.'/output');
