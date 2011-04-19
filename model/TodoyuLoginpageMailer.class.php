@@ -72,11 +72,11 @@ class TodoyuLoginpageMailer {
 
 		$data	= array(
 			'confirmationlink'	=> TodoyuString::buildUrl(
-				array('ext' => 'loginpage',
+				array('ext' 		=> 'loginpage',
 					  'controller'	=> 'ext',
 					  'action'		=> 'confirmationmail',
-					  'hash'			=> $hash,
-					  'userName'		=> $userName
+					  'hash'		=> $hash,
+					  'userName'	=> $userName
 				),
 				'',		// Hash
 				true	// absolute
