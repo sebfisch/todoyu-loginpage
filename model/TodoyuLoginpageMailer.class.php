@@ -45,7 +45,7 @@ class TodoyuLoginpageMailer {
 		$baseURL	= PATH_EXT_LOGINPAGE;
 
 			// Send mail
-		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL);
+		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL, true);
 
 		return $sendStatus;
 	}
@@ -89,7 +89,7 @@ class TodoyuLoginpageMailer {
 		$baseURL	= PATH_EXT_LOGINPAGE;
 
 			// Send mail
-		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL);
+		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL, true);
 
 		return $sendStatus;
 	}
