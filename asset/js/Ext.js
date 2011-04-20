@@ -213,13 +213,13 @@ Todoyu.Ext.loginpage = {
 	 * @return	{Boolean}
 	 */
 	checkFieldsNotEmpty: function() {
-		if( $F(this.fieldUsername).trim() === '' ) {
+		if( $F(this.fieldUsername).strip() === '' ) {
 			alert('[LLL:loginpage.ext.error.enterUsername]');
 			$(this.fieldUsername).value = '';
 			$(this.fieldUsername).focus();
 			return false;
 		}
-		if( $F(this.fieldPassword).trim() === '' ) {
+		if( $F(this.fieldPassword).strip() === '' ) {
 			alert('[LLL:loginpage.ext.error.enterPassword]');
 			$(this.fieldPassword).focus();
 			return false;
@@ -493,7 +493,9 @@ Todoyu.Ext.loginpage = {
 
 		this.oldRequest = response.request;
 
-		if( !this.popup || !this.popup.isVisible() ) this.popup = Todoyu.Popups.open(idPopup, '[LLL:loginpage.ext.loginexpired.title]', width, url, options)
+		if( !this.popup || !this.popup.isVisible() ) {
+			this.popup = Todoyu.Popups.open(idPopup, '[LLL:loginpage.ext.loginexpired.title]', width, url, options);
+		}
 	},
 
 
