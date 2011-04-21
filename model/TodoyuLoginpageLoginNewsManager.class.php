@@ -57,7 +57,6 @@ class TodoyuLoginpageLoginNewsManager {
 	 */
 	private static function downloadNewsFile($isSecure) {
 		$url		= Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLoginNews']['url'];
-		$url		= ($isSecure ? 'https://' : 'http://') . $url;
 
 		$pageContent= TodoyuFileManager::downloadFile($url);
 		$bodyContent= self::extractBodyFromNewsFile($pageContent);
@@ -127,6 +126,11 @@ class TodoyuLoginpageLoginNewsManager {
 	 */
 	private static function writeCacheFile($content, $isSecure) {
 		$pathCacheFile	= self::getNewsFileCachePath($isSecure);
+
+			// Make sure content is https valid (prevents security notices in browser
+		if( $isSecure ) {
+			$content	= str_replace('http://', 'https://', $content);
+		}
 
 		TodoyuFileManager::saveFileContent($pathCacheFile, $content);
 	}
