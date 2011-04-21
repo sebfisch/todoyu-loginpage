@@ -52,8 +52,9 @@ Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 	Widgets
    ------------ */
 	// Feed URL for todoyu news widget
-Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLiveNews'] = array(
-	'url'	=> 'http://www.todoyu.com/?id=loginnews&type=101'
+Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLoginNews'] = array(
+	'url'	=> 'www.todoyu.com/?id=loginnews&type=101',
+	'age'	=> 36000 // 10 * 3600
 );
 
 ?>
