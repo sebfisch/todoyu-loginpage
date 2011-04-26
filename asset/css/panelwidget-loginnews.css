@@ -19,20 +19,20 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-live {
-	margin: 0;
-	padding: 10px 5px;
-	background: #eee;
-	font-family: Arial,Verdana,Helvetica,sans-serif;
-	font-size: 11px;
+	margin:0;
+	padding:10px 5px;
+	background:#eee;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:11px;
 }
 
 #panelwidget-loginnews #news-live p {
-	margin: 0;
-	padding: 0;
+	margin:0;
+	padding:0;
 }
 
 #panelwidget-loginnews #news-live a{
-	text-decoration: none;
+	text-decoration:none;
 	color:#247f9d;
 }
 
