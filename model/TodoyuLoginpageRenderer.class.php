@@ -99,8 +99,7 @@ class TodoyuLoginpageRenderer {
 
 
 	/**
-	 * @static
-	 * @return String
+	 * @return	String
 	 */
 	public static function renderForgotPasswordLink() {
 		return render('ext/loginpage/view/forgotpasswordlink.tmpl', array());
@@ -127,11 +126,10 @@ class TodoyuLoginpageRenderer {
 
 
 	/**
-	 * Renders the noscript javascript check an sets a cookie.
+	 * Renders the noscript check and sets a cookie.
 	 * To check if javaScript & cookies are enabled
 	 *
-	 * @static
-	 * @return String
+	 * @return	String
 	 */
 	public static function renderJavascriptAndCookieCheck() {
 		$tmpl	= 'ext/loginpage/view/javascriptcheck.tmpl';

@@ -38,11 +38,11 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 
 			// Construct panelWidget (init basic configuration)
 		parent::__construct(
-			'loginpage',							// ext key
-			'loginpage',							// panel widget ID
-			'LLL:loginpage.panelwidget-loginpage.title',		// widget title text
-			$config,								// widget config array
-			$params								// widget parameters
+			'loginpage',								// ext key
+			'loginpage',								// panel widget ID
+			'LLL:loginpage.panelwidget-loginpage.title',// widget title text
+			$config,									// widget config array
+			$params										// widget parameters
 		);
 
 
