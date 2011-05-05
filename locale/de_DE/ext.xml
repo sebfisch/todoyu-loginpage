@@ -41,6 +41,6 @@
 	<label index="loginexpired.message">Ihr Login ist nicht länger gültig. Bitte geben Sie Ihre Angaben im folgenden Formular ein.</label>
 	<label index="form.javascriptcheck">JavaScript ist in Ihrem Browser deaktiviert. Bitte aktivieren Sie JavaScript um einlogen zu können.</label>
 	<label index="form.javascriptcheck.linklabel">Wie kann ich JavaScript im Browser aktivieren?</label>
-	<label index="form.cookiecheck">>Cookies sind in Ihrem Browser deaktiviert. Bitte aktivieren Sie Cookies um einlogen zu können.</label>
+	<label index="form.cookiecheck">Cookies sind in Ihrem Browser deaktiviert. Bitte aktivieren Sie Cookies um einlogen zu können.</label>
 	<label index="form.cookiecheck.linklabel">Wie kann ich Cookies im Browser aktivieren?</label>
 </labels>
