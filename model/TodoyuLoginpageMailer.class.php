@@ -27,27 +27,9 @@ class TodoyuLoginpageMailer {
 	 * @return	Boolean
 	 */
 	public static function sendNewPasswordMail($idPerson, $password) {
-		$person	= TodoyuContactPersonManager::getPerson($idPerson);
+		$mail	= new TodoyuLoginpagePasswordResetMail($idPerson, $password);
 
-		$data	= array(
-			'newPassword'	=> $password,
-			'loginlink'		=> TodoyuString::buildUrl(array(), '', true)
-		);
-
-		$mailSubject	= Todoyu::Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
-		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
-		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
-		$toAddress		= $person->getEmail();
-		$toName			= $person->getFullName();
-		$htmlBody		= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
-		$textBody		= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
-
-		$baseURL	= PATH_EXT_LOGINPAGE;
-
-			// Send mail
-		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL, true);
-
-		return $sendStatus;
+		return $mail->send();
 	}
 
 
@@ -60,38 +42,10 @@ class TodoyuLoginpageMailer {
 	 * @param	String		$userName
 	 * @return	Boolean
 	 */
-	public static function sendConfirmationMail($idPerson, $hash, $userName) {
-		$idPerson	= intval($idPerson);
-		$person		= TodoyuContactPersonManager::getPerson($idPerson);
+	public static function sendConfirmationMail($idPerson, $hash) {
+		$mail	= new TodoyuLoginpagePasswordConfirmMail($idPerson, $hash);
 
-		$mailSubject= Todoyu::Label('loginpage.ext.forgotpassword.mail.confirmation.title');
-		$fromAddress= Todoyu::$CONFIG['SYSTEM']['email'];
-		$fromName	= Todoyu::$CONFIG['SYSTEM']['name'];
-		$toAddress	= $person->getEmail();
-		$toName		= $person->getFullName();
-
-		$data	= array(
-			'confirmationlink'	=> TodoyuString::buildUrl(
-				array('ext' 		=> 'loginpage',
-					  'controller'	=> 'ext',
-					  'action'		=> 'confirmationmail',
-					  'hash'		=> $hash,
-					  'userName'	=> $userName
-				),
-				'',		// Hash
-				true	// absolute
-			),
-			'isConfirmation'	=> true
-		);
-		$htmlBody	= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
-		$textBody	= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
-
-		$baseURL	= PATH_EXT_LOGINPAGE;
-
-			// Send mail
-		$sendStatus	= TodoyuMailManager::sendMail($mailSubject, $fromAddress, $fromName, $toAddress, $toName, $htmlBody, $textBody, $baseURL, true);
-
-		return $sendStatus;
+		return $mail->send();
 	}
 
 }

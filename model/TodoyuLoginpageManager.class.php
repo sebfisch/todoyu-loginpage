@@ -84,13 +84,11 @@ class TodoyuLoginpageManager {
 	 * @param	String	$userName
 	 */
 	public static function sendConfirmationMail($userName) {
-		$idPerson	= TodoyuContactPersonManager::getPersonIDByUsername($userName);
+		$person		= TodoyuContactPersonManager::getPersonByUsername($userName);
+		$oldPassword= $person->get('password');
+		$hash		= md5($userName . $oldPassword);
 
-		$oldPassword	= TodoyuContactPersonManager::getPerson($idPerson)->get('password');
-
-		$hash	= md5($userName . $oldPassword);
-
-		TodoyuLoginpageMailer::sendConfirmationMail($idPerson, $hash, $userName);
+		TodoyuLoginpageMailer::sendConfirmationMail($person->getID(), $hash);
 	}
 
 
