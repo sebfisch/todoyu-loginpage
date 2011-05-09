@@ -34,13 +34,13 @@ class TodoyuLoginpageMailer {
 			'loginlink'		=> TodoyuString::buildUrl(array(), '', true)
 		);
 
-		$mailSubject	= Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
+		$mailSubject	= Todoyu::Label('loginpage.ext.forgotpassword.mail.subject.newpassword');
 		$fromAddress	= Todoyu::$CONFIG['SYSTEM']['email'];
 		$fromName		= Todoyu::$CONFIG['SYSTEM']['name'];
 		$toAddress		= $person->getEmail();
 		$toName			= $person->getFullName();
-		$htmlBody		= render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
-		$textBody		= render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
+		$htmlBody		= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
+		$textBody		= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
 
 		$baseURL	= PATH_EXT_LOGINPAGE;
 
@@ -64,7 +64,7 @@ class TodoyuLoginpageMailer {
 		$idPerson	= intval($idPerson);
 		$person		= TodoyuContactPersonManager::getPerson($idPerson);
 
-		$mailSubject= Label('loginpage.ext.forgotpassword.mail.confirmation.title');
+		$mailSubject= Todoyu::Label('loginpage.ext.forgotpassword.mail.confirmation.title');
 		$fromAddress= Todoyu::$CONFIG['SYSTEM']['email'];
 		$fromName	= Todoyu::$CONFIG['SYSTEM']['name'];
 		$toAddress	= $person->getEmail();
@@ -83,8 +83,8 @@ class TodoyuLoginpageMailer {
 			),
 			'isConfirmation'	=> true
 		);
-		$htmlBody	= render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
-		$textBody	= render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
+		$htmlBody	= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyhtml.tmpl', $data);
+		$textBody	= Todoyu::render('ext/loginpage/view/forgotpassword-mailbodyplain.tmpl', $data);
 
 		$baseURL	= PATH_EXT_LOGINPAGE;
 

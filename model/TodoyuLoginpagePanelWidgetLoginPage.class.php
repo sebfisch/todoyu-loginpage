@@ -59,7 +59,7 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 		$tmpl	= 'ext/loginpage/view/panelwidget-loginpage.tmpl';
 		$data	= array();
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 }

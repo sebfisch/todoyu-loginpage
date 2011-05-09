@@ -102,7 +102,7 @@ class TodoyuLoginpageRenderer {
 	 * @return	String
 	 */
 	public static function renderForgotPasswordLink() {
-		return render('ext/loginpage/view/forgotpasswordlink.tmpl', array());
+		return Todoyu::render('ext/loginpage/view/forgotpasswordlink.tmpl', array());
 	}
 
 
@@ -140,7 +140,7 @@ class TodoyuLoginpageRenderer {
 
 		setcookie("check", 1, 0);
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 }
