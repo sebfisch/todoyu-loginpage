@@ -39,7 +39,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		}
 
 		if( TodoyuTokenManager::hasRequestToken() ) {
-			$hash		= TodoyuTokenManager::geTokenHashValueFromRequest();
+			$hash	= TodoyuTokenManager::geTokenHashValueFromRequest();
 			return TodoyuTokenCallbackManager::getCallbackResultByHash($hash);
 		} else {
 				// Add login screen main tabs
