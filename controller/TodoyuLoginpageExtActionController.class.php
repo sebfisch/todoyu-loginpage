@@ -294,16 +294,12 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 * @return String
 	 */
-	public function cookiecheckAction(array $params) {
-		if( empty($_COOKIE['check']) ) {
-			TodoyuHeader::sendTodoyuErrorHeader();
+	public function nocookieAction(array $params) {
+		TodoyuHeader::sendTodoyuErrorHeader();
 
-			return Todoyu::Label('loginpage.ext.form.cookiecheck')
-					. '<br />'
-					. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], Todoyu::Label('loginpage.ext.form.cookiecheck.linklabel'));
-		} else {
-			setcookie('check', 0, NOW-1);
-		}
+		return Todoyu::Label('loginpage.ext.form.cookiecheck')
+				. '<br />'
+				. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], Todoyu::Label('loginpage.ext.form.cookiecheck.linklabel'));
 	}
 
 }

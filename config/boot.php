@@ -33,7 +33,7 @@ Todoyu::$CONFIG['AUTH']['login'] = array(
 
 Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
 
-Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies']		= 'http://docu.todoyu.com/index.php?id=manual-cookies';
-Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['javascript']	= 'http://docu.todoyu.com/index.php?id=manual-javascript';
+Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies']		= 'http://doc.todoyu.com/index.php?id=manual-cookies';
+Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['javascript']	= 'http://doc.todoyu.com/index.php?id=manual-javascript';
 
 ?>

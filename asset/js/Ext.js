@@ -575,21 +575,30 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 * Sends an request to check if cookies are enabled in the browser
+	 * checks if cookies are enabled in the browser
 	 *
-	 * @method	sendCookieCheck
+	 * @method	checkCookie
 	 */
-	sendCookieCheck: function() {
-		var url = Todoyu.getUrl('loginpage', 'ext');
+	checkCookie: function() {
+		var cookieEnabled=(navigator.cookieEnabled)? true : false;
 
-		var options = {
-			parameters: {
-				action: 'cookiecheck'
-			},
-			onComplete: this.onCookieCheckComplete.bind(this)
-		};
+		if (typeof navigator.cookieEnabled=="undefined" && !cookieEnabled){
+			document.cookie="cookiecheck";
+			cookieEnabled=(document.cookie.indexOf("cookiecheck")!=-1)? true : false;
+		}
 
-		Todoyu.send(url, options);
+		if( !cookieEnabled ) {
+			var url = Todoyu.getUrl('loginpage', 'ext');
+
+			var options = {
+				parameters: {
+					action: 'nocookie'
+				},
+				onComplete: this.onCookieCheckComplete.bind(this)
+			};
+
+			Todoyu.send(url, options);
+		}
 	},
 
 
