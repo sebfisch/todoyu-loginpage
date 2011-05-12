@@ -38,34 +38,29 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			TodoyuLoginpageManager::redirectToHome();
 		}
 
-		if( TodoyuTokenManager::hasRequestToken() ) {
-			$hash	= TodoyuTokenManager::geTokenHashValueFromRequest();
-			return TodoyuTokenCallbackManager::getCallbackResultByHash($hash);
-		} else {
-				// Add login screen main tabs
-			TodoyuLoginpageManager::addLoginScreenMainTabs();
-				// Set default tab
-			TodoyuFrontend::setDefaultTab('login');
+			// Add login screen main tabs
+		TodoyuLoginpageManager::addLoginScreenMainTabs();
+			// Set default tab
+		TodoyuFrontend::setDefaultTab('login');
 
-			TodoyuPage::init('ext/loginpage/view/ext.tmpl');
-			TodoyuPage::setTitle('LLL:loginpage.ext.page.title');
+		TodoyuPage::init('ext/loginpage/view/ext.tmpl');
+		TodoyuPage::setTitle('LLL:loginpage.ext.page.title');
 
-			$loginStatus	= $params['status'];
+		$loginStatus	= $params['status'];
 
-				// Render elements
-			$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
-			$loginForm			= TodoyuLoginpageRenderer::renderLoginForm($loginStatus);
-			$extendedContent	= TodoyuLoginpageRenderer::renderExtendedContent();
+			// Render elements
+		$panelWidgets		= TodoyuLoginpageRenderer::renderPanelWidgets();
+		$loginForm			= TodoyuLoginpageRenderer::renderLoginForm($loginStatus);
+		$extendedContent	= TodoyuLoginpageRenderer::renderExtendedContent();
 
-			TodoyuPage::set('panelWidgets', $panelWidgets);
-			TodoyuPage::set('loginForm', $loginForm);
-			TodoyuPage::set('extendedContent', $extendedContent);
+		TodoyuPage::set('panelWidgets', $panelWidgets);
+		TodoyuPage::set('loginForm', $loginForm);
+		TodoyuPage::set('extendedContent', $extendedContent);
 
-				// Prevent robots to index the login page
-			TodoyuPage::addMetatag('robots', 'noindex');
+			// Prevent robots to index the login page
+		TodoyuPage::addMetatag('robots', 'noindex');
 
-			return TodoyuPage::render();
-		}
+		return TodoyuPage::render();
 	}
 
 
