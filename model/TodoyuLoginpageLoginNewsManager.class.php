@@ -51,9 +51,10 @@ class TodoyuLoginpageLoginNewsManager {
 
 	/**
 	 * Creates a File with news from todoyu.com
+	 * -first try over curl
+	 * -second try over file get contents
 	 *
-	 * first try over curl
-	 * second try over file get contents
+	 * @param	Boolean		$isSecure
 	 */
 	private static function downloadNewsFile($isSecure) {
 		$url		= Todoyu::$CONFIG['EXT']['loginpage']['panelWidgetLoginNews']['url'];

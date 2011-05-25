@@ -47,6 +47,7 @@ class TodoyuLoginpageRenderer {
 	/**
 	 * Render login mask (form)
 	 *
+	 * @param	String		$status
 	 * @return	String
 	 */
 	public static function renderLoginForm($status = null) {

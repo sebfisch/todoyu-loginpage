@@ -32,7 +32,6 @@ class TodoyuLoginpagePanelWidgetLoginNews extends TodoyuPanelWidget {
 	 * @param	Array		$config
 	 * @param	Array		$params
 	 * @param	Integer		$idArea
-	 * @param	Boolean		$expanded
 	 */
 	public function __construct(array $config, array $params = array(), $idArea = 0) {
 

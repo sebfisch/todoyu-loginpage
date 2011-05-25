@@ -39,7 +39,6 @@ class TodoyuLoginpageMailer {
 	 *
 	 * @param	Integer		$idPerson
 	 * @param	String		$hash
-	 * @param	String		$userName
 	 * @return	Boolean
 	 */
 	public static function sendConfirmationMail($idPerson, $hash) {
