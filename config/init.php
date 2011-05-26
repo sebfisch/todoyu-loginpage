@@ -34,14 +34,14 @@ Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 		'position'	=> 20,
 		'key'		=> 'help',
 		'label'		=> 'LLL:loginpage.ext.tab.help',
-		'href'		=> 'http://www.todoyu.com/community/forum/',
+		'href'		=> 'http://www.todoyu.com/community/forum/?utm_source=todoyulogin&utm_medium=web&utm_campaign=todoyu',
 		'target'	=> '_blank'
 	),
 	array(
 		'position'	=> 30,
 		'key'		=> 'blog',
 		'label'		=> 'LLL:loginpage.ext.tab.blog',
-		'href'		=> 'http://www.todoyu.com/community/blog/',
+		'href'		=> 'http://www.todoyu.com/community/blog/?utm_source=todoyulogin&utm_medium=web&utm_campaign=todoyu',
 		'target'	=> '_blank'
 	)
 );
