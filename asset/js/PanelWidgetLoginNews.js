@@ -31,8 +31,10 @@
 Todoyu.Ext.loginpage.PanelWidget.LoginNews = {
 
 	/**
-	 * Handler when news is loaded
-	 * Show iFrame content instead of static news dummy
+	 * Handler when news is loaded: Show iFrame content instead of static news dummy
+	 * Evoked from within the news file being fetched from todoyu.com
+	 *
+	 * @method	newsLoaded
 	 */
 	newsLoaded: function() {
 		var live	= $('news-live');

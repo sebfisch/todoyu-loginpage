@@ -29,22 +29,68 @@
  */
 Todoyu.Ext.loginpage = {
 
+	/**
+	 * @property	PanelWidget
+	 * @type		Object
+	 */
 	PanelWidget: {},
 
+	/**
+	 * @property	Headlet
+	 * @type		Object
+	 */
 	Headlet: {},
 
+	/**
+	 * ID of username field element
+	 *
+	 * @property	fieldUsername
+	 * @type		String
+	 */
 	fieldUsername:	'login-field-username',
 
+	/**
+	 * ID of password field element
+	 *
+	 * @property	fieldPassword
+	 * @type		String
+	 */
 	fieldPassword:	'login-field-password',
 
+	/**
+	 * ID of remain field
+	 *
+	 * @property	fieldRemain
+	 * @type		String
+	 */
 	fieldRemain:	'login-field-loginremain',
 
+	/**
+	 * ID of status element
+	 *
+	 * @property	elStatus
+	 * @type		String
+	 */
 	elStatus:		'formElement-login-field-status-inputbox',
 
+	/**
+	 * ID of element to contain status of "forgot password" option status
+	 *
+	 * @property	elStatus
+	 * @type		String
+	 */
 	forgotPasswordElStatus:		'formElement-forgotpassword-field-status-inputbox',
 
+	/**
+	 * @property	popup
+	 * @type		Todoyu.Popup
+	 */
 	popup: null,
 
+	/**
+	 * @property	oldRequest
+	 * @type		Ajax.Response
+	 */
 	oldRequest: null,
 
 
@@ -433,7 +479,6 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 *
 	 * @method	submitForgotPasswordForm
 	 * @param	{Element}	form
 	 */
@@ -477,6 +522,7 @@ Todoyu.Ext.loginpage = {
 	 * This method is called by the onLoggedOut hook. Sends the request to load the relogin form
 	 *
 	 * @method	onLoggedOutAuto
+	 * @param	{Request.Response}	response
 	 */
 	onLoggedOutAuto: function(response) {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
@@ -493,7 +539,7 @@ Todoyu.Ext.loginpage = {
 
 		this.oldRequest = response.request;
 
-		if( !this.popup || !this.popup.isVisible() ) {
+		if( ! this.popup || ! this.popup.isVisible() ) {
 			this.popup = Todoyu.Popups.open(idPopup, '[LLL:loginpage.ext.loginexpired.title]', width, url, options);
 		}
 	},
@@ -582,9 +628,9 @@ Todoyu.Ext.loginpage = {
 	checkCookie: function() {
 		var cookieEnabled=(navigator.cookieEnabled)? true : false;
 
-		if (typeof navigator.cookieEnabled=="undefined" && !cookieEnabled){
+		if (typeof navigator.cookieEnabled=="undefined" && ! cookieEnabled){
 			document.cookie="cookiecheck";
-			cookieEnabled=(document.cookie.indexOf("cookiecheck")!=-1)? true : false;
+			cookieEnabled	= document.cookie.indexOf("cookiecheck") != -1;
 		}
 
 		if( !cookieEnabled ) {
