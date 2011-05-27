@@ -448,7 +448,6 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
-	 *
 	 * @method	loadForgotPasswordForm
 	 */
 	loadForgotPasswordForm: function() {
@@ -522,7 +521,7 @@ Todoyu.Ext.loginpage = {
 	 * This method is called by the onLoggedOut hook. Sends the request to load the relogin form
 	 *
 	 * @method	onLoggedOutAuto
-	 * @param	{Request.Response}	response
+	 * @param	{Ajax.Response}	response
 	 */
 	onLoggedOutAuto: function(response) {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
