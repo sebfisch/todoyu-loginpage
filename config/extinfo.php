@@ -38,7 +38,8 @@ Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 		),
 		'conflicts' => array(
 		)
-	)
+	),
+	'urlDocumentation'	=> 'http://doc.todoyu.com/?loginpage'
 );
 
 ?>
