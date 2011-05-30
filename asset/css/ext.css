@@ -56,11 +56,11 @@ form.formLogin fieldset {
 }
 form.formLogin .fElement {
 	padding:10px;
-	border-top:1px dotted #fff;
 }
 form.formLogin .fElement .fLabel {
 	width:180px;
 	padding:5px;
+
 }
 form.formLogin .fElement input {
 	width:220px;
@@ -98,7 +98,7 @@ form.formLogin .notification {
 	float:none;
 	text-align:center;
 	line-height:21px;
-	border:1px dotted #fff !important;
+	border:1px solid #fff !important;
 	background-color:#f8f9e3 !important;
 }
 	form.formLogin .notification img {
@@ -191,6 +191,14 @@ form.formLogin fieldset.buttons button span.rgt {
 	border:1px solid #edf1e0;
 }
 
+.formLogin  a,
+.formLogin  a:hover {
+	text-decoration: underline;
+}
+
+.formLogin  a:hover {
+	color:#4C4C4C;
+}
 
 
 /* ----------------------------
@@ -200,8 +208,6 @@ form.formLogin fieldset.buttons button span.rgt {
 	border:1px solid #d3dabb;
 	background-color:#edf1e0;
 	clear:both;
-	margin-top:5px;
-	margin-bottom:10px;
 	padding:15px;
 }
 
@@ -234,7 +240,6 @@ form.formLogin fieldset.buttons button span.rgt {
 
 div.passwordResetConfirmationText {
 	padding:5px;
-	border:1px dotted #ccc;
 
 }
 
@@ -262,7 +267,7 @@ div.passwordResetConfirmationText.successful {
 #loginform-javascriptcheck,
 #reLoginPopup #relgin-popup-message {
 	margin:5px 5px 0 5px;
-	border-bottom:1px #ccc dotted;
+	border-bottom:1px #fff solid;
 	background:#e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
 	height:50px;
 	padding:18px 0 5px 70px;
@@ -287,7 +292,7 @@ div.passwordResetConfirmationText.successful {
 #loginform-cookiecheck,
 #loginform-javascriptcheck {
 	background-color:#fbfdd5;
-	border:1px #d3dabb dotted;
+	border:1px #fff solid;
 }
 
 #loginform-cookiecheck .fField,

@@ -50,25 +50,19 @@
 					<label>loginpage.ext.form.remainLogin</label>
 				</field>
 
-				<field type="comment" name="forgotpassword">
-					<comment type="function">
-						<function>TodoyuLoginpageRenderer::renderForgotPasswordLink</function>
-					</comment>
-				</field>
-
-			</elements>
-		</fieldset>
-
-		<fieldset name="buttons">
-			<legend>Actions</legend>
-			<class>buttons</class>
-			<elements>
 				<field type="button" name="submit">
 					<text>LLL:loginpage.ext.form.field.submit</text>
 					<type>submit</type>
 					<class>buttonLogin</class>
 					<hasIcon />
 				</field>
+
+				<field type="comment" name="forgotpassword">
+					<comment type="function">
+						<function>TodoyuLoginpageRenderer::renderForgotPasswordLink</function>
+					</comment>
+				</field>
+
 			</elements>
 		</fieldset>
 
