@@ -27,20 +27,20 @@ Todoyu::$CONFIG['EXT']['loginpage']['tabs']	= array(
 	array(
 		'position'	=> 10,
 		'key'		=> 'login',
-		'label'		=> 'LLL:loginpage.ext.tab.login',
+		'label'		=> 'loginpage.ext.tab.login',
 		'href'		=> '?ext=loginpage&controller=ext',
 	),
 	array(
 		'position'	=> 20,
 		'key'		=> 'help',
-		'label'		=> 'LLL:loginpage.ext.tab.help',
+		'label'		=> 'loginpage.ext.tab.help',
 		'href'		=> 'http://www.todoyu.com/community/forum/?utm_source=todoyulogin&utm_medium=web&utm_campaign=todoyu',
 		'target'	=> '_blank'
 	),
 	array(
 		'position'	=> 30,
 		'key'		=> 'blog',
-		'label'		=> 'LLL:loginpage.ext.tab.blog',
+		'label'		=> 'loginpage.ext.tab.blog',
 		'href'		=> 'http://www.todoyu.com/community/blog/?utm_source=todoyulogin&utm_medium=web&utm_campaign=todoyu',
 		'target'	=> '_blank'
 	)
