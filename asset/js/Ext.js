@@ -145,7 +145,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	observeForm
 	 */
 	observeForm: function() {
-		$('login-form').observe('submit', this.onFormSubmit.bindAsEventListener(this));
+		$('login-form').on('submit', this.onFormSubmit.bind(this));
 	},
 
 
@@ -156,8 +156,8 @@ Todoyu.Ext.loginpage = {
 	 * @method	observePasswordField
 	 */
 	observePasswordField: function() {
-		$('login-field-password').observe('keyup', this.onPasswordEnter.bind(this));
-		$('login-field-password').observe('change', this.onPasswordEnter.bind(this));
+		$('login-field-password').on('keyup', this.onPasswordEnter.bind(this));
+		$('login-field-password').on('change', this.onPasswordEnter.bind(this));
 	},
 
 
@@ -551,7 +551,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	onLoggedOutFormLoaded
 	 */
 	onLoggedOutFormLoaded: function() {
-		$('login-form').observe('submit', this.onReLoginFormSubmit.bindAsEventListener(this));
+		$('login-form').on('submit', this.onReLoginFormSubmit.bind(this));
 		this.observePasswordField();
 		this.focusField();
 		this.disableToggleSave();
@@ -563,8 +563,9 @@ Todoyu.Ext.loginpage = {
 	 * Handler to re-submit login form
 	 *
 	 * @method	onReLoginFormSubmit
+	 * @param	{Event}		event
 	 */
-	onReLoginFormSubmit: function() {
+	onReLoginFormSubmit: function(event) {
 		if( this.checkFieldsNotEmpty() ) {
 			this.onLoginRequest();
 
@@ -572,9 +573,9 @@ Todoyu.Ext.loginpage = {
 			var	options	= {
 				parameters: {
 					action:	'login',
-					'username':	$F(this.fieldUsername),
-					'passhash':	this.getHashedPassword(),
-					'remain':	this.isRemainLoginChecked()
+					username:	$F(this.fieldUsername),
+					passhash:	this.getHashedPassword(),
+					remain:		this.isRemainLoginChecked()
 				},
 				onComplete:	this.onReLoginResponse.bind(this)
 			};
