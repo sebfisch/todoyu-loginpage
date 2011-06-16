@@ -201,6 +201,7 @@ form.formLogin fieldset.buttons button span.rgt {
 }
 
 
+
 /* ----------------------------
  	Todoyu Info on Login page
    ---------------------------- */
@@ -234,10 +235,11 @@ form.formLogin fieldset.buttons button span.rgt {
 	text-align:right;
 }
 
+
+
 /* ------------------------
 	Confirmation page
    ------------------------ */
-
 div.passwordResetConfirmationText {
 	padding:5px;
 
@@ -254,11 +256,11 @@ div.passwordResetConfirmationText.successful {
 	border-color:#008000;
 }
 
+
+
 /* ----------------------
 	Loginpage
    ---------------------- */
-
-
 #reLoginPopup {
 	text-align:left;
 }
