@@ -29,7 +29,7 @@
 				</field>
 
 				<field type="comment" name="status">
-					<comment>LLL:loginpage.ext.form.status.enterLoginData</comment>
+					<comment>loginpage.ext.form.status.enterLoginData</comment>
 				</field>
 
 				<field type="text" name="username">
@@ -51,7 +51,7 @@
 				</field>
 
 				<field type="button" name="submit">
-					<text>LLL:loginpage.ext.form.field.submit</text>
+					<text>loginpage.ext.form.field.submit</text>
 					<type>submit</type>
 					<class>buttonLogin</class>
 					<hasIcon />
