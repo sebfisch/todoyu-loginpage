@@ -1,6 +1,9 @@
 todoyu loginpage extension changelog
 
-loginpage 1.1.0 - beta release
+loginpage 1.1.1 - ???
+	* Bugfix: Login status icon styling fixed (icon was cropped)
+
+loginpage 1.1.0 - 2011-06-17
 	* Changed: Requires core 2.1
 	* Changed: Structure for 2.1
 	* Changed: All classes are prefixed with extension name

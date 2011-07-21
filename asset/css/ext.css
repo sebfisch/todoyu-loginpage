@@ -106,44 +106,30 @@ form.formLogin .notification {
 		top:4px;
 		margin-right:5px;
 	}
+	form.formLogin .notification .icon {
+		display: inline-block !important;
+		height:18px;
+		margin-bottom: -5px;
+		margin-right: 3px;
+		background-image: url(../../../../core/asset/img/notify.png);
+		background-repeat: no-repeat;
+		float:none;
+	}
 	form.formLogin .notification.success {
 		background-color:#c5e8c5 !important;
 		border-color:#008000;
 	}
 		form.formLogin .notification.success .icon {
-			padding-left:15px;
-			margin-right:5px;
-			background:url(../../../../core/asset/img/notify.png) no-repeat 0 -1px;
+			background-position:0 1px;
 		}
 	form.formLogin .notification.failure {
 		background-color:#f6e0e0 !important;
 		border-color:#d1a4a4;
 	}
 		form.formLogin .notification.failure .icon {
-			background:url(../../../../core/asset/img/notify.png) no-repeat 0 -47px;
+			background-position:0 -47px;
 		}
-	form.formLogin .notification span.icon {
-		float:none;
-		clear:both;
-		display:inline;
-	}
-	form.formLogin .notification.failure span.icon {
-		display:inline-block;
-		width:16px;
-		height:16px;
-		position:relative;
-		top:3px;
-		margin-right:5px;
-		margin-left:-20px;
-	}
 
-/*
-form.formLogin .loginError {
-	padding:10px 20px;
-	border:1px solid #0065a6;
-	color:#ff0000;
-}
-*/
 
 form.formLogin fieldset {
 	padding:0;
