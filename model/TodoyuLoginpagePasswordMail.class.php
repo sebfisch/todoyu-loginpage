@@ -53,7 +53,6 @@ abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 
 	/**
 	 * Init mail
-	 *
 	 */
 	private function init() {
 		$this->setSystemAsSender();

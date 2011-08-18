@@ -53,7 +53,6 @@ class TodoyuLoginpagePasswordResetMail extends TodoyuLoginpagePasswordMail {
 
 	/**
 	 * Init mail
-	 *
 	 */
 	private function init() {
 		$this->setSubject('loginpage.ext.forgotpassword.mail.subject.newpassword');

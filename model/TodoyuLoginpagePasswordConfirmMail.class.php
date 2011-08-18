@@ -54,7 +54,6 @@ class TodoyuLoginpagePasswordConfirmMail extends TodoyuLoginpagePasswordMail {
 
 	/**
 	 * Init mail
-	 *
 	 */
 	private function init() {
 		$this->setSubject('loginpage.ext.forgotpassword.mail.confirmation.title');
