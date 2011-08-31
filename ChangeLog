@@ -1,5 +1,9 @@
 todoyu loginpage extension changelog
 
+loginpage 1.1.2 - not released yet
+	* Added: Hooks: login, login.failed
+
+
 loginpage 1.1.1 - 2011-07-25
 	* Bugfix: Login status icon styling fixed (icon was cropped)
 

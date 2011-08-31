@@ -103,6 +103,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 				// Login person
 			TodoyuAuth::login($idPerson);
 
+			TodoyuHookManager::callHook('loginpage', 'login', array($idPerson));
+
 				// Set locale cookie
 			TodoyuLocaleManager::setLocaleCookie();
 
@@ -126,6 +128,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			}
 
 		} else {
+			TodoyuHookManager::callHook('loginpage', 'login.failed', array($username, $passHash));
+
 				// Log failed login
 			TodoyuLogger::logNotice('Login failed', array('username' => $username, 'passhash' => $passHash));
 
