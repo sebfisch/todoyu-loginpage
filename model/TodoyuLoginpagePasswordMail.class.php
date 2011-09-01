@@ -21,9 +21,9 @@
 /**
  * Password mail for loginpage (abstract)
  *
- * @abstract
  * @package		Todoyu
  * @subpackage	Loginpage
+ * @abstract
  */
 abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 
