@@ -44,7 +44,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		TodoyuFrontend::setDefaultTab('login');
 
 		TodoyuPage::init('ext/loginpage/view/ext.tmpl');
-		TodoyuPage::setTitle('LLL:loginpage.ext.page.title');
+		TodoyuPage::setTitle('loginpage.ext.page.title');
 
 		$loginStatus	= $params['status'];
 
@@ -253,7 +253,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 			$replaceArray	=  TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], '', true);
 
-			$label = str_replace(array('%s', '%e'), $replaceArray, Todoyu::Label('LLL:loginpage.ext.forgotpassword.confirmpage.failure.text'));
+			$label = str_replace(array('%s', '%e'), $replaceArray, Todoyu::Label('loginpage.ext.forgotpassword.confirmpage.failure.text'));
 
 			TodoyuPage::set('confirmationpagetext', $label);
 		}

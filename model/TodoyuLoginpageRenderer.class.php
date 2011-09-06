@@ -58,7 +58,7 @@ class TodoyuLoginpageRenderer {
 			// If status is failed, show error message
 		if( $status === 'failed' ) {
 			$config	= array(
-				'default'	=> 'LLL:loginpage.ext.form.loginFailed',
+				'default'	=> 'loginpage.ext.form.loginFailed',
 				'class'		=> 'error'
 			);
 			$form->getFieldset('message')->addFieldElement('info', 'comment', $config);
