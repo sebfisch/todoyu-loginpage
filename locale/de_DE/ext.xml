@@ -5,7 +5,7 @@
 	<label index="tab.login">Anmeldung</label>
 	<label index="tab.help">Hilfe</label>
 	<label index="tab.blog">Blog</label>
-	<label index="loginbox.title">Willkommen! </label>
+	<label index="loginbox.title">Willkommen!</label>
 	<label index="form.field.username">Benutzer</label>
 	<label index="form.field.password">Passwort</label>
 	<label index="form.field.submit">Anmeldung</label>
