@@ -1,6 +1,6 @@
 todoyu loginpage extension changelog
 
-loginpage 1.1.2 - not released yet
+loginpage 1.1.2 - 2011-09-15
 	* Added: Hooks: login, login.failed
 
 
@@ -17,4 +17,3 @@ loginpage 1.1.0 - 2011-06-17
 loginpage 1.0.6
 	* Bugfix: Removed whitespace after password in email body to prevent copy/paste problems
 	* Bugfix: fixed label key: forgotpassword.mail.tologin
- 	* Added changelog
