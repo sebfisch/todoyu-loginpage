@@ -164,11 +164,13 @@ form.formLogin fieldset.buttons button span.rgt {
 		margin-left:195px;
 	}
 	button.buttonLogin span.icon {
-		background:url('../img/icons.png') no-repeat 0 -58px;
+		background:url('../img/icons.png') no-repeat 4px -57px;
+		width:24px;
 	}
 
 	button.sendNewPasswordButton span.icon {
-		background:url('../img/icons.png') no-repeat 0 -86px;
+		background:url('../img/icons.png') no-repeat 4px -86px;
+		width:24px;
 	}
 
 #formElement-login-field-status-inputbox,
