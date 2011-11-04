@@ -16,22 +16,17 @@ h1.extIconLoginpage .title {
    ------------------------------- */
 body.todoyu-loginpage #right {
 	top:20px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
 }
 
 body.todoyu-loginpage #right .inner {
 	background-color:#edf1e0; /* bcl01 */
 }
 
-body.todoyu-loginpage .content span.lt {
-	display:block;
-}
-
-body.todoyu-loginpage button span.rgt {
-	background-color:#d3dabb;
-}
-
 #todoyu-loginpage #content h1.headerLine {
-	margin:32px 0 0 0;
+	margin:0;
 }
 
 span#password-forget {
@@ -41,7 +36,6 @@ span#password-forget {
 	right:300px;
 	bottom:18px;
 }
-
 
 
 /* ---------------------
@@ -156,8 +150,7 @@ form.formLogin fieldset.buttons .fElement .fField {
 
 form.formLogin fieldset.buttons,
 form.formLogin fieldset.buttons div.odd,
-form.formLogin fieldset.buttons div.even,
-form.formLogin fieldset.buttons button span.rgt {
+form.formLogin fieldset.buttons div.even {
 	background-color:#d3dabb !important;
 }
 	button.buttonLogin {
@@ -265,8 +258,7 @@ div.passwordResetConfirmationText.successful {
 
 #reLoginPopup form.formLogin fieldset.buttons,
 #reLoginPopup form.formLogin fieldset.buttons div.odd,
-#reLoginPopup form.formLogin fieldset.buttons div.even,
-#reLoginPopup form.formLogin fieldset.buttons button span.rgt {
+#reLoginPopup form.formLogin fieldset.buttons div.even {
 	background-color:#e2e2e2 !important;
 }
 
