@@ -178,6 +178,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 *
 	 * @param	Array	$params
 	 * @return	String	JSON encoded password-forgotten form
+	 * @todo	Remove the json_encode part, refactor method!
 	 */
 	public function forgotPasswordAction($params) {
 		$xml	= 'ext/loginpage/config/form/forgotpassword.xml';
