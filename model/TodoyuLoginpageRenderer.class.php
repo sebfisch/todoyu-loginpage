@@ -66,7 +66,9 @@ class TodoyuLoginpageRenderer {
 
 			// Check remain login checkbox if last time was checked
 		if( TodoyuLoginpageManager::hasRemainLoginFlagCookie() ) {
-			$form->getField('loginremain')->setChecked();
+			/** @var	$fieldLoginRemain	TodoyuFormElement_Checkbox */
+			$fieldLoginRemain	= $form->getField('loginremain');
+			$fieldLoginRemain->setChecked();
 		}
 
 		return $form->render();

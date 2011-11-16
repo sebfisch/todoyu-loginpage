@@ -79,8 +79,8 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	/**
 	 * Login request
 	 *
-	 * @param	Array		$params
-	 * @return	String
+	 * @param	Array			$params
+	 * @return	String|Void
 	 */
 	public function loginAction($params) {
 			// If login form not submitted by AJAX, form vars are wrapped in login namespace
@@ -144,7 +144,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			sleep($secondsToWait);
 		}
 
-			// If AJAX request, send JSON. If normal request, redirect to lo
+			// If AJAX request, send JSON. If normal request, redirect to loginpage
 		if( TodoyuRequest::isAjaxRequest() ) {
 			TodoyuHeader::sendTypeJSON();
 
