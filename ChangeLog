@@ -20,4 +20,4 @@ loginpage 1.1.0 - 2011-06-17
 
 loginpage 1.0.6
 	* Bugfix: Removed whitespace after password in email body to prevent copy/paste problems
-	* Bugfix: fixed label key: forgotpassword.mail.tologin
+	* Bugfix: Fixed label key: forgotpassword.mail.tologin
