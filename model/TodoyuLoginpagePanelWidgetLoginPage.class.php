@@ -33,12 +33,10 @@ class TodoyuLoginpagePanelWidgetLoginPage extends TodoyuPanelWidget {
 	 * @param	Array		$params
 	 */
 	public function __construct(array $config, array $params = array()) {
-
-			// Construct panelWidget (init basic configuration)
 		parent::__construct(
 			'loginpage',								// ext key
 			'loginpage',								// panel widget ID
-			'loginpage.panelwidget-loginpage.title',// widget title text
+			'loginpage.panelwidget-loginpage.title',	// widget title text
 			$config,									// widget config array
 			$params										// widget parameters
 		);
