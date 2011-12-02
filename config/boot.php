@@ -31,8 +31,9 @@ Todoyu::$CONFIG['AUTH']['login'] = array(
 	'controller'=> 'ext'
 );
 
+	// Seconds to wait after failed login
 Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin'] = 2;
-
+	// Documentation URLs: how to enable cookies / javaScript in browsers
 Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies']		= 'http://doc.todoyu.com/index.php?id=manual-cookies';
 Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['javascript']	= 'http://doc.todoyu.com/index.php?id=manual-javascript';
 
