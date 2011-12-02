@@ -1,5 +1,8 @@
 todoyu loginpage extension changelog
 
+loginpage 1.1.4 - not released yet
+	* Added: Hook "loginpage.relogin.onreloginresponse"
+
 loginpage 1.1.3 - 2011-11-17
 	* Translation: Polish
 

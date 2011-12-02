@@ -605,6 +605,8 @@ Todoyu.Ext.loginpage = {
 	onReLoginResponse: function(response) {
 		var status	= response.responseJSON;
 
+		Todoyu.Hook.exec('loginpage.relogin.onreloginresponse', response);
+
 		if( status.success ) {
 			Todoyu.Popups.close('reLoginPopup');
 			Todoyu.Notification.fadeAllNotes();
