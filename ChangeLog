@@ -1,6 +1,8 @@
 todoyu loginpage extension changelog
 
 loginpage 1.1.4 - not released yet
+	* Changed: Style of login-links to buttons to be easier recognized as clickable
+	* Added: Real names of demo-account persons
 	* Added: Hook "loginpage.relogin.onreloginresponse"
 
 loginpage 1.1.3 - 2011-11-17
