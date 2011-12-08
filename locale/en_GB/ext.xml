@@ -18,6 +18,7 @@
 	<label index="error.enterUsername">Please enter your user name</label>
 	<label index="error.enterPassword">Please enter your password</label>
 	<label index="headlet.label">Logout</label>
+	<label index="warning.capslock">Warning: caps lock key is on!</label>
 	<label index="forgotpassword">Forgot your password?</label>
 	<label index="forgotpassword.tologin">Click here to go to the login page</label>
 	<label index="forgotpassword.invalidusername">The entered user name does not exist.</label>

@@ -103,6 +103,7 @@ Todoyu.Ext.loginpage = {
 	init: function() {
 		if( Todoyu.getArea() === 'loginpage' ) {
 			this.observeForm();
+			this.observeUsernameField();
 			this.observePasswordField();
 			this.focusField();
 			this.disableToggleSave();
@@ -151,13 +152,25 @@ Todoyu.Ext.loginpage = {
 
 
 	/**
+	 * Observe the username field for keyPress event
+	 *
+	 * @method	observeUsernameField
+	 */
+	observeUsernameField: function() {
+		$(this.fieldUsername).on('keypress', this.detectCapsLock.bind(this));
+	},
+
+
+
+	/**
 	 * Observe the password field for changes
 	 *
 	 * @method	observePasswordField
 	 */
 	observePasswordField: function() {
-		$('login-field-password').on('keyup', this.onPasswordEnter.bind(this));
-		$('login-field-password').on('change', this.onPasswordEnter.bind(this));
+		$(this.fieldPassword).on('keypress', this.detectCapsLock.bind(this));
+		$(this.fieldPassword).on('keyup', this.onPasswordEnter.bind(this));
+		$(this.fieldPassword).on('change', this.onPasswordEnter.bind(this));
 	},
 
 
@@ -169,6 +182,20 @@ Todoyu.Ext.loginpage = {
 	 */
 	registerHooks: function() {
 		Todoyu.Hook.add('core.notloggedin', this.onLoggedOutAuto.bind(this));
+	},
+
+
+
+	/**
+	 * Detect whether capsLock is active and warn if
+	 *
+	 * @method	detectCapsLock
+	 * @param	{Event}		event
+	 */
+	detectCapsLock: function(event) {
+		if( Todoyu.Ui.isCapsLock(event) ) {
+			Todoyu.Notification.notify(Todoyu.Notification.INFO, '[LLL:loginpage.ext.warning.capslock]', false, 3, 'capslock');
+		}
 	},
 
 
