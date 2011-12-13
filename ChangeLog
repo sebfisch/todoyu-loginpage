@@ -1,6 +1,6 @@
 todoyu loginpage extension changelog
 
-loginpage 1.1.4 - not released yet
+loginpage 1.1.4 - 2011-12-13
 	* Added: CapsLock detection + warning
 	* Added: Real names of demo-account persons
 	* Added: Hook "loginpage.relogin.onreloginresponse"
