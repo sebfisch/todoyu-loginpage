@@ -24,16 +24,16 @@
 
 Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 	'title'			=> 'todoyu Login Page',
-	'description' 	=> 'todoyu Login Page',
-	'author' 		=> array(
+	'description'	=> 'todoyu Login Page',
+	'author'		=> array(
 		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 		=> 'stable',
-	'version' 		=> '1.1.4',
-	'constraints' 	=> array(
-		'depends' 	=> array(
+	'state'			=> 'stable',
+	'version'		=> '1.1.4',
+	'constraints'	=> array(
+		'depends'	=> array(
 			'contact'	=> '1.1.0',
 		),
 		'conflicts' => array(

@@ -95,7 +95,7 @@ class TodoyuLoginpagePasswordConfirmMail extends TodoyuLoginpagePasswordMail {
 	private function getConfirmationLink() {
 		return TodoyuString::buildUrl(
 			array(
-				'ext' 			=> 'loginpage',
+				'ext'			=> 'loginpage',
 				'controller'	=> 'ext',
 				'action'		=> 'confirmationmail',
 				'hash'			=> $this->hash,

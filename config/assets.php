@@ -54,12 +54,12 @@ Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 			'position'	=> 100
 		),
 		array(
-			'file' 		=> 'ext/loginpage/asset/css/panelwidget-loginnews.css',
-			'position' 	=> 120,
+			'file'		=> 'ext/loginpage/asset/css/panelwidget-loginnews.css',
+			'position'	=> 120,
 		),
 		array(
-			'file' 		=> 'ext/loginpage/asset/css/headlet-logout.css',
-			'position' 	=> 120,
+			'file'		=> 'ext/loginpage/asset/css/headlet-logout.css',
+			'position'	=> 120,
 		)
 	)
 );

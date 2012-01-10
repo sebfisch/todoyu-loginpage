@@ -193,7 +193,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			if( TodoyuContactPersonManager::personExists($forgotPasswordData['username']) ) {
 				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
- 			} else {
+			} else {
 				TodoyuHeader::sendTodoyuErrorHeader();
 
 				$message = Todoyu::Label('loginpage.ext.forgotpassword.invalidusername')
