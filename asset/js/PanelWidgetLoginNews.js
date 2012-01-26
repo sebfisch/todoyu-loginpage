@@ -43,7 +43,7 @@ Todoyu.Ext.loginpage.PanelWidget.LoginNews = {
 		local.hide();
 
 		Effect.SlideDown('news-live', {
-			'duration': 0.3
+			duration: 0.3
 		});
 	}
 

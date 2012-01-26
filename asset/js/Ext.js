@@ -241,10 +241,10 @@ Todoyu.Ext.loginpage = {
 			var url		= Todoyu.getUrl('loginpage', 'ext');
 			var	options	= {
 				parameters: {
-					action:	'login',
-					'username':	$F(this.fieldUsername),
-					'passhash':	this.getHashedPassword(),
-					'remain':	this.isRemainLoginChecked()
+					action:		'login',
+					username:	$F(this.fieldUsername),
+					passhash:	this.getHashedPassword(),
+					remain:		this.isRemainLoginChecked()
 				},
 				onComplete:	this.onLoginResponse.bind(this)
 			};
@@ -481,8 +481,8 @@ Todoyu.Ext.loginpage = {
 		var url		= Todoyu.getUrl('loginpage', 'ext');
 		var options	= {
 			parameters: {
-				action:	'loadForgotPasswordForm',
-				'username':	$F(this.fieldUsername)
+				action:		'loadForgotPasswordForm',
+				username:	$F(this.fieldUsername)
 			},
 			onComplete:	this.onForgotPasswordFormLoaded.bind(this)
 		};
