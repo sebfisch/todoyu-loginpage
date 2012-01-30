@@ -79,9 +79,10 @@ class TodoyuLoginpageRenderer {
 	/**
 	 * Render extended content (from registered function hooks)
 	 *
+	 * @param	Array		$params
 	 * @return	String
 	 */
-	public static function renderExtendedContent() {
+	public static function renderExtendedContent(array $params) {
 		$content	= '';
 
 		$funcRefs	= Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'];
@@ -90,8 +91,8 @@ class TodoyuLoginpageRenderer {
 			foreach($funcRefs as $funcRef) {
 				if( TodoyuFunction::isFunctionReference($funcRef) ) {
 					list($obj, $method) = explode('::', $funcRef);
-					$obj = new $obj();
-					$content	.= $obj->$method($requestData);
+					$obj 		= new $obj();
+					$content	.= $obj->$method($params);
 				}
 			}
 		}
