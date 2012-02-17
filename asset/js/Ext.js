@@ -101,7 +101,7 @@ Todoyu.Ext.loginpage = {
 	 * @method	init
 	 */
 	init: function() {
-		if( Todoyu.getArea() === 'loginpage' ) {
+		if( Todoyu.isInArea('loginpage') ) {
 			this.observeForm();
 			this.observeUsernameField();
 			this.observePasswordField();
