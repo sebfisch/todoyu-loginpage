@@ -85,15 +85,13 @@ class TodoyuLoginpageRenderer {
 	public static function renderExtendedContent(array $params) {
 		$content	= '';
 
-		$funcRefs	= Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks'];
+		$funcRefs	= TodoyuArray::assure(Todoyu::$CONFIG['EXT']['loginpage']['extendedContentHooks']);
 
-		if( is_array($funcRefs) ) {
-			foreach($funcRefs as $funcRef) {
-				if( TodoyuFunction::isFunctionReference($funcRef) ) {
-					list($obj, $method) = explode('::', $funcRef);
-					$obj 		= new $obj();
-					$content	.= $obj->$method($params);
-				}
+		foreach($funcRefs as $funcRef) {
+			if( TodoyuFunction::isFunctionReference($funcRef) ) {
+				list($obj, $method) = explode('::', $funcRef);
+				$obj 		= new $obj();
+				$content	.= $obj->$method($params);
 			}
 		}
 
