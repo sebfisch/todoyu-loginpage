@@ -140,8 +140,10 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			);
 
 				// Wait at failed log-in
-			$secondsToWait = intval(Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin']);
-			sleep($secondsToWait);
+			if( function_exists('sleep') ) {
+				$secondsToWait = intval(Todoyu::$CONFIG['EXT']['loginpage']['waitAtFailLogin']);
+				sleep($secondsToWait);
+			}
 		}
 
 			// If AJAX request, send JSON. If normal request, redirect to loginpage
