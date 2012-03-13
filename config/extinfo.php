@@ -31,12 +31,11 @@ Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state'			=> 'stable',
-	'version'		=> '1.1.4',
+	'version'		=> '1.1.5',
 	'constraints'	=> array(
+		'core'		=> '2.2.0dev',
 		'depends'	=> array(
-			'contact'	=> '1.1.0',
-		),
-		'conflicts' => array(
+			'contact'	=> '1.1.0'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?loginpage'
