@@ -18,6 +18,8 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-TodoyuHeadManager::addHeadlet('TodoyuLoginpageHeadletLogout', 10);
+if( TodoyuAuth::isLoggedIn() ) {
+	TodoyuHeadManager::addHeadlet('TodoyuLoginpageHeadletLogout', 10);
+}
 
 ?>

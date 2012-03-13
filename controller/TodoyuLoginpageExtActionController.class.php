@@ -84,7 +84,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 */
 	public function loginAction($params) {
 			// If login form not submitted by AJAX, form vars are wrapped in login namespace
-		if( ! TodoyuRequest::isAjaxRequest() ) {
+		if( !TodoyuRequest::isAjaxRequest() ) {
 				// Get login data from login namespace
 			$loginData	= $params['login'];
 				// Merge login data with params
