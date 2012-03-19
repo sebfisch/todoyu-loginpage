@@ -18,6 +18,7 @@
 	<label index="error.enterUsername">Bitte Ihren Benutzernamen angeben</label>
 	<label index="error.enterPassword">Bitte Ihr Passwort angeben</label>
 	<label index="headlet.label">Abmelden</label>
+	<label index="warning.capslock">Warnung: Feststelltaste ist aktiviert!</label>
 	<label index="forgotpassword">Passwort vergessen?</label>
 	<label index="forgotpassword.tologin">Klicken Sie hier um zur Login-Seite zu gelangen.</label>
 	<label index="forgotpassword.invalidusername">Der eingegebene Benutzername konnte nicht gefunden werden.</label>
