@@ -24,12 +24,12 @@
 	<label index="forgotpassword.invalidusername">The entered user name does not exist.</label>
 	<label index="forgotpassword.invalidusername.adminlink">I cannot remember my user name</label>
 	<label index="forgotpassword.form.field.submit">Send me my new password</label>
-	<label index="forgotpassword.form.field.notification.success">A confirmation mail has been sent to your email address</label>
+	<label index="forgotpassword.form.field.notification.success">A confirmation mail has been sent to your email address.</label>
 	<label index="forgotpassword.form.field.comment">You forgot your password? No problem! Enter your user name and push the send button. You will receive an email to confirm your password reset.</label>
 	<label index="forgotpassword.mail.subject.newpassword">Your new todoyu password</label>
 	<label index="forgotpassword.mail.confirmation.title">Password reset confirmation</label>
 	<label index="forgotpassword.mail.confirmation.text">You requested a new password. Please confirm the resetting of you password by clicking the link below. The new password will be sent to your email address immediately.</label>
-	<label index="forgotpassword.mail.passwordreset.title">Your password has been reset</label>
+	<label index="forgotpassword.mail.passwordreset.title">Your password has been reset.</label>
 	<label index="forgotpassword.mail.passwordreset.text">You will find your new password in this email. If you wish to change the password again, just log in to todoyu and go to the personal settings of your profile. In the password tab you can set your desired password.</label>
 	<label index="forgotpassword.mail.tologin">Click here to go to the login page</label>
 	<label index="forgotpassword.mail.toconfirmation">Click here to reset your password</label>
