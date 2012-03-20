@@ -513,7 +513,8 @@ Todoyu.Ext.loginpage = {
 
 		$(form).request({
 			parameters: {
-				action:	'forgotPassword'
+				action:	'forgotPassword',
+				area:	Todoyu.getArea()
 			},
 			onComplete: this.onForgotPasswordResponse.bind(this)
 		});
