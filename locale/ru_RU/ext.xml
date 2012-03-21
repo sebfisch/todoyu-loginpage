@@ -35,8 +35,8 @@
 	<label index="forgotpassword.mail.yournewpassword">Новый пароль для todoyu</label>
 	<label index="forgotpassword.confirmpage.successful.title">Ваш пароль сброшен</label>
 	<label index="forgotpassword.confirmpage.successful.text">Ваш пароль был успешно сброшен. Новый пароль послан на ваш электронный адрес. Если вы хотите изменить этот пароль, зайдите в личные установки вашего профиля в todoyu. Вы можете установить новый пароль в соответствующей закладке.</label>
-	<label index="forgotpassword.confirmpage.failure.title">Извините, но...</label>
-	<label index="forgotpassword.confirmpage.failure.text">...этот линк больше не действителен. Ваш новый пароль уже был послан на вашу электронную почту. Если вам нужна дополнительная информация, свяжитесь с %sадминистратором%e.</label>
+	<label index="forgotpassword.confirmpage.failure.title">Извините, но ...</label>
+	<label index="forgotpassword.confirmpage.failure.text">... этот линк больше не действителен. Ваш новый пароль уже был послан на вашу электронную почту. Если вам нужна дополнительная информация, свяжитесь с %sадминистратором%e.</label>
 	<label index="loginexpired.title">Сессия закончилась</label>
 	<label index="loginexpired.message">Сессия закончилась. Пожалуйста, введите ваши данные для входа в todoyu.</label>
 	<label index="form.javascriptcheck">В вашем броузере выключен JavaScript. Пожалуйста, включите JavaScript в настройках броузера, чтобы зайти в todoyu.</label>

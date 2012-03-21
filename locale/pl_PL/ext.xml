@@ -35,8 +35,8 @@
 	<label index="forgotpassword.mail.yournewpassword">Twoje nowe hasło do todoyu</label>
 	<label index="forgotpassword.confirmpage.successful.title">Twoje hasło zostało pomyślnie zresetowane</label>
 	<label index="forgotpassword.confirmpage.successful.text">Twoje hasło zostało pomyślnie zresetowane. Nowe hasło zostało przesłane na pocztę e-mail. Jeśli chcesz zmienić hasło ponownie, poprostu zaloguj się do todoyu, przejdź do danych osobistych profilu, a następnie w zakładce hasło wpisz pożądane.</label>
-	<label index="forgotpassword.confirmpage.failure.title">Przykro nam, ale...</label>
-	<label index="forgotpassword.confirmpage.failure.text">...ten link nie jest dostępny. Twoje nowe hasło powinno zostać przesłane na twój adres e-mail. Jeśli potrzebujesz dalszych ifnromacji skontaktuj się z %sAdministrator%e.</label>
+	<label index="forgotpassword.confirmpage.failure.title">Przykro nam, ale ...</label>
+	<label index="forgotpassword.confirmpage.failure.text">... ten link nie jest dostępny. Twoje nowe hasło powinno zostać przesłane na twój adres e-mail. Jeśli potrzebujesz dalszych ifnromacji skontaktuj się z %sAdministrator%e.</label>
 	<label index="loginexpired.title">Twój login stracił ważność</label>
 	<label index="loginexpired.message">Twój login stracił ważność. Podaj potwierdzenie konta w poniższym formularzu aby zresetować.</label>
 	<label index="form.javascriptcheck">Masz wyłączoną opcję obsługi JavaScript w swojej przeglądarce internetowej. Aktywuj JavaScript w ustawieniach przeglądarki, aby się zalogować.</label>
