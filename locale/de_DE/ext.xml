@@ -25,7 +25,7 @@
 	<label index="forgotpassword.invalidusername.adminlink">Ich habe meinen Benutzernamen vergessen</label>
 	<label index="forgotpassword.form.field.submit">Neues Passwort per Email anfordern</label>
 	<label index="forgotpassword.form.field.notification.success">Eine Bestätigungs-Email wurde an Ihre Email-Adresse gesendet.</label>
-	<label index="forgotpassword.form.field.comment">Geben Sie Ihren Benutzernamen ein und Sie erhalten umgehend eine Email, um das Zurücksetzen des Passwortes zu bestätigen.</label>
+	<label index="forgotpassword.form.field.comment">Passwort vergessen? Kein Problem! Geben Sie Ihren Benutzernamen ein und klicken Sie auf den Absenden Button. Sie erhalten dann eine Email, um das Zurüksetzen des Passwortes zu bestätigen.</label>
 	<label index="forgotpassword.mail.subject.newpassword">Ihr neues todoyu Passwort</label>
 	<label index="forgotpassword.mail.confirmation.title">Bestätigung der Passwort-Zurücksetzung</label>
 	<label index="forgotpassword.mail.confirmation.text">Sie haben ein neues Passwort angefordert. Bitte bestätigen Sie Ihr Passwort durch Klick auf den untenstehenden Link. Sie erhalten Ihr neues Passwort umgehend per Email.</label>
