@@ -102,14 +102,39 @@ Todoyu.Ext.loginpage = {
 	 */
 	init: function() {
 		if( Todoyu.isInArea('loginpage') ) {
-			this.observeForm();
-			this.observeUsernameField();
-			this.observePasswordField();
-			this.focusField();
-			this.disableToggleSave();
+			this.initLoginpage();
 		}
 
 		this.registerHooks();
+		this.preloadImages();
+	},
+
+
+
+	/**
+	 * Initialize login page handlers
+	 *
+	 */
+	initLoginpage: function() {
+		this.observeForm();
+		this.observeUsernameField();
+		this.observePasswordField();
+		this.focusField();
+		this.disableToggleSave();
+	},
+
+
+
+	/**
+	 * Preload images to make sure they are already loaded on success login redirect
+	 *
+	 */
+	preloadImages: function() {
+		var imgNotify = new Image();
+		imgNotify.src = 'core/asset/img/notify.png';
+
+		var imgLoading = new Image();
+		imgLoading.src = 'core/asset/img/ajax-loader_success.gif';
 	},
 
 
