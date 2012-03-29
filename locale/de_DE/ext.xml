@@ -6,7 +6,7 @@
 	<label index="tab.help">Hilfe</label>
 	<label index="tab.blog">Blog</label>
 	<label index="loginbox.title">Willkommen!</label>
-	<label index="form.field.username">Benutzer</label>
+	<label index="form.field.username">Benutzername</label>
 	<label index="form.field.password">Passwort</label>
 	<label index="form.field.submit">Anmeldung</label>
 	<label index="form.remainLogin">Anmeldung auf diesem Computer speichern</label>
