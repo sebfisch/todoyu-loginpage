@@ -37,55 +37,60 @@ span#password-forget {
 	bottom:18px;
 }
 
+#formElement-login-field-forgotpassword-inputbox {
+	width:440px;
+	text-align: right;
+}
+
 
 /* ---------------------
 	Login form
    --------------------- */
-form.formLogin {
+.formLogin {
 	padding:0;
 	background:none;
 }
-form.formLogin fieldset {
+.formLogin fieldset {
 	border:none;
 }
-form.formLogin .fElement {
+.formLogin .fElement {
 	padding:10px;
 }
-form.formLogin .fElement .fLabel {
+.formLogin .fElement .fLabel {
 	width:180px;
 	padding:5px;
 
 }
-form.formLogin .fElement input {
+.formLogin .fElement input {
 	width:220px;
 	padding:2px;
 	font-size:13px;
 	line-height:16px;
 }
-form.formLogin .fElement.fieldnameStatus,
-form.formLogin .fElement.fieldnameSubmit {
+.formLogin .fElement.fieldnameStatus,
+.formLogin .fElement.fieldnameSubmit {
 	margin:0;
 	float:none;
 	border-top:none;
 }
-form.formLogin .fElement.fieldnameStatus .fLabel,
-form.formLogin .fElement.fieldnameSubmit .fLabel {
+.formLogin .fElement.fieldnameStatus .fLabel,
+.formLogin .fElement.fieldnameSubmit .fLabel {
 	display:none;
 }
-form.formLogin .fElement.fieldnameStatus .fField {
+.formLogin .fElement.fieldnameStatus .fField {
 	margin:0 0 0 195px;
 }
-form.formLogin .fElement.fieldnameSubmit .fField {
+.formLogin .fElement.fieldnameSubmit .fField {
 	margin:0;
 }
-form.formLogin .fElement input.checkbox {
+.formLogin .fElement input.checkbox {
 	top:3px;
 }
 
-form.formLogin .fElement.fieldnameStatus .fField.notification {
+.formLogin .fElement.fieldnameStatus .fField.notification {
 	margin-left:0;
 }
-form.formLogin .notification {
+.formLogin .notification {
 	width:auto;
 	margin:0;
 	padding:5px 0;
@@ -95,12 +100,12 @@ form.formLogin .notification {
 	border:1px solid #fff !important;
 	background-color:#f8f9e3 !important;
 }
-	form.formLogin .notification img {
+	.formLogin .notification img {
 		position:relative;
 		top:4px;
 		margin-right:5px;
 	}
-	form.formLogin .notification .icon {
+	.formLogin .notification .icon {
 		display:inline-block !important;
 		height:18px;
 		margin-bottom:-5px;
@@ -109,48 +114,48 @@ form.formLogin .notification {
 		background-repeat:no-repeat;
 		float:none;
 	}
-	form.formLogin .notification.success {
+	.formLogin .notification.success {
 		background-color:#c5e8c5 !important;
 		border-color:#008000;
 	}
-		form.formLogin .notification.success .icon {
+		.formLogin .notification.success .icon {
 			background-position:0 1px;
 		}
-	form.formLogin .notification.failure {
+	.formLogin .notification.failure {
 		background-color:#f6e0e0 !important;
 		border-color:#d1a4a4;
 	}
-		form.formLogin .notification.failure .icon {
+		.formLogin .notification.failure .icon {
 			background-position:0 -47px;
 		}
 
 
-form.formLogin fieldset {
+.formLogin fieldset {
 	padding:0;
 }
-form.formLogin fieldset.message {
+.formLogin fieldset.message {
 	margin:0;
 	border:none;
 }
-	form.formLogin fieldset legend {
+	.formLogin fieldset legend {
 		display:none;
 	}
 
-form.formLogin div.odd,
-form.formLogin div.even {
+.formLogin div.odd,
+.formLogin div.even {
 	background-color:#edf1e0; /* bcl01 */
 }
 
-form.formLogin fieldset.buttons {
+.formLogin fieldset.buttons {
 	text-align:left;
 }
-form.formLogin fieldset.buttons .fElement .fField {
+.formLogin fieldset.buttons .fElement .fField {
 	float:none;
 }
 
-form.formLogin fieldset.buttons,
-form.formLogin fieldset.buttons div.odd,
-form.formLogin fieldset.buttons div.even {
+.formLogin fieldset.buttons,
+.formLogin fieldset.buttons div.odd,
+.formLogin fieldset.buttons div.even {
 	background-color:#d3dabb !important;
 }
 	button.buttonLogin {
