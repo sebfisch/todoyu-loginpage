@@ -30,18 +30,18 @@
 	<label index="forgotpassword.mail.confirmation.title">Bestätigung der Passwort-Zurücksetzung</label>
 	<label index="forgotpassword.mail.confirmation.text">Sie haben ein neues Passwort angefordert. Bitte bestätigen Sie Ihr Passwort durch Klick auf den untenstehenden Link. Sie erhalten Ihr neues Passwort umgehend per Email.</label>
 	<label index="forgotpassword.mail.passwordreset.title">Ihr Passwort wurde zurückgesetzt</label>
-	<label index="forgotpassword.mail.passwordreset.text">Ihr neues Passwort finden Sie in diesr Email aufgeführt. Sollten Sie Ihr Passwort erneut ändern wollen, dann logen Sie bitte ein und ändern Sie dieses bei Ihren persönlichen Einstellungen.</label>
+	<label index="forgotpassword.mail.passwordreset.text">Ihr neues Passwort finden Sie in dieser Email aufgeführt. Sollten Sie Ihr Passwort erneut ändern wollen, melden Sie sich bitte an und ändern Sie das Passwort unter Ihren persönlichen Einstellungen.</label>
 	<label index="forgotpassword.mail.tologin">Hier klicken, um zur Login-Seite zu springen</label>
 	<label index="forgotpassword.mail.toconfirmation">Klicken Sie hier um Ihr Password zurück zu setzen</label>
 	<label index="forgotpassword.mail.yournewpassword">Ihr neues todoyu Passwort</label>
 	<label index="forgotpassword.confirmpage.successful.title">Ihr Passwort wurde erfolgreich zurückgesetzt</label>
-	<label index="forgotpassword.confirmpage.successful.text">Ihr Passwort wurde erfolgreich zurückgesetzt. Das neue Passwort wird an Ihre Email-Adresse gesandt. Sollten Sie Ihr Passwort erneut ändern wollen, dann logen Sie bitte ein und ändern Sie dieses bei Ihren persönlichen Einstellungen.</label>
+	<label index="forgotpassword.confirmpage.successful.text">Ihr Passwort wurde erfolgreich zurückgesetzt. Das neue Passwort wird an Ihre Email-Adresse gesandt. Sollten Sie Ihr Passwort erneut ändern wollen, dann melden Sie sich bitte an und ändern Sie dieses bei Ihren persönlichen Einstellungen.</label>
 	<label index="forgotpassword.confirmpage.failure.title">Es tut uns leid, aber ...</label>
 	<label index="forgotpassword.confirmpage.failure.text">... dieser Link ist nicht länger gültig. Ihr neues Passwort wurde bereits an Ihre Email-Adresse gesandt. Im Zweifelsfalle kontaktieren Sie Ihren %sAdministrator%e.</label>
 	<label index="loginexpired.title">Ihr Login ist nicht länger gültig.</label>
 	<label index="loginexpired.message">Ihr Login ist nicht länger gültig. Bitte geben Sie Ihre Angaben im folgenden Formular ein.</label>
-	<label index="form.javascriptcheck">JavaScript ist in Ihrem Browser deaktiviert. Bitte aktivieren Sie JavaScript um einlogen zu können.</label>
+	<label index="form.javascriptcheck">JavaScript ist in Ihrem Browser deaktiviert. Bitte aktivieren Sie JavaScript um sich anzumelden.</label>
 	<label index="form.javascriptcheck.linklabel">Wie kann ich JavaScript im Browser aktivieren?</label>
-	<label index="form.cookiecheck">Cookies sind in Ihrem Browser deaktiviert. Bitte aktivieren Sie Cookies um einlogen zu können.</label>
+	<label index="form.cookiecheck">Cookies sind in Ihrem Browser deaktiviert. Bitte aktivieren Sie Cookies um sich anzumelden.</label>
 	<label index="form.cookiecheck.linklabel">Wie kann ich Cookies im Browser aktivieren?</label>
 </labels>
