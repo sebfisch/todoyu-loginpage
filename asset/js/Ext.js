@@ -57,6 +57,9 @@ Todoyu.Ext.loginpage = {
 	 */
 	fieldPassword:	'login-field-password',
 
+
+	fieldSubmit: 'login-field-submit',
+
 	/**
 	 * ID of remain field
 	 *
@@ -347,23 +350,12 @@ Todoyu.Ext.loginpage = {
 	 * @param	{Boolean}	active
 	 */
 	toggleLoginFields: function(active) {
-		var opacity, func;
+		var method = active ? 'enable' : 'disable';
 
-		if( active ) {
-			opacity	= 1.0;
-			func	= 'enable';
-		} else {
-			opacity	= 0.3;
-			func	= 'disable';
-		}
-
-		$(this.fieldUsername)[func]();
-		$(this.fieldPassword)[func]();
-		$(this.fieldUsername).up('div').setOpacity(opacity);
-		$(this.fieldPassword).up('div').setOpacity(opacity);
-		$('formElement-login-field-loginremain').setOpacity(opacity);
-		$('formElement-login-field-forgotpassword').setOpacity(opacity);
-		$('login-field-submit').setOpacity(opacity);
+		$(this.fieldUsername)[method]();
+		$(this.fieldPassword)[method]();
+		$(this.fieldRemain)[method]();
+		$(this.fieldSubmit)[method]();
 	},
 
 

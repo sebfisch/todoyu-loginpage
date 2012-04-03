@@ -38,7 +38,7 @@ span#password-forget {
 }
 
 #formElement-login-field-forgotpassword-inputbox {
-	width:440px;
+	width:420px;
 	text-align: right;
 }
 
@@ -46,51 +46,54 @@ span#password-forget {
 /* ---------------------
 	Login form
    --------------------- */
-.formLogin {
+#todoyu-loginpage .formLogin {
 	padding:0;
 	background:none;
 }
-.formLogin fieldset {
+#todoyu-loginpage .formLogin fieldset {
 	border:none;
 }
-.formLogin .fElement {
+#todoyu-loginpage .formLogin .fElement {
 	padding:10px;
 }
-.formLogin .fElement .fLabel {
+#todoyu-loginpage .formLogin .fElement .fLabel {
 	width:180px;
 	padding:5px;
 
 }
-.formLogin .fElement input {
+#todoyu-loginpage .formLogin .fElement input {
 	width:220px;
 	padding:2px;
 	font-size:13px;
 	line-height:16px;
 }
-.formLogin .fElement.fieldnameStatus,
-.formLogin .fElement.fieldnameSubmit {
+#todoyu-loginpage .formLogin .fElement.typeCheckbox input {
+	width:auto;
+}
+#todoyu-loginpage .formLogin .fElement.fieldnameStatus,
+#todoyu-loginpage .formLogin .fElement.fieldnameSubmit {
 	margin:0;
 	float:none;
 	border-top:none;
 }
-.formLogin .fElement.fieldnameStatus .fLabel,
-.formLogin .fElement.fieldnameSubmit .fLabel {
+#todoyu-loginpage .formLogin .fElement.fieldnameStatus .fLabel,
+#todoyu-loginpage .formLogin .fElement.fieldnameSubmit .fLabel {
 	display:none;
 }
-.formLogin .fElement.fieldnameStatus .fField {
+#todoyu-loginpage .formLogin .fElement.fieldnameStatus .fField {
 	margin:0 0 0 195px;
 }
-.formLogin .fElement.fieldnameSubmit .fField {
+#todoyu-loginpage .formLogin .fElement.fieldnameSubmit .fField {
 	margin:0;
 }
-.formLogin .fElement input.checkbox {
+#todoyu-loginpage .formLogin .fElement input.checkbox {
 	top:3px;
 }
 
-.formLogin .fElement.fieldnameStatus .fField.notification {
+#todoyu-loginpage .formLogin .fElement.fieldnameStatus .fField.notification {
 	margin-left:0;
 }
-.formLogin .notification {
+#todoyu-loginpage .formLogin .notification {
 	width:auto;
 	margin:0;
 	padding:5px 0;
@@ -100,40 +103,40 @@ span#password-forget {
 	border:1px solid #fff !important;
 	background-color:#f8f9e3 !important;
 }
-	.formLogin .notification img {
-		position:relative;
-		top:4px;
-		margin-right:5px;
-	}
-	.formLogin .notification .icon {
-		display:inline-block !important;
-		height:18px;
-		margin-bottom:-5px;
-		margin-right:3px;
-		background-image:url(../../../../core/asset/img/notify.png);
-		background-repeat:no-repeat;
-		float:none;
-	}
-	.formLogin .notification.success {
-		background-color:#c5e8c5 !important;
-		border-color:#008000;
-	}
-		.formLogin .notification.success .icon {
-			background-position:0 1px;
-		}
-	.formLogin .notification.failure {
-		background-color:#f6e0e0 !important;
-		border-color:#d1a4a4;
-	}
-		.formLogin .notification.failure .icon {
-			background-position:0 -47px;
-		}
+#todoyu-loginpage .formLogin .notification img {
+	position:relative;
+	top:4px;
+	margin-right:5px;
+}
+#todoyu-loginpage .formLogin .notification .icon {
+	display:inline-block !important;
+	height:18px;
+	margin-bottom:-5px;
+	margin-right:3px;
+	background-image:url(../../../../core/asset/img/notify.png);
+	background-repeat:no-repeat;
+	float:none;
+}
+#todoyu-loginpage .formLogin .notification.success {
+	background-color:#c5e8c5 !important;
+	border-color:#008000;
+}
+#todoyu-loginpag.formLogin .notification.success .icon {
+	background-position:0 1px;
+}
+#todoyu-loginpage .formLogin .notification.failure {
+	background-color:#f6e0e0 !important;
+	border-color:#d1a4a4;
+}
+#todoyu-loginpage .formLogin .notification.failure .icon {
+	background-position:0 -47px;
+}
 
 
-.formLogin fieldset {
+#todoyu-loginpage .formLogin fieldset {
 	padding:0;
 }
-.formLogin fieldset.message {
+#todoyu-loginpage .formLogin fieldset.message {
 	margin:0;
 	border:none;
 }
@@ -141,21 +144,21 @@ span#password-forget {
 		display:none;
 	}
 
-.formLogin div.odd,
-.formLogin div.even {
+#todoyu-loginpage .formLogin div.odd,
+#todoyu-loginpage .formLogin div.even {
 	background-color:#edf1e0; /* bcl01 */
 }
 
-.formLogin fieldset.buttons {
+#todoyu-loginpage .formLogin fieldset.buttons {
 	text-align:left;
 }
-.formLogin fieldset.buttons .fElement .fField {
+#todoyu-loginpage .formLogin fieldset.buttons .fElement .fField {
 	float:none;
 }
 
-.formLogin fieldset.buttons,
-.formLogin fieldset.buttons div.odd,
-.formLogin fieldset.buttons div.even {
+#todoyu-loginpage .formLogin fieldset.buttons,
+#todoyu-loginpage .formLogin fieldset.buttons div.odd,
+#todoyu-loginpage .formLogin fieldset.buttons div.even {
 	background-color:#d3dabb !important;
 }
 	button.buttonLogin {
@@ -171,18 +174,18 @@ span#password-forget {
 		width:24px;
 	}
 
-#formElement-login-field-status-inputbox,
-#formElement-forgotpassword-field-status-inputbox {
-	/*height:25px;*/
+#todoyu-loginpage #formElement-login-field-status-inputbox,
+#todoyu-loginpage #formElement-forgotpassword-field-status-inputbox {
 	border:1px solid #edf1e0;
+	padding-right: 40px;
 }
 
-.formLogin  a,
-.formLogin  a:hover {
+#todoyu-loginpage .formLogin  a,
+#todoyu-loginpage .formLogin  a:hover {
 	text-decoration:underline;
 }
 
-.formLogin  a:hover {
+#todoyu-loginpage .formLogin  a:hover {
 	color:#4C4C4C;
 }
 
