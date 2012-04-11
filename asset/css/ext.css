@@ -39,7 +39,7 @@ span#password-forget {
 
 #formElement-login-field-forgotpassword-inputbox {
 	width:420px;
-	text-align: right;
+	text-align:right;
 }
 
 
@@ -177,7 +177,7 @@ span#password-forget {
 #todoyu-loginpage #formElement-login-field-status-inputbox,
 #todoyu-loginpage #formElement-forgotpassword-field-status-inputbox {
 	border:1px solid #edf1e0;
-	padding-right: 40px;
+	padding-right:40px;
 }
 
 #todoyu-loginpage .formLogin  a,
