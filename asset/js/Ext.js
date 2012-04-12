@@ -383,7 +383,7 @@ Todoyu.Ext.loginpage = {
 
 	/**
 	 * Reload page after login
-	 * 
+	 *
 	 */
 	reloadAfterLogin: function() {
 		location.reload();
