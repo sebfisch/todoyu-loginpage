@@ -371,12 +371,22 @@ Todoyu.Ext.loginpage = {
 
 		if( status.success ) {
 			this.displayLoginSuccess();
-			location.reload();
+			this.reloadAfterLogin.bind(this).delay(0.2);
 		} else {
 			this.toggleLoginFields(true);
 			this.displayLoginError(status.message);
 			$(this.fieldPassword).select();
 		}
+	},
+
+
+
+	/**
+	 * Reload page after login
+	 * 
+	 */
+	reloadAfterLogin: function() {
+		location.reload();
 	},
 
 
