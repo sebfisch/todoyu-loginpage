@@ -24,6 +24,7 @@
 	<label index="forgotpassword.invalidusername">The entered user name does not exist.</label>
 	<label index="forgotpassword.invalidusername.adminlink">I cannot remember my user name</label>
 	<label index="forgotpassword.form.field.submit">Send me my new password</label>
+	<label index="forgotpassword.form.field.cancel">Cancel and return to login</label>
 	<label index="forgotpassword.form.field.notification.success">A confirmation mail has been sent to your email address.</label>
 	<label index="forgotpassword.form.field.comment">You forgot your password? No problem! Enter your user name and push the send button. You will receive an email to confirm your password reset.</label>
 	<label index="forgotpassword.mail.subject.newpassword">Your new todoyu password</label>

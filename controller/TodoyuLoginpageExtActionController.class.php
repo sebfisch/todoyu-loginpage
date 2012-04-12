@@ -170,7 +170,20 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 */
 	public function loadForgotPasswordFormAction($params) {
 		$username	= $params['username'];
+
 		return TodoyuLoginpageRenderer::renderForgotPasswordForm($username);
+	}
+
+
+
+	/**
+	 * Render login form
+	 *
+	 * @param	Array	$params
+	 * @return	String
+	 */
+	public function loadLoginFormAction($params) {
+		return TodoyuLoginpageRenderer::renderLoginForm();
 	}
 
 

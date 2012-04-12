@@ -42,6 +42,11 @@ span#password-forget {
 	text-align:right;
 }
 
+#forgotpassword-fieldset-buttons div.fElement {
+	float:left !important;
+}
+
+
 
 /* ---------------------
 	Login form

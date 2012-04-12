@@ -104,12 +104,24 @@ Todoyu.Ext.loginpage = {
 	 * @method	init
 	 */
 	init: function() {
-		if( Todoyu.isInArea('loginpage') ) {
+		if( this.hasLoginForm() ) {
 			this.initLoginpage();
 		}
 
 		this.registerHooks();
 		this.preloadImages();
+	},
+
+
+
+	/**
+	 * Check whethere fields of login form are in DOM
+	 *
+	 * @method	hasLoginForm
+	 * @return	{Boolean}
+	 */
+	hasLoginForm: function() {
+		return Todoyu.exists(this.fieldUsername) && Todoyu.exists(this.fieldPassword);
 	},
 
 
@@ -384,6 +396,7 @@ Todoyu.Ext.loginpage = {
 	/**
 	 * Reload page after login
 	 *
+	 * @method	reloadAfterLogin
 	 */
 	reloadAfterLogin: function() {
 		location.reload();
@@ -527,6 +540,40 @@ Todoyu.Ext.loginpage = {
 	 */
 	onForgotPasswordFormLoaded: function(response) {
 		$('login-form').replace(response.responseText);
+	},
+
+
+
+	/**
+	 * @method	cancelForgotPasswordForm
+	 * @param	{Element}	form
+	 */
+	cancelForgotPasswordForm: function(form) {
+		var url		= Todoyu.getUrl('loginpage', 'ext');
+		var options	= {
+			parameters: {
+				action:		'loadLoginForm'
+			},
+			onComplete:	this.onCancelForgotPasswordForm.bind(this)
+		};
+
+		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * Handler when forget-password form has been loaded - set content from response
+	 *
+	 * @method	onForgotPasswordFormLoaded
+	 * @param	{Ajax.Response}		response
+	 */
+	onCancelForgotPasswordForm: function(response) {
+		var formID	= Todoyu.exists('forgotpassword-form') ? 'forgotpassword-form' : 'relogin-popup-form';
+
+		$(formID).replace(response.responseText);
+
+		this.init();
 	},
 
 
