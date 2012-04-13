@@ -35,7 +35,7 @@
 				<field type="text" name="username">
 					<label>loginpage.ext.form.field.username</label>
 					<validate>
-						<isNotEmpty msg="Tell me your name!" />
+						<isNotEmpty />
 					</validate>
 					<required />
 				</field>
