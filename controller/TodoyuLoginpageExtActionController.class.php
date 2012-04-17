@@ -213,7 +213,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 				$message = Todoyu::Label('loginpage.ext.forgotpassword.invalidusername')
 							. '<br /><br />'
-							. TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], Todoyu::Label('loginpage.ext.forgotpassword.invalidusername.adminlink'));
+							. TodoyuString::buildMailtoATag(Todoyu::$CONFIG['SYSTEM']['email'], Todoyu::Label('loginpage.ext.forgotpassword.invalidusername.adminlink'));
 
 				$response['message'] = $message;
 				$response['form'] = $form->render();
@@ -267,7 +267,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			TodoyuPage::setTitle(Todoyu::Label('loginpage.ext.forgotpassword.confirmpage.failure.title'));
 			TodoyuPage::set('title', Todoyu::Label('loginpage.ext.forgotpassword.confirmpage.failure.title'));
 
-			$replaceArray	=  TodoyuString::getMailtoTag(Todoyu::$CONFIG['SYSTEM']['email'], '', true);
+			$replaceArray	=  TodoyuString::buildMailtoATag(Todoyu::$CONFIG['SYSTEM']['email'], '', true);
 
 			$label = str_replace(array('%s', '%e'), $replaceArray, Todoyu::Label('loginpage.ext.forgotpassword.confirmpage.failure.text'));
 
@@ -311,10 +311,13 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 */
 	public function nocookieAction(array $params) {
 		TodoyuHeader::sendTodoyuErrorHeader();
+		$labelCookieCheck	= Todoyu::Label('loginpage.ext.form.cookiecheck');
+		$labelLink			= Todoyu::Label('loginpage.ext.form.cookiecheck.linklabel');
+		$urlManual			= Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'];
 
-		return Todoyu::Label('loginpage.ext.form.cookiecheck')
+		return $labelCookieCheck
 				. '<br />'
-				. TodoyuString::getATag(Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'], Todoyu::Label('loginpage.ext.form.cookiecheck.linklabel'));
+				. TodoyuString::buildATag($urlManual, $labelLink, '_blank');
 	}
 
 }
