@@ -63,6 +63,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getUserWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
 	<td>assertElementPresent</td>
 	<td>css=div#panelwidget-loginnews.panelWidget h1#panelwidget-loginnews-h1.expand span#panelwidget-loginnews-toggle.toggle</td>
 	<td></td>
@@ -74,7 +79,7 @@
 </tr>
 <tr>
 	<td>assertExpression</td>
-	<td>javascript{storedVars['widgetHeight'] &lt; 40}</td>
+	<td>javascript{storedVars['widgetHeight'] &lt; 45}</td>
 	<td>true</td>
 </tr>
 <tr>
@@ -86,6 +91,11 @@
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getUserWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>assertElementNotPresent</td>
