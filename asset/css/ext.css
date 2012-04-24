@@ -303,3 +303,7 @@ div.passwordResetConfirmationText.successful {
 div#relogin-popup-form fieldset.loginForm {
 	background-color:#f6f8f1;
 }
+
+div#relogin-popup-form fieldset.loginForm input {
+	font-size:12px;
+}
