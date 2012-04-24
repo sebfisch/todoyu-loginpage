@@ -131,7 +131,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 			TodoyuHookManager::callHook('loginpage', 'login.failed', array($username, $passHash));
 
 				// Log failed login
-			TodoyuLogger::logNotice('Login failed', array('username' => $username, 'passhash' => $passHash));
+			TodoyuLogger::logNotice('Login failed for user <' . htmlentities($username) . '>', array('username' => $username, 'passhash' => $passHash));
 
 				// Build JSON response
 			$response	= array(
