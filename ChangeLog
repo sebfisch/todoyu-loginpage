@@ -1,6 +1,6 @@
 todoyu loginpage extension changelog
 
-loginpage 1.2.0 - not released yet
+loginpage 1.2.0 - 2012-05-03
 	* Adapted to core 2.2
 	* Added: Cancel button in request forgotten password form to return to login
 
