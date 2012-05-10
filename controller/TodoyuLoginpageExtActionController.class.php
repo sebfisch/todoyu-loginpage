@@ -196,11 +196,11 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 * @todo	Remove the json_encode part, refactor method!
 	 */
 	public function forgotPasswordAction($params) {
-		$xml	= 'ext/loginpage/config/form/forgotpassword.xml';
+		$xmlPath	= 'ext/loginpage/config/form/forgotpassword.xml';
 
 		$forgotPasswordData	= $params['forgotpassword'];
 
-		$form	= TodoyuFormManager::getForm($xml, 0, array());
+		$form	= TodoyuFormManager::getForm($xmlPath);
 		$form->addFormData($forgotPasswordData);
 		$form->setRecordID(false);
 
@@ -287,9 +287,9 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 	 */
 	public function reloginPopupAction(array $params) {
 		$tmpl	= 'ext/loginpage/view/reloginpopup.tmpl';
-		$xml	= 'ext/loginpage/config/form/login.xml';
+		$xmlPath= 'ext/loginpage/config/form/login.xml';
 
-		$form	= TodoyuFormManager::getForm($xml, 0, array());
+		$form	= TodoyuFormManager::getForm($xmlPath);
 		$form->setRecordID(false);
 
 		$data	= array(
