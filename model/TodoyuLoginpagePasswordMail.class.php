@@ -34,17 +34,25 @@ abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 	 */
 	protected $person;
 
+	/**
+	 * Email receiver
+	 *
+	 * @var	TodoyuMailReceiver
+	 */
+	private $mailReceiver;
+
+
 
 	/**
 	 * Initialize mail
 	 *
-	 * @param	String		$idPerson
+	 * @param	String		$mailReceiverID
 	 * @param	Array		$config
 	 */
-	public function __construct($idPerson, array $config = array()) {
+	public function __construct($mailReceiverID, array $config = array()) {
 		parent::__construct($config);
 
-		$this->person	= TodoyuContactPersonManager::getPerson($idPerson);
+		$this->mailReceiver	= TodoyuMailReceiverManager::getMailReceiverObject($mailReceiverID);
 
 		$this->init();
 	}
