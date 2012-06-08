@@ -46,13 +46,13 @@ abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 	/**
 	 * Initialize mail
 	 *
-	 * @param	String		$mailReceiverID
+	 * @param	String		$receiverTuple		Tuple like 'type:ID' or just 'ID' which defaults the type to 'contactperson'
 	 * @param	Array		$config
 	 */
-	public function __construct($mailReceiverID, array $config = array()) {
+	public function __construct($receiverTuple, array $config = array()) {
 		parent::__construct($config);
 
-		$this->mailReceiver	= TodoyuMailReceiverManager::getMailReceiverObject($mailReceiverID);
+		$this->mailReceiver	= TodoyuMailReceiverManager::getMailReceiverObject($receiverTuple);
 
 		$this->init();
 	}
@@ -105,7 +105,7 @@ abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 
 
 	/**
-	 * Get temaplte
+	 * Get mail template
 	 *
 	 * @abstract
 	 * @param	Boolean		$asHtml
