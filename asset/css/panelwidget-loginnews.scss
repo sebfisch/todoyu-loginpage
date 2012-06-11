@@ -1,3 +1,7 @@
+@import "../../../../core/config/theme.scss";
+
+
+
 /* ------------------------------------------------------------
 	Check library dependencies panel widget
    ------------------------------------------------------------ */
@@ -8,7 +12,7 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-local {
-	background-color:#eee;
+	background-color:$grey01;
 	min-height:200px;
 }
 
@@ -21,7 +25,7 @@ div #panelwidget-loginnews h1 span.title {
 #panelwidget-loginnews #news-live {
 	margin:0;
 	padding:10px 5px;
-	background:#eee;
+	background:$grey01;
 	font-family:Arial,Verdana,Helvetica,sans-serif;
 	font-size:11px;
 }
@@ -41,5 +45,5 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-live a:hover{
-	color:#333;
+	color:$grey08;
 }

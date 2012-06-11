@@ -49,12 +49,12 @@ Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/loginpage/asset/css/ext.css',
+			'file'		=> 'ext/loginpage/asset/css/ext.scss',
 			'media'		=> 'all',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/loginpage/asset/css/panelwidget-loginnews.css',
+			'file'		=> 'ext/loginpage/asset/css/panelwidget-loginnews.scss',
 			'position'	=> 120,
 		),
 		array(
