@@ -12,7 +12,7 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-local {
-	background-color:$grey01;
+	background-color:$colorNeutral01;
 	min-height:200px;
 }
 
@@ -25,7 +25,7 @@ div #panelwidget-loginnews h1 span.title {
 #panelwidget-loginnews #news-live {
 	margin:0;
 	padding:10px 5px;
-	background:$grey01;
+	background:$colorNeutral01;
 	font-family:Arial,Verdana,Helvetica,sans-serif;
 	font-size:11px;
 }
@@ -45,5 +45,5 @@ div #panelwidget-loginnews h1 span.title {
 }
 
 #panelwidget-loginnews #news-live a:hover{
-	color:$grey08;
+	color:$colorNeutral08;
 }
