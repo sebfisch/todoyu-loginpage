@@ -128,14 +128,14 @@ span#password-forget {
 }
 #todoyu-loginpage .formLogin .notification.success {
 	background-color:#c5e8c5 !important;
-	border-color:#008000;
+	border-color:$colorApprove07;
 }
 #todoyu-loginpag.formLogin .notification.success .icon {
 	background-position:0 1px;
 }
 #todoyu-loginpage .formLogin .notification.failure {
-	background-color:#f6e0e0 !important;
-	border-color:#d1a4a4;
+	background-color:$colorAlert04 !important;
+	border-color:$colorAlert01;
 }
 #todoyu-loginpage .formLogin .notification.failure .icon {
 	background-position:0 -47px;
@@ -195,7 +195,7 @@ span#password-forget {
 }
 
 #todoyu-loginpage .formLogin  a:hover {
-	color:#4C4C4C;
+	color:$colorNeutral08;
 }
 
 
@@ -245,13 +245,13 @@ div.passwordResetConfirmationText {
 
 
 div.passwordResetConfirmationText.failure {
-	background-color:#F6E0E0 !important;
-	border-color:#D1A4A4;
+	background-color:$colorAlert04 !important;
+	border-color:$colorAlert01;
 }
 
 div.passwordResetConfirmationText.successful {
-	background-color:#c5e8c5 !important;
-	border-color:#008000;
+	background-color:$colorApprove04 !important;
+	border-color:$colorApprove07;
 }
 
 
@@ -267,7 +267,7 @@ div.passwordResetConfirmationText.successful {
 #loginform-javascriptcheck,
 #reLoginPopup #relogin-popup-message {
 	border:1px $white solid;
-	background:#e9ebc6 url('../img/alert.png') no-repeat 16px 16px;
+	background:$colorHighlight02 url('../img/alert.png') no-repeat 16px 16px;
 	height:50px;
 	padding:18px 0 5px 70px;
 }
@@ -289,7 +289,7 @@ div.passwordResetConfirmationText.successful {
 
 #loginform-cookiecheck,
 #loginform-javascriptcheck {
-	background-color:#fbfdd5;
+	background-color:$colorHighlight02;
 	border:1px $white solid;
 }
 
@@ -305,7 +305,7 @@ div.passwordResetConfirmationText.successful {
 	Re-login popup
    ---------------------- */
 div#relogin-popup-form fieldset.loginForm {
-	background-color:#f6f8f1;
+	background-color:$white;
 }
 
 div#relogin-popup-form fieldset.loginForm input {
