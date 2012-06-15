@@ -58,7 +58,7 @@ Todoyu::$CONFIG['EXT']['loginpage']['assets'] = array(
 			'position'	=> 120,
 		),
 		array(
-			'file'		=> 'ext/loginpage/asset/css/headlet-logout.css',
+			'file'		=> 'ext/loginpage/asset/css/headlet-logout.scss',
 			'position'	=> 120,
 		)
 	)
