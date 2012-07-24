@@ -18,20 +18,24 @@ h1.extIconLoginpage .title {
 /* -------------------------------
 	Default layout changes
    ------------------------------- */
-body.todoyu-loginpage #right {
-	top:20px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
+body.todoyu-loginpage {
+	#content h1.headerLine {
+		margin:0;
+	}
+
+	#right {
+		top:20px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:10px;
+
+		.inner {
+			background-color:$colorCorporate01;
+		}
+	}
 }
 
-body.todoyu-loginpage #right .inner {
-	background-color:$colorCorporate01;
-}
 
-#todoyu-loginpage #content h1.headerLine {
-	margin:0;
-}
 
 span#password-forget {
 	line-height:23px;
@@ -55,114 +59,154 @@ span#password-forget {
 /* ---------------------
 	Login form
    --------------------- */
-#todoyu-loginpage .formLogin {
-	padding:0;
-	background:none;
-}
-#todoyu-loginpage .formLogin fieldset {
-	border:none;
-}
-#todoyu-loginpage .formLogin .fElement {
-	padding:10px;
-}
-#todoyu-loginpage .formLogin .fElement .fLabel {
-	width:180px;
-	padding:5px;
+#todoyu-loginpage {
 
+	.formLogin {
+		padding:0;
+		background:none;
+
+		a:hover {
+			color:$colorNeutral08;
+		}
+
+		fieldset {
+			border:none;
+			padding:0;
+
+			legend {
+				display:none;
+			}
+
+			&.buttons {
+				text-align:left;
+
+				.fElement .fField {
+					float:none;
+				}
+			}
+
+			&.message {
+				margin:0;
+				border:none;
+			}
+		}
+
+		.fElement {
+			padding:10px;
+
+			input {
+				width:220px;
+				padding:2px;
+				font-size:13px;
+				line-height:16px;
+
+				&.checkbox {
+					top:3px;
+				}
+			}
+
+			.fLabel {
+				width:180px;
+				padding:5px;
+			}
+
+			&.typeCheckbox input {
+				width:auto;
+			}
+
+			&.fieldnameStatus .fField {
+				margin:0 0 0 195px;
+
+				&.notification {
+					margin-left:0;
+				}
+			}
+
+			&.fieldnameSubmit .fField {
+				margin:0;
+			}
+		}
+
+		.notification {
+			width:auto;
+			margin:0;
+			padding:5px 0;
+			float:none;
+			text-align:center;
+			line-height:21px;
+			border:1px solid $white !important;
+			background-color:#f8f9e3 !important;
+
+			img {
+				position:relative;
+				top:4px;
+				margin-right:5px;
+			}
+
+			.icon {
+				display:inline-block !important;
+				height:18px;
+				margin-bottom:-5px;
+				margin-right:3px;
+				background-image:url(../../../../core/asset/img/notify.png);
+				background-repeat:no-repeat;
+				float:none;
+			}
+
+			&.success {
+				background-color:#c5e8c5 !important;
+				border-color:$colorApprove07;
+
+				.icon {
+					background-position:0 1px;
+				}
+			}
+
+			&.failure {
+				background-color:$colorAlert04 !important;
+				border-color:$colorAlert01;
+
+				.icon {
+					background-position:0 -47px;
+				}
+			}
+		}
+	}
+
+	p.slogan {
+		bottom:0;
+		color:white;
+		font-size:13px;
+		font-weight:bold;
+		height:34px;
+		padding:12px 10px;
+		position:absolute;
+		right:0;
+		text-align:right;
+		text-transform:uppercase;
+	}
+
+	.panelWidget .content {
+		margin-top:0;
+		position:relative;
+	}
 }
-#todoyu-loginpage .formLogin .fElement input {
-	width:220px;
-	padding:2px;
-	font-size:13px;
-	line-height:16px;
-}
-#todoyu-loginpage .formLogin .fElement.typeCheckbox input {
-	width:auto;
-}
+
 #todoyu-loginpage .formLogin .fElement.fieldnameStatus,
 #todoyu-loginpage .formLogin .fElement.fieldnameSubmit {
 	margin:0;
 	float:none;
 	border-top:none;
 }
+
 #todoyu-loginpage .formLogin .fElement.fieldnameStatus .fLabel,
 #todoyu-loginpage .formLogin .fElement.fieldnameSubmit .fLabel {
 	display:none;
 }
-#todoyu-loginpage .formLogin .fElement.fieldnameStatus .fField {
-	margin:0 0 0 195px;
-}
-#todoyu-loginpage .formLogin .fElement.fieldnameSubmit .fField {
-	margin:0;
-}
-#todoyu-loginpage .formLogin .fElement input.checkbox {
-	top:3px;
-}
-
-#todoyu-loginpage .formLogin .fElement.fieldnameStatus .fField.notification {
-	margin-left:0;
-}
-#todoyu-loginpage .formLogin .notification {
-	width:auto;
-	margin:0;
-	padding:5px 0;
-	float:none;
-	text-align:center;
-	line-height:21px;
-	border:1px solid $white !important;
-	background-color:#f8f9e3 !important;
-}
-#todoyu-loginpage .formLogin .notification img {
-	position:relative;
-	top:4px;
-	margin-right:5px;
-}
-#todoyu-loginpage .formLogin .notification .icon {
-	display:inline-block !important;
-	height:18px;
-	margin-bottom:-5px;
-	margin-right:3px;
-	background-image:url(../../../../core/asset/img/notify.png);
-	background-repeat:no-repeat;
-	float:none;
-}
-#todoyu-loginpage .formLogin .notification.success {
-	background-color:#c5e8c5 !important;
-	border-color:$colorApprove07;
-}
-#todoyu-loginpag.formLogin .notification.success .icon {
-	background-position:0 1px;
-}
-#todoyu-loginpage .formLogin .notification.failure {
-	background-color:$colorAlert04 !important;
-	border-color:$colorAlert01;
-}
-#todoyu-loginpage .formLogin .notification.failure .icon {
-	background-position:0 -47px;
-}
-
-
-#todoyu-loginpage .formLogin fieldset {
-	padding:0;
-}
-#todoyu-loginpage .formLogin fieldset.message {
-	margin:0;
-	border:none;
-}
-	.formLogin fieldset legend {
-		display:none;
-	}
 
 #todoyu-loginpage .formLogin div.odd,
 #todoyu-loginpage .formLogin div.even {
 	background-color:$colorCorporate01;
-}
-
-#todoyu-loginpage .formLogin fieldset.buttons {
-	text-align:left;
-}
-#todoyu-loginpage .formLogin fieldset.buttons .fElement .fField {
-	float:none;
 }
 
 #todoyu-loginpage .formLogin fieldset.buttons,
@@ -170,18 +214,24 @@ span#password-forget {
 #todoyu-loginpage .formLogin fieldset.buttons div.even {
 	background-color:#d3dabb !important;
 }
-	button.buttonLogin {
+
+button{
+	&.buttonLogin {
 		margin-left:195px;
-	}
-	button.buttonLogin span.icon {
-		background:url('../img/icons.png') no-repeat 4px -57px;
-		width:24px;
+
+		span.icon {
+			background:url('../img/icons.png') no-repeat 4px -57px;
+			width:24px;
+		}
 	}
 
-	button.sendNewPasswordButton span.icon {
+	&.sendNewPasswordButton span.icon {
 		background:url('../img/icons.png') no-repeat 4px -86px;
 		width:24px;
 	}
+}
+
+
 
 #todoyu-loginpage #formElement-login-field-status-inputbox,
 #todoyu-loginpage #formElement-forgotpassword-field-status-inputbox {
@@ -192,10 +242,6 @@ span#password-forget {
 #todoyu-loginpage .formLogin  a,
 #todoyu-loginpage .formLogin  a:hover {
 	text-decoration:underline;
-}
-
-#todoyu-loginpage .formLogin  a:hover {
-	color:$colorNeutral08;
 }
 
 
@@ -212,26 +258,7 @@ span#password-forget {
 
 
 
-/* ----------------------------
- 	Todoyu Panelwidget Slogan
-   ---------------------------- */
-#todoyu-loginpage .panelWidget .content {
-	margin-top:0;
-	position:relative;
-}
 
-#todoyu-loginpage p.slogan {
-	position:absolute;
-	bottom:0;
-	right:0;
-	height:34px;
-	padding:12px 10px;
-	text-transform:uppercase;
-	color:white;
-	font-size:13px;
-	font-weight:bold;
-	text-align:right;
-}
 
 
 
@@ -241,17 +268,15 @@ span#password-forget {
 div.passwordResetConfirmationText {
 	padding:5px;
 
-}
+	&.failure {
+		background-color:$colorAlert04 !important;
+		border-color:$colorAlert01;
+	}
 
-
-div.passwordResetConfirmationText.failure {
-	background-color:$colorAlert04 !important;
-	border-color:$colorAlert01;
-}
-
-div.passwordResetConfirmationText.successful {
-	background-color:$colorApprove04 !important;
-	border-color:$colorApprove07;
+	&.successful {
+		background-color:$colorApprove04 !important;
+		border-color:$colorApprove07;
+	}
 }
 
 
@@ -261,6 +286,10 @@ div.passwordResetConfirmationText.successful {
    ---------------------- */
 #reLoginPopup {
 	text-align:left;
+
+	form.formLogin .notification {
+		width:480px !important;
+	}
 }
 
 #loginform-cookiecheck,
@@ -283,10 +312,6 @@ div.passwordResetConfirmationText.successful {
 	background-color:#f6f8f1;
 }
 
-#reLoginPopup form.formLogin .notification {
-	width:480px !important;
-}
-
 #loginform-cookiecheck,
 #loginform-javascriptcheck {
 	background-color:$colorHighlight02;
@@ -306,8 +331,8 @@ div.passwordResetConfirmationText.successful {
    ---------------------- */
 div#relogin-popup-form fieldset.loginForm {
 	background-color:$white;
-}
 
-div#relogin-popup-form fieldset.loginForm input {
-	font-size:12px;
+	input {
+		font-size:12px;
+	}
 }
