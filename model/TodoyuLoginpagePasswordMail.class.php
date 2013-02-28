@@ -28,18 +28,11 @@
 abstract class TodoyuLoginpagePasswordMail extends TodoyuMail {
 
 	/**
-	 * Receiver person
-	 *
-	 * @var	TodoyuContactPerson
-	 */
-	protected $person;
-
-	/**
 	 * Email receiver
 	 *
 	 * @var	TodoyuMailReceiverInterface
 	 */
-	private $mailReceiver;
+	protected $mailReceiver;
 
 
 

@@ -99,7 +99,7 @@ class TodoyuLoginpagePasswordConfirmMail extends TodoyuLoginpagePasswordMail {
 				'controller'	=> 'ext',
 				'action'		=> 'confirmationmail',
 				'hash'			=> $this->hash,
-				'userName'		=> $this->person->getUsername()
+				'userName'		=> $this->mailReceiver->getPerson()->getUsername()
 			)
 		);
 	}
