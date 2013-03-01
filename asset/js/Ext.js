@@ -146,7 +146,7 @@ Todoyu.Ext.loginpage = {
 	 */
 	preloadImages: function() {
 		var imgNotify = new Image();
-		imgNotify.src = 'core/asset/img/notify.png';
+		imgNotify.src = 'core/asset/img/icons.png';
 
 		var imgLoading = new Image();
 		imgLoading.src = 'core/asset/img/ajax-loader_success.gif';
