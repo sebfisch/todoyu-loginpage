@@ -24,8 +24,8 @@ body.todoyu-loginpage {
 	}
 
 	#right {
-		top:20px;
 		border-radius:10px;
+		top:20px;
 
 		.inner {
 			background-color:$colorCorporate01;
@@ -133,7 +133,7 @@ span#password-forget {
 			text-align:center;
 			line-height:21px;
 			border:1px solid $white !important;
-			background-color:#f8f9e3 !important;
+			background-color:$colorHighlight03 !important;
 
 			img {
 				position:relative;
@@ -144,7 +144,7 @@ span#password-forget {
 			.icon {
 				display:inline-block !important;
 				height:18px;
-				margin-bottom:-5px;
+				margin-bottom: -5px;
 				margin-right:3px;
 				background-image:url(../../../../core/asset/img/icons.png);
 				background-repeat:no-repeat;
@@ -210,7 +210,7 @@ span#password-forget {
 #todoyu-loginpage .formLogin fieldset.buttons,
 #todoyu-loginpage .formLogin fieldset.buttons div.odd,
 #todoyu-loginpage .formLogin fieldset.buttons div.even {
-	background-color:#d3dabb !important;
+	background-color:$colorCorporate04 !important;
 }
 
 button{
@@ -307,7 +307,7 @@ div.passwordResetConfirmationText {
 
 #reLoginPopup form.formLogin div.odd,
 #reLoginPopup form.formLogin div.even {
-	background-color:#f6f8f1;
+	background-color:$colorNeutral00;
 }
 
 #loginform-cookiecheck,
