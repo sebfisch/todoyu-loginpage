@@ -33,7 +33,7 @@ Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 	'state'			=> 'stable',
 	'version'		=> '1.3.0',
 	'constraints'	=> array(
-		'core'		=> '2.3.0b1',
+		'core'		=> '2.3.0',
 		'depends'	=> array(
 			'contact'	=> '1.3.0'
 		)
