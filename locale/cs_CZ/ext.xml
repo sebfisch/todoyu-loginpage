@@ -23,6 +23,7 @@
 	<label index="forgotpassword.tologin">Klikněte zde pro přihlášení</label>
 	<label index="forgotpassword.invalidusername">Zadané jméno neexistuje.</label>
 	<label index="forgotpassword.invalidusername.adminlink">Nemůžu si zapamatovat své uživatelské jméno</label>
+	<label index="forgotpassword.invalidusernameoremail">Neplatné uživatelské jméno nebo e-mailová adresa.</label>
 	<label index="forgotpassword.form.field.submit">Pošli mi moje nové heslo</label>
 	<label index="forgotpassword.form.field.cancel">Zrušit a vrátit se k přihlášení</label>
 	<label index="forgotpassword.form.field.notification.success">Potvrzovací Email byl zaslán na vaši adresu</label>
@@ -35,6 +36,7 @@
 	<label index="forgotpassword.mail.tologin">Zde klikněte pro přihlášení</label>
 	<label index="forgotpassword.mail.toconfirmation">Zde klikněte pro resetování vašeho hesla</label>
 	<label index="forgotpassword.mail.yournewpassword">Vaše nové heslo pro todoyu</label>
+	<label index="forgotpassword.mail.yourusername">Její uživatelské jméno</label>
 	<label index="forgotpassword.confirmpage.successful.title">Vaše heslo bylo úspěšně resetováno</label>
 	<label index="forgotpassword.confirmpage.successful.text">Vaše heslo bylo úspěšně resetováno. Nové heslo bude zasláno na vaši Emailovou adresu.  Jestli si přejete vaše heslo změnit, stačí když se přihlásíte do todoyu, půjdete do osobní sekce vašeho profilu. V záložce Heslo si je pak můžete změnit dle potřeby.</label>
 	<label index="forgotpassword.confirmpage.failure.title">Omlouváme se, ale...</label>

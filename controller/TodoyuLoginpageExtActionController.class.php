@@ -205,17 +205,25 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$form->setRecordID(false);
 
 		if( $form->isValid() ) {
-			if( TodoyuContactPersonManager::personExists($forgotPasswordData['username']) ) {
-				TodoyuLoginpageManager::sendConfirmationMail($forgotPasswordData['username']);
+			$userName	= $forgotPasswordData['usernameoremail'];
+			if( TodoyuString::isValidEmail($userName) ) {
+				$person	= TodoyuContactPersonManager::getPersonByEmail($userName);
+				if( $person !== false ) {
+					$userName	= $person->getUsername();
+				}
+			}
+
+			if( TodoyuContactPersonManager::personExists($userName) ) {
+				TodoyuLoginpageManager::sendConfirmationMail($userName);
 				$response['form'] = TodoyuLoginpageRenderer::renderLoginForm();
 			} else {
 				TodoyuHeader::sendTodoyuErrorHeader();
 
-				$message = Todoyu::Label('loginpage.ext.forgotpassword.invalidusername')
-							. '<br /><br />'
-							. TodoyuString::buildMailtoATag(Todoyu::$CONFIG['SYSTEM']['email'], Todoyu::Label('loginpage.ext.forgotpassword.invalidusername.adminlink'));
+//				$message = Todoyu::Label('loginpage.ext.forgotpassword.invalidusernameoremail')
+//				.  '<br /><br />'
+//				.  TodoyuString::buildMailtoATag(Todoyu::$CONFIG['SYSTEM']['email'], Todoyu::Label('loginpage.ext.forgotpassword.invalidusername.adminlink'));
 
-				$response['message'] = $message;
+				$response['message'] = Todoyu::Label('loginpage.ext.forgotpassword.invalidusernameoremail');
 				$response['form'] = $form->render();
 			}
 		} else {
@@ -280,7 +288,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 
 
 	/**
-	 * Render relogin popup message with form
+	 * Render re-login popup message with form
 	 *
 	 * @param	Array	$params
 	 * @return	String
@@ -315,9 +323,7 @@ class TodoyuLoginpageExtActionController extends TodoyuActionController {
 		$labelLink			= Todoyu::Label('loginpage.ext.form.cookiecheck.linklabel');
 		$urlManual			= Todoyu::$CONFIG['EXT']['loginpage']['manuallinks']['cookies'];
 
-		return $labelCookieCheck
-				. '<br />'
-				. TodoyuString::buildATag($urlManual, $labelLink, '_blank');
+		return $labelCookieCheck . '<br />'	. TodoyuString::buildATag($urlManual, $labelLink, '_blank');
 	}
 
 }

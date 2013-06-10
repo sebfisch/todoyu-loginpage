@@ -27,6 +27,13 @@
 class TodoyuLoginpagePasswordResetMail extends TodoyuLoginpagePasswordMail {
 
 	/**
+	 * Username
+	 *
+	 * @var	String
+	 */
+	private $username;
+
+	/**
 	 * New password
 	 *
 	 * @var	String
@@ -42,6 +49,10 @@ class TodoyuLoginpagePasswordResetMail extends TodoyuLoginpagePasswordMail {
 	 * @param	Array		$config
 	 */
 	public function __construct($idPerson, $password, array $config = array()) {
+		$idPerson	= intval($idPerson);
+		$person	= TodoyuContactPersonManager::getPerson($idPerson);
+
+		$this->username	= $person->getUsername();
 		$this->password	= $password;
 
 		parent::__construct($idPerson, $config);
@@ -68,6 +79,7 @@ class TodoyuLoginpagePasswordResetMail extends TodoyuLoginpagePasswordMail {
 	 */
 	protected function getData() {
 		return array(
+			'username'		=> $this->username,
 			'newPassword'	=> $this->password,
 			'loginlink'		=> TODOYU_URL
 		);

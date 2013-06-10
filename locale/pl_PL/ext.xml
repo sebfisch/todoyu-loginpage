@@ -22,6 +22,7 @@
 	<label index="forgotpassword.tologin">Kliknij tu, aby przejść do strony logowania</label>
 	<label index="forgotpassword.invalidusername">Podana nazwa użytkownika nie istnieje.</label>
 	<label index="forgotpassword.invalidusername.adminlink">Nie mogę zapamiętać mojej nazwy użytkownika</label>
+	<label index="forgotpassword.invalidusernameoremail">Wpisana nazwa użytkownika lub adres e-mail nie został znaleziony.</label>
 	<label index="forgotpassword.form.field.submit">Prześlij mi moje nowe hasło</label>
 	<label index="forgotpassword.form.field.notification.success">E-mail z potweirdzeniem został przesłany na twoją skrzynkę</label>
 	<label index="forgotpassword.form.field.comment">Zapomniałeś hasło? Nie ma problemu! Wpisz swojąnazwę użytkownika i wciśnij przycisk. Otrzymasz wiadomość e-mail w celu weryfikacji chęci zresetowania hasła.</label>
@@ -33,6 +34,7 @@
 	<label index="forgotpassword.mail.tologin">Kliknij tu, aby przejść do strony logowania</label>
 	<label index="forgotpassword.mail.toconfirmation">Kliknij tu, aby zresetować hasło</label>
 	<label index="forgotpassword.mail.yournewpassword">Twoje nowe hasło do todoyu</label>
+	<label index="forgotpassword.mail.yourusername">Jej nazwa użytkownika</label>
 	<label index="forgotpassword.confirmpage.successful.title">Twoje hasło zostało pomyślnie zresetowane</label>
 	<label index="forgotpassword.confirmpage.successful.text">Twoje hasło zostało pomyślnie zresetowane. Nowe hasło zostało przesłane na pocztę e-mail. Jeśli chcesz zmienić hasło ponownie, poprostu zaloguj się do todoyu, przejdź do danych osobistych profilu, a następnie w zakładce hasło wpisz pożądane.</label>
 	<label index="forgotpassword.confirmpage.failure.title">Przykro nam, ale ...</label>

@@ -22,6 +22,7 @@
 	<label index="forgotpassword.tologin">Кликните овде да дођете до пријаве</label>
 	<label index="forgotpassword.invalidusername">Унешено корисничко име не постоји.</label>
 	<label index="forgotpassword.invalidusername.adminlink">Не могу да се сетим мог корисничког имена</label>
+	<label index="forgotpassword.invalidusernameoremail">ушао корисничко име или е-маил адреса се не може пронаћи</label>
 	<label index="forgotpassword.form.field.submit">Пошаљите ми нову лозинку</label>
 	<label index="forgotpassword.form.field.notification.success">Потврдни маил послат је на вашу маил адресу</label>
 	<label index="forgotpassword.form.field.comment">Заборавили сте лозинку? Нема проблема! Унесите своје корисничко име и притисните дугме "Пошаљи". Примићете маил да бисте потврдили ресетовање лозинке.</label>
@@ -33,6 +34,7 @@
 	<label index="forgotpassword.mail.tologin">Кликните овде да одете на страницу за пријаву</label>
 	<label index="forgotpassword.mail.toconfirmation">Кликните овде да бисте ресетовали лозинку</label>
 	<label index="forgotpassword.mail.yournewpassword">Ваша нова лозинка за todoyu</label>
+	<label index="forgotpassword.mail.yourusername">хер усернаме</label>
 	<label index="forgotpassword.confirmpage.successful.title">Ваша лозинка је успешно ресетована</label>
 	<label index="forgotpassword.confirmpage.successful.text">Ваша лозинка је успешно ресетована.Нова лозинка је послата на вашу е-маил адресу. Ако желите да поново промените лозинку, само се пријавите и идите на лична подешавања. У таб-у лозинке можете да подесите жељени лозинку.</label>
 	<label index="forgotpassword.confirmpage.failure.title">Жао нам је, али ...</label>

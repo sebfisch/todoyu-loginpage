@@ -22,6 +22,7 @@
 	<label index="forgotpassword.tologin">Войти в todoyu</label>
 	<label index="forgotpassword.invalidusername">Имя входа не существует.</label>
 	<label index="forgotpassword.invalidusername.adminlink">Не могу вспомнить своё имя входа</label>
+	<label index="forgotpassword.invalidusernameoremail">введенное имя пользователя или адрес электронной почты не может быть найден</label>
 	<label index="forgotpassword.form.field.submit">Пришлите мне новый пароль</label>
 	<label index="forgotpassword.form.field.notification.success">На вашу электронную почту отправлено письмо с подтверждением.</label>
 	<label index="forgotpassword.form.field.comment">Забыли пароль? Нет проблем! Введите своё имя и мы пришлём вам ссылку на сброс пароля.</label>
@@ -33,6 +34,7 @@
 	<label index="forgotpassword.mail.tologin">Войти в todoyu</label>
 	<label index="forgotpassword.mail.toconfirmation">Сбросить пароль</label>
 	<label index="forgotpassword.mail.yournewpassword">Новый пароль для todoyu</label>
+	<label index="forgotpassword.mail.yourusername">ее имя пользователя</label>
 	<label index="forgotpassword.confirmpage.successful.title">Ваш пароль сброшен</label>
 	<label index="forgotpassword.confirmpage.successful.text">Ваш пароль был успешно сброшен. Новый пароль послан на ваш электронный адрес. Если вы хотите изменить этот пароль, зайдите в личные установки вашего профиля в todoyu. Вы можете установить новый пароль в соответствующей закладке.</label>
 	<label index="forgotpassword.confirmpage.failure.title">Извините, но ...</label>

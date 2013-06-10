@@ -35,6 +35,7 @@
 	<label index="forgotpassword.mail.tologin">点击进入登陆页</label>
 	<label index="forgotpassword.mail.toconfirmation">点击重置密码</label>
 	<label index="forgotpassword.mail.yournewpassword">你的新密码</label>
+	<label index="forgotpassword.mail.yourusername">她的用户名</label>
 	<label index="forgotpassword.confirmpage.successful.title">你的密码重置成功</label>
 	<label index="forgotpassword.confirmpage.successful.text">你的密码已经成功重置, 新的密码已经发送到你的Email邮箱.假如你想再次更改密码, 请登陆todoyu并去个人设置中更改, 在密码标签页中可以将密码设为你喜欢的密码.</label>
 	<label index="forgotpassword.confirmpage.failure.title">这个...这个我也无能为力...</label>

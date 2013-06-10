@@ -35,7 +35,7 @@ Todoyu::$CONFIG['EXT']['loginpage']['info'] = array(
 	'constraints'	=> array(
 		'core'		=> '2.3.0',
 		'depends'	=> array(
-			'contact'	=> '1.3.0'
+			'contact'	=> '1.3.1'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?loginpage'
